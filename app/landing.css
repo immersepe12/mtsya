@@ -62,9 +62,48 @@
   height: 38%;
   background: var(--mtsya-veda-cream);
 }
-.hero .mood {
+.hero .hero-fish {
   position: absolute;
-  left: var(--layout-margin-d);
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  height: 360px;
+  pointer-events: none;
+}
+.hero .hero-fish img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Devanagari mark + gloss, centred on the Veda Cream floor. */
+.hero .hero-tag {
+  position: absolute;
+  left: 50%;
+  bottom: 128px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.hero .hero-tag .deva {
+  font-family: var(--font-deva);
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--color-fg);
+  letter-spacing: 0.02em;
+}
+.hero .hero-tag .en {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--color-fg-2);
+  margin-top: 12px;
+}
+
+/* Corner labels — edition (left), cloth + origin (right). */
+.hero .hero-corner {
+  position: absolute;
   bottom: 32px;
   font-family: var(--font-ui);
   font-size: 11px;
@@ -72,18 +111,9 @@
   text-transform: uppercase;
   color: var(--color-fg-2);
 }
-.hero .meta {
-  position: absolute;
-  right: var(--layout-margin-d);
-  bottom: 32px;
-  text-align: right;
-  font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-fg-2);
-}
-.hero .meta b {
+.hero .hero-corner.left  { left: var(--layout-margin-d); text-align: left; }
+.hero .hero-corner.right { right: var(--layout-margin-d); text-align: right; }
+.hero .hero-corner b {
   display: block;
   color: var(--color-fg);
   font-weight: 500;
@@ -575,8 +605,12 @@
 
 /* ======================= Responsive =================== */
 @media (max-width: 960px) {
-  .hero .mood { left: var(--layout-margin-m); }
-  .hero .meta { right: var(--layout-margin-m); }
+  .hero .hero-corner.left  { left: var(--layout-margin-m); }
+  .hero .hero-corner.right { right: var(--layout-margin-m); }
+  .hero .hero-fish { width: 240px; height: 240px; }
+  .hero .hero-tag { bottom: 168px; }
+  .hero .hero-tag .deva { font-size: 28px; }
+  .hero .hero-tag .en { font-size: 14px; }
 
   .statement { padding: 96px var(--layout-margin-m) 48px; }
   .statement h2 { font-size: 32px; }

@@ -27,7 +27,7 @@ export default function Header() {
           <a href="#tees">tees</a>
           <a href="#story">the story</a>
           <a href="#journal">journal</a>
-          <a href="#bag">bag (0)</a>
+          <a href="#bag">bag</a>
         </nav>
       </div>
     </header>
