@@ -605,6 +605,13 @@
 
 /* ======================= Responsive =================== */
 @media (max-width: 960px) {
+  .hero .hero-corner {
+    font-size: 10px;
+    line-height: 1.4;
+    /* Cap each corner to its own half so the long lines wrap
+       inside their column instead of crashing into the other. */
+    max-width: calc(50% - var(--layout-margin-m) - 12px);
+  }
   .hero .hero-corner.left  { left: var(--layout-margin-m); }
   .hero .hero-corner.right { right: var(--layout-margin-m); }
   .hero .hero-fish { width: 240px; height: 240px; }
