@@ -1,0 +1,691 @@
+MTSYA · Design System · Web Components
+DESIGN SYSTEM
+& Web Component Guidelines
+Edition 1.0 — May 2026
+Built to feed Claude Design (and any other design tool)
+Informed by The Row · Lemaire · Toteme · Brunello Cucinelli · Loro Piana · Hermès · Aesop · 11.11 · Nicobar · Raw Mango
+1
+
+-- 1 of 26 --
+
+MTSYA · Design System · Web Components
+How to use this document
+This document has six parts. Read them in order the first time. After that, use them as reference.
+1. Part A — Claude Design quick-paste. Copy these three blocks into the Claude Design setup
+form.
+2. Part B — Brand tokens. The atomic units: colour, type, spacing, borders. The primitives
+every component is built from.
+3. Part C — Component library. Every UI element specified — buttons, inputs, cards,
+navigation, headers, footers.
+4. Part D — Page layouts. The pages of the website and how they are composed, with explicit
+references to the quiet-luxury brands they descend from.
+5. Part E — Anti-patterns. The things that would break MTSYA. Read this quarterly.
+6. Part F — Reference brand studies. Each of the nine reference brands, what to take from
+them and what to leave.
+If a designer or AI tool tries to override a specification in this document, they need to argue with
+the principle behind it, not just substitute a different value. The principles live in the brand book.
+2
+
+-- 2 of 26 --
+
+MTSYA · Design System · Web Components
+PART A
+Claude Design — quick paste
+Three text blocks ready to copy directly into the three editable fields on the Claude Design setup
+form. Plus the asset upload checklist.
+A.1 Company name and blurb
+Paste this into the ‘Company name and blurb' field.
+MTSYA — a quiet-luxury Indian menswear brand. Five plain shirts and five plain T-shirts in
+Egyptian Giza cotton × TENCEL Lyocell at ₹3,000. Named for Matsya, the first avatar of Vishnu —
+the fish that guided Manu's boat through the deluge. Brand promise: the wardrobe that endures
+the deluge.
+A.2 Other notes
+Paste this into the ‘Any other notes' field. Long but worth it — gives Claude Design the full system.
+BRAND VOICE
+Calm, considered, never urgent. No exclamation marks. No marketing words like ‘premium',
+‘luxury', ‘curated', ‘amazing', ‘crafted'. Closer to a long-form magazine essay than a marketing
+email. Every page rewards a slow read.
+COLOUR SYSTEM
+Primary: Deep Ink #1F3A4D (75% of all text). Background: Paper Cream #F5F1EA (75% of
+every surface). Accent: Terracotta #C9603A (1% only — wax seals, single moments). Secondary
+text: Stone #5A6B78. Tertiary / dividers: Quiet #9DA8B2 / Rule #BFC4C9. Black #000000 only
+on care labels, never web.
+TYPOGRAPHY
+Wordmark: lowercase ‘mtsya' in Adobe Caslon Pro Bold (or equivalent classical serif), wide
+letter-spacing (+200). Headlines + body: classical serif (Adobe Caslon Pro, Cormorant
+Garamond, or EB Garamond). Functional UI: sans-serif (Optima, Avenir, or Inter). Devanagari
+मत्स् य: Mukta Mahee.
+LAYOUT
+12-column grid, max 1440px content width, 24px gutters. 8px spacing scale only
+(8/16/24/48/96/128). Always more whitespace than feels comfortable. The Loro Piana / The
+Row generosity rule.
+3
+
+-- 3 of 26 --
+
+MTSYA · Design System · Web Components
+COMPONENTS
+Buttons: square corners, no shadow, navy fill or navy outline. Inputs: bottom-border only, no full
+borders. Cards: no fill, no border, no shadow — just well-shot product image plus type. Image
+radius: 0 always. Icons: NEVER use icons in UI; use language instead (the cart link says ‘bag', not
+a bag icon).
+DON'T DO
+Drop shadows. Gradients. Rounded corners > 2px. Carousels. Pop-ups. Stock photography.
+Animation on scroll. Sans-serif body text. Bold body text. Exclamation marks. Emojis in
+customer-facing copy.
+REFERENCE BRANDS
+If asked what MTSYA should look like, point to: therow.com (homepage discipline), lemaire.fr
+(product page), brunellocucinelli.com (storytelling pages), loropiana.com (material
+photography), aesop.com (typography hierarchy), 11-11.in (Indian quiet-luxury). MTSYA sits at
+the intersection of European quiet luxury and Indian craft luxury, at the ₹3,000 plain-shirt price
+point.
+A.3 Asset uploads
+Drag these files into the ‘Add fonts, logos and assets' upload area.
+• MTSYA_logo.png — the navy fish + mtsya wordmark (already in your MATSYA folder)
+• Once commissioned: MTSYA logo SVG, fish-only SVG, fish + wordmark lockup SVG
+• Once licensed: Adobe Caslon Pro font files, or your final wordmark serif
+• Once shot: 5–10 hero photographs in the brand's photographic style (cream backgrounds,
+soft natural light)
+A.4 What NOT to upload
+• Stock photography — Claude Design will use it as a reference template otherwise
+• Trend boards from Pinterest — Claude Design treats these as direction
+• Logos of competing brands — even as ‘inspiration', they pollute the model's
+understanding
+• Sketches that aren't aligned with the final design — the tool will literally try to match
+them
+4
+
+-- 4 of 26 --
+
+MTSYA · Design System · Web Components
+5
+
+-- 5 of 26 --
+
+MTSYA · Design System · Web Components
+PART B
+Brand tokens
+B.1 Colour
+The full palette
+DEEP INK
+#1F3A4D
+PAPER CREAM
+#F5F1EA
+TERRACOTTA
+#C9603A
+MFG BLACK
+#000000
+STONE
+#5A6B78
+QUIET
+#9DA8B2
+Tokens (paste into your Tailwind/CSS/Figma)
+--color-bg: 	#F5F1EA; /* Paper Cream — default background */
+--color-primary: 	#1F3A4D; /* Deep Ink — text, wordmark, fish */
+--color-text-2: 	#5A6B78; /* Stone — captions, secondary */
+--color-text-3: 	#9DA8B2; /* Quiet — tertiary, disabled */
+--color-rule: 	#BFC4C9; /* Hairline borders, dividers */
+--color-accent: 	#C9603A; /* Terracotta — 1% only */
+--color-ink-true: 	#000000; /* Care labels only — never web */
+Application ratios
+• Paper Cream — 75% of every surface. Default state. The brand's air.
+• Deep Ink — 20%. All text, wordmark, fish. The brand's voice.
+• Stone + Quiet — 4% combined. Secondary text, dividers, hints.
+• Terracotta — 1% only. Wax seal, single accent moments. Never as a colour fill.
+• Black — 0% on web. Reserved for care-label print and embroidery.
+Product palette (the five shirts — used only in product photography)
+6
+
+-- 6 of 26 --
+
+MTSYA · Design System · Web Components
+Name 	HEX 	Pantone TPG 	Meaning
+Manu White 	#F4EFE5 	11-0103 TPG 	the boat — what carries
+Deluge Indigo 	#1B2A47 	19-3933 TPG 	the night — when the rain
+came
+Veda Cream 	#EFE6D2 	12-0712 TPG 	old paper — preserved
+Tide Stone 	#B8BCB6 	16-3802 TPG 	wet rock — the boat
+rested
+Coast Olive 	#545A3D 	18-0523 TPG 	dry land — life again
+These five colours appear only in product photography — never in UI chrome, never as section backgrounds, never as button
+colours.
+7
+
+-- 7 of 26 --
+
+MTSYA · Design System · Web Components
+B.2 Typography
+Three faces
+Role 	Recommended 	Use
+Display / wordmark Adobe Caslon Pro
+Bold
+‘mtsya' wordmark — lowercase, +200 letter-spacing.
+The same typeface used in Penguin Classics and
+Aleph Book Company hardcovers.
+Headlines + body 	Adobe Caslon Pro
+Roman
+Long-form text, founder's letter, product page copy.
+Free fallback: EB Garamond.
+Functional / UI 	Optima or Inter 	Buttons, captions, prices, navigation labels, sizes.
+Optima has Roman-inscriptional roots; Inter is the
+free modern alternative.
+Devanagari 	Mukta Mahee 	मत्स् य and any Hindi/Sanskrit text. Free, by Ek Type
+Mumbai. Conservative, refined.
+Type scale (web, px)
+Role 	Font 	Size 	Line ht 	Weight 	Tracking
+Wordmark 	Caslon Bold 	64–96 	1.05 	700 	+200
+H1 	Caslon 	40–48 	1.20 	400 	0
+H2 	Caslon 	28–32 	1.30 	400 	0
+H3 / eyebrow 	Optima 	14–16 	1.30 	500 	+200
+Body 	Caslon 	17–18 	1.55 	400 	0
+Caption 	Optima 	13–14 	1.45 	400 	+20
+Button (caps) 	Optima 	12–13 	1.0 	500 	+150
+Type rules
+• Body text always justified-left, ragged-right (web). Justified-both-sides only in InDesign
+with proper hyphenation (print).
+8
+
+-- 8 of 26 --
+
+MTSYA · Design System · Web Components
+• No italics in headlines. Italics only for foreign words (matsya, pralaya) and the brand book.
+• No bold weights in body. The brand voice does not need to shout.
+• Numerals: oldstyle in body, lining in tables and prices.
+• Smart quotes always. Never straight quotes.
+• All-caps allowed only for: wordmark, button labels, eyebrows.
+• ₹ symbol always — never ‘Rs.' or ‘INR' on customer surfaces.
+9
+
+-- 9 of 26 --
+
+MTSYA · Design System · Web Components
+B.3 Spacing & layout
+Spacing scale
+Token 	px 	Use
+xs 	8 	Inline gaps, tight UI
+sm 	16 	Paragraph spacing, button padding
+md 	24 	Default block separator, card padding
+lg 	48 	Section gaps within a page
+xl 	96 	Section gaps on the homepage
+2xl 	128 	Hero spacing, top-of-page generosity
+Grid
+12 columns. Max content width 1440px. Gutter 24px. Side margins: 80px desktop, 24px mobile.
+Vertical rhythm: 8px increments only.
+Borders, radii, shadows
+Token 	Value 	Use
+--radius-none 	0 	Default — buttons, cards, inputs, images
+--radius-sm 	2 px 	Only if absolutely needed — rare
+--border-hairline 	1 px solid Rule #BFC4C9 	Table dividers, image frames
+--border-emphasis 	2 px solid Deep Ink 	Selected states, focus rings
+--shadow 	NONE 	Drop shadows betray the brand. Never use.
+10
+
+-- 10 of 26 --
+
+MTSYA · Design System · Web Components
+PART C
+Component library
+Every UI element in MTSYA, specified. Each component cites the reference brand whose
+execution it descends from.
+C.1 Header / navigation
+Reference: The Row, Lemaire — single line, flat, no dropdowns until necessary
+A single horizontal line, 80px tall on desktop, 64px on mobile. Logo (mtsya wordmark only, no
+fish) on left. Five navigation items max on right: ‘shirts', ‘tees', ‘the story', ‘journal', ‘bag'. All in
+Optima 14px, all-caps, +150 letter-spacing, Deep Ink. No dropdowns. No mega-menus. The
+header is transparent over hero images, becomes solid Paper Cream on scroll.
+height: 	80px (desktop), 64px (mobile)
+background: transparent on hero, Paper Cream on scroll
+logo: 	left-aligned, mtsya wordmark, 24px height
+nav items: 	5 max, Optima 14px caps +150, right-aligned
+border-bottom: 1px Rule, only when scrolled
+C.2 Footer
+Reference: Lemaire, Loro Piana — sparse, no banner, no newsletter spam
+Three columns on desktop, stacked on mobile. Column one: brand block — small fish + ‘mtsya' +
+brand promise (‘the wardrobe that endures the deluge'). Column two: navigation — ‘shirts /
+tees / the story / journal / contact'. Column three: a single email signup field (no banner, no
+animation, just a serif input and a navy ‘subscribe' button). Below: legal — © 2026 MTSYA ·
+Made in India · Privacy · Returns. Background: Paper Cream. Text: Stone. Padding 96px top and
+bottom.
+padding: 	96px top + bottom, 48px sides
+background: Paper Cream
+text colour: Stone (#5A6B78)
+font: 	Optima 13px for nav, Caslon 14px for brand block
+layout: 	3 columns equal width, stacked < 768px
+C.3 Hero
+11
+
+-- 11 of 26 --
+
+MTSYA · Design System · Web Components
+Reference: The Row, Lemaire — single full-screen image, no overlay text, no carousel
+Full viewport width and height (100vw × 100vh). One image only — never a carousel. The
+image is mood ‘Worn' (real man wearing the shirt in his life) at launch, rotating to mood ‘Still'
+(shirt photographed alone) seasonally. No overlay text on the image. No CTA button on the
+image. The viewer scrolls down to the founder's letter; the image is the welcome.
+dimensions: 100vw × 100vh
+content: 	single image, no overlay
+transitions: none — single static image
+image style: ‘Worn' or ‘Still' (see brand book Appendix D)
+C.4 Product card
+Reference: Aesop, Lemaire — pure image, no fill, no border, no shadow
+On product listing pages. Each card is a single 4:5 portrait image of the shirt on cream
+background, shot from the front, single garment, no model. Below the image: 16px gap, then
+product name (e.g. ‘Manu White') in Caslon 18px Roman; below that, an italic subtitle (‘the boat
+— what carries') in Caslon Italic 14px Stone; below that, 8px gap, then price (‘₹3,000') in
+Optima 14px. No ‘add to bag' button on the card — clicking the card opens the full product page.
+No hover effects beyond a 200ms opacity dim of the image.
+image: 	4:5 portrait, single garment on cream, no border
+title: 	Caslon 18px Roman, Deep Ink
+subtitle: 	Caslon Italic 14px, Stone
+price: 	Optima 14px, Deep Ink, oldstyle figures
+hover: 	opacity 0.85, 200ms ease
+no buttons, no badges, no ‘sale' tags, no quick-add
+C.5 Product listing grid
+Reference: Loro Piana, Aesop — generous, never more than 3 across
+Maximum three products per row on desktop. Two on tablet. One on mobile. Vertical gap
+between rows: 96px. Horizontal gap between cards: 48px. With only 5 shirts at launch, the
+entire collection fits on one screen above the fold on a 1440px display. This is a feature, not a
+constraint — the buyer sees the whole world at once.
+columns: 	3 desktop / 2 tablet / 1 mobile
+row gap: 	96px
+col gap: 	48px
+max products visible above fold (desktop): 5–6
+12
+
+-- 12 of 26 --
+
+MTSYA · Design System · Web Components
+C.6 Product detail page
+Reference: Loro Piana, Aesop — image dominant, text below, fabric story prominent
+Two-column layout above fold on desktop, stacked on mobile.
+LEFT COLUMN (60% width): One large hero image of the shirt, 4:5 ratio, centred with cream
+margin. Below: three small thumbnail images (still / worn / detail), 96px tall, evenly spaced.
+Click thumbnail to swap hero.
+RIGHT COLUMN (40% width): Product name in Caslon 36px (e.g. ‘Manu White'). Subtitle in
+Caslon Italic 18px Stone (‘the boat. the foundational shirt.'). 24px gap. Price in Optima 18px.
+24px gap. Fit selector (three pills: SLIM / MODERN / RELAXED). 16px gap. Size selector (five
+pills: XS S M L XL). 24px gap. Single button: ‘ADD TO BAG' in cream-on-navy, full width of
+column.
+BELOW THE FOLD (full width): The fabric story — about 150 words of Caslon body in two
+columns, on the cloth (Egyptian Giza × TENCEL), the mill, why it drapes the way it does. Two
+more images: macro of the weave, and a worn detail (the cuff, the placket). Below: care
+instructions in 6 lines max. No ‘you may also like' carousel. No reviews section by default — the
+brand earns trust through the brand book and the founder's letter, not through 4-star ratings.
+// Above fold — two column
+.product-hero { display: grid; grid-template-columns: 60% 40%; gap: 48px; }
+// Below fold — fabric story
+.fabric-story { columns: 2; column-gap: 48px; max-width: 960px; margin: 96px auto; }
+C.7 Buttons
+Reference: The Row, Lemaire — square, no shadow, two variants only
+Primary
+background: Deep Ink #1F3A4D
+text: 	Paper Cream #F5F1EA
+font: 	Optima 13px, ALL CAPS, +150 letter-spacing, weight 500
+padding: 	16px vertical, 32px horizontal
+radius: 	0
+hover: 	background → #15293A (10% darker), 200ms
+disabled: 	background → Stone #5A6B78
+13
+
+-- 13 of 26 --
+
+MTSYA · Design System · Web Components
+Secondary (ghost)
+background: transparent
+border: 	1px solid Deep Ink
+text: 	Deep Ink, Optima 13px caps
+padding: 	16px / 32px
+hover: 	background → Deep Ink, text → Paper Cream, 200ms
+That is the entire button system. There is no third variant. There are no ‘success', ‘warning', or
+‘danger' colours — MTSYA is a clothing brand, not a SaaS product. Errors are written in Deep
+Ink, with one line of stone-coloured Optima below explaining the issue.
+C.8 Inputs
+Reference: Brunello Cucinelli — bottom-border only, never boxed inputs
+background: 	Paper Cream
+border: 	none
+border-bottom: 	1px solid Stone #5A6B78
+padding: 	12px 0 (no horizontal padding)
+font: 	Caslon Roman 17px, Deep Ink
+placeholder: 	Quiet #9DA8B2
+focus: 	border-bottom thickens to 2px Deep Ink, 200ms
+error: 	border-bottom → Terracotta, 1 line of message below in Optima 13px
+Labels appear ABOVE the input, in Optima 13px caps +200, Stone colour. The label is always
+visible — never a placeholder-only ‘floating label'. The brand respects the customer enough to
+tell them what each field is.
+C.9 Cards & containers
+Reference: Aesop — there are no card containers. The image is the card.
+MTSYA does not use card containers in the standard sense. There are no rounded-corner panels
+with drop shadows containing content. Layout is achieved through generous whitespace
+between elements, hairline rules where division is essential, and the natural framing of
+well-shot images. If you find yourself reaching for a ‘card' component, you are probably reaching
+for a Bootstrap habit. Ask: would Loro Piana wrap this in a card? They wouldn't. Don't.
+C.10 Divider
+.divider { border-top: 1px solid #BFC4C9; margin: 48px 0; }
+14
+
+-- 14 of 26 --
+
+MTSYA · Design System · Web Components
+That's it. One pixel of Rule grey, 48px breathing room above and below. Used at most twice on
+any page — between the hero and the content, and between the content and the footer.
+Anything more is decoration.
+C.11 Image frame
+Images have no borders, no shadows, no rounded corners. Aspect ratios allowed: 4:5 (product),
+3:2 (lifestyle), 1:1 (Instagram crops, brand-system only). Background behind every image: Paper
+Cream. Images load with a 200ms fade-in, no skeleton loaders with shimmer animations (those
+betray the brand).
+img { border: 0; border-radius: 0; box-shadow: none; }
+.image-loading { opacity: 0; transition: opacity 200ms; }
+.image-loaded { opacity: 1; }
+C.12 Iconography
+Reference: The Row, Lemaire, Loro Piana — language replaces icons
+The single hardest rule of the system: NO ICONS IN THE UI. Every icon you would normally use,
+MTSYA replaces with language.
+Where you'd use an
+icon
+MTSYA uses instead 	Why
+Cart icon (🛒) 	‘bag (2)' as text link 	Loro Piana, Lemaire, The Row all use the word
+Hamburger menu (≡) 	‘menu' as text link 	Mobile menu opens the same nav as desktop, just
+stacked
+Search magnifier (🔍) 	‘search' link, opens an
+input
+With only 10 SKUs, search is rarely needed
+Account / user icon (👤) ‘account' link 	Or just ‘sign in' if not logged in
+Heart / wishlist 	Don't have a wishlist 	With 5 shirts, the customer doesn't need to save
+things
+Social icons in footer 	‘instagram' as text link Underlined Optima 13px, Stone colour
+Star ratings
+(★★★★★)
+Don't have ratings 	The brand book and founder's letter earn trust
+15
+
+-- 15 of 26 --
+
+MTSYA · Design System · Web Components
+Where you'd use an
+icon
+MTSYA uses instead 	Why
+ARROW ICONS (← →) 	‘previous' / ‘next' as
+text
+Or just don't have pagination
+EXCEPTION: the fish emblem itself, used at the close of the founder's letter, on the favicon, and
+as a small mark at the end of email footers. That is the only graphic mark in the entire UI.
+Everything else is type.
+16
+
+-- 16 of 26 --
+
+MTSYA · Design System · Web Components
+PART D
+Page layouts
+Every page in the website, anatomically described. Each page cites the reference brands whose
+homepage / product page / cart it descends from.
+D.1 Homepage
+Reference: The Row (homepage discipline), Lemaire (single-image hero), Brunello Cucinelli (founder's letter prominent)
+Above the fold
+One full-screen image (mood ‘Worn'). No overlay text. No CTA button. No carousel. The image is
+the welcome.
+Below the fold (the founder's letter)
+96px of breathing space. Then the founder's letter, in Caslon body, 18px, line-height 1.55, set in a
+single column at 65 characters wide. Centred in the page. About 600 words. Written in first
+person by the founder, never edited by marketing. Closes with a small fish emblem, then a single
+line link: ‘the five shirts →'.
+Below the founder's letter
+128px of breathing space. Then the homepage product preview — a single image of one shirt
+(rotates per visit), with the word ‘shirts' as a Caslon 32px link below. Clicking goes to /shirts.
+Below that, similarly: ‘tees', ‘the story', ‘journal'. Four sections, one image each, vertically
+stacked. Each at 80vh. The homepage scrolls slowly.
+Footer
+Standard footer (see C.2).
+TOTAL PAGE LENGTH: roughly 6 viewport heights, mostly image and breathing space. The user
+scrolls deliberately. The brand rewards them for it.
+D.2 Shop / shirts listing page
+Reference: Aesop, Loro Piana — generous grid, no filters, 5 SKUs only
+URL: /shirts. Header. 96px space. Page title in Caslon H1 32px, Stone: ‘the five shirts'. 48px
+space. A short paragraph in Caslon body 18px, 65ch wide, centred — about 80 words on what
+17
+
+-- 17 of 26 --
+
+MTSYA · Design System · Web Components
+these are: ‘Five shirts, each named for a moment in the myth. Made of Egyptian Giza cotton
+woven with TENCEL Lyocell. ₹3,000 each. Three fits. Restocked every eight weeks; the
+silhouettes do not change.'
+Below: the grid. Three columns desktop (so all five fit in two rows with one image standing
+alone — which is fine, even desirable). Each card uses the spec from C.4. No filter sidebar. No
+sort dropdown. With five products, filtering is absurd.
+Below grid: 96px. Then a small line in Caslon italic 18px Stone: ‘— and five plain T-shirts.' This is
+a link to /tees.
+D.3 Product detail page
+Reference: Loro Piana, Aesop — material story dominant, no upsells
+Full spec already covered in C.6. The product page is the most important commerce page in the
+brand. It is never to be A/B-tested with conversion-rate-optimisation logic. Changes happen by
+deliberation, not data.
+D.4 The story (about page)
+Reference: Brunello Cucinelli (Solomeo essays), 11.11 (process pages)
+URL: /the-story. This is where the brand book lives, in chapter form. One page per chapter,
+Caslon body, paged navigation at the bottom (‘chapter one of eight →'). The chapters from the
+brand book are reproduced verbatim. Each chapter ends with the fish emblem and a chapter
+pagination.
+This is the most-read page on the website after the homepage and product pages. The buyer
+comes here to learn what they are about to buy into. Treat it as the brand's most important
+asset.
+D.5 The journal
+Reference: Lemaire (long-form essays), Aesop (Issue magazine)
+URL: /journal. A list of essays, one per quarter. Each essay is between 1,200 and 3,500 words.
+Topics: the mill the fabric is made in, a craft tradition the brand draws on, an interview with a
+wearer, a Sanskrit word that doesn't translate, an essay on what a wardrobe is. Each essay is
+illustrated with one or two photographs from the World mood. No ‘featured posts' module, no
+related posts at the bottom — each essay stands alone.
+18
+
+-- 18 of 26 --
+
+MTSYA · Design System · Web Components
+D.6 Cart
+Reference: Lemaire — stripped, no upsells
+URL: /bag. (Not /cart — that's icon-language, not brand-language.)
+Single column, Caslon Roman type, generous spacing. Each item is a row: small image (96px
+square) on the left, product name + colour + size + fit in the middle, price on the right, with a
+small ‘remove' link below the product name in Stone colour. No quantity selector for 99% of
+cases — the buyer adds one shirt at a time. (If they really need two, they add to bag twice.)
+Below the items: subtotal in Optima 18px, ‘Free shipping in India' as a single sentence (always
+true, not an offer), and a ‘CONTINUE TO CHECKOUT' primary button. Below: a single sentence in
+Caslon italic 14px Stone: ‘Returns within 30 days, no questions, no need to explain.' That is the
+trust statement. There is no FAQ accordion. There are no upsell suggestions. There is no ‘people
+who bought this also bought' module.
+D.7 Checkout
+Reference: Lemaire — three steps, clean, fast
+Three steps, on three pages: address, shipping, payment. Each page has a single column, the
+brand header reduced to just the wordmark, no footer. Fields use the input spec from C.8
+(bottom-border only). The CTA at the bottom of each step is a primary button: ‘CONTINUE'. The
+final step's button is ‘PLACE ORDER · ₹X,XXX' (with the total inline). After payment, the order
+confirmation page IS the founder's letter, in full, with the order details quietly underneath.
+D.8 Order confirmation email
+Reference: Aesop — the email is a letter
+Subject line: ‘Your MTSYA shirt is ordered.' (period, no exclamation). From: ‘kushal at mtsya'
+(lowercase, no pretentious title). Body: a short note from the founder thanking them, the order
+details below in Optima 14px, the founder's signature, the fish at the close. Total length: about
+200 words. No tracking links yet (the shipping email handles that). No ‘follow us on Instagram'
+line.
+D.9 Shipping notification email
+19
+
+-- 19 of 26 --
+
+MTSYA · Design System · Web Components
+Subject: ‘On its way.' Body: ‘Your MTSYA shirt left the studio this morning. It will arrive in 2–4
+days. Track it here.' That's it. One line of body copy plus a tracking link.
+D.10 404 page
+‘This page is not here. The brand is small. Most of it is at /shirts.' Set in Caslon H2 32px, centred
+on a near-empty Paper Cream page, with the small fish below.
+D.11 Search results
+If implemented at all (probably year two). Single search input, 30 character placeholder: ‘a
+colour, a fit'. Results are simple text links to product pages. No image thumbnails — with 10
+SKUs, the customer can read the names.
+D.12 Mobile patterns
+Mobile is not a separate experience. It is the same brand, re-flowed. Specifically:
+• Header: 64px, mtsya wordmark left, ‘menu' text right (no hamburger)
+• Hero: 100vh, single image
+• Product grid: single column, full width minus 24px gutter
+• Product detail: image stack, then info, then fabric story (single column)
+• Cart: single column
+• Buttons: full-width with 24px side padding
+• Type: same scale as desktop minus 2–4px on each level
+20
+
+-- 20 of 26 --
+
+MTSYA · Design System · Web Components
+PART E
+Anti-patterns
+If MTSYA dies young, it will probably die in one of these specific ways. Reread quarterly.
+E.1 Visual anti-patterns
+• Drop shadows on anything
+• Gradients (background, text, button — never)
+• Rounded corners > 2px
+• Animation on scroll (parallax, fade-in cascades, ‘aos' libraries)
+• Skeleton loaders with shimmer animations
+• Carousels (homepage, product, anywhere)
+• Pop-ups (newsletter signup, cookie banner, exit-intent)
+• Sticky ‘scroll back to top' arrows
+• Live chat widgets in the bottom right
+• Stock photography of any kind
+• ‘As seen in' press logo bars
+• Trust-seal badges (‘100% Secure Checkout', ‘Verified by Visa')
+• Third-party review widgets (Trustpilot, Yotpo)
+• Discount countdown timers
+E.2 Copy anti-patterns
+• Exclamation marks (almost never)
+• Emojis in customer-facing copy
+• ALL CAPS for emphasis in body
+• ‘Hurry, only 2 left in stock!' urgency text
+• ‘Free shipping on orders over ₹X' (shipping is free, full stop)
+• Words: premium, luxury, curated, drop, alert, amazing, crafted, must-have
+E.3 Commerce anti-patterns
+21
+
+-- 21 of 26 --
+
+MTSYA · Design System · Web Components
+• Sales (end-of-season, festival, anniversary — no)
+• Discount codes (the price is the price)
+• BOGO offers
+• Bundles (‘shirt + tee for 10% off')
+• Subscription / auto-replenish models
+• Affiliate / influencer codes
+• Marketplace listings (Myntra, Flipkart, Amazon, Ajio) for at least 18 months
+• Performance marketing (Meta, Google ads) at scale in year one
+E.4 Structural anti-patterns
+• Adding products faster than once per quarter (the brand is built on five and five)
+• Founder-personality marketing in year one (the founder is silent for the first eighteen
+months)
+• Influencer ‘seeding' in exchange for posts
+• Free product to mid-tier influencers
+• Pinterest as a moodboard source for new collections
+• Logo on chest, ever
+22
+
+-- 22 of 26 --
+
+MTSYA · Design System · Web Components
+PART F
+Reference brand studies
+Each of MTSYA's reference brands, with the specific lesson to take and what to leave. Spend an
+afternoon on each website before any major design decision.
+The Row
+URL: therow.com. Founded 2006 by the Olsen sisters.
+TAKE: the homepage discipline. Single image, no carousel, minimal nav, no overlay text. The
+product grid generosity. The way they refuse to put faces on the founders. Their year-one vow of
+silence.
+LEAVE: their price point (much higher), their black-and-white photography exclusively (MTSYA
+uses cream backgrounds).
+Lemaire
+URL: lemaire.fr. Christophe Lemaire's house, current era.
+TAKE: the earth-tone palette discipline (chocolates, ecru, navy with rare burnished orange). The
+product page layout — single image dominant, type below. The footer (sparse, no banner). The
+geometric letterforms in their wordmark — same logic as ‘mtsya' as a flat geometric word.
+LEAVE: their European-only product photography. MTSYA's photography includes Indian
+interiors and Indian morning light.
+Toteme
+URL: toteme-studio.com. Stockholm, founded 2014.
+TAKE: the custom typography approach. The sharp, no-frills product photography. The ‘less is
+more' product page restraint. The decisive, direct copy voice.
+LEAVE: the cold Scandinavian palette — MTSYA is warmer, Indian-rooted.
+23
+
+-- 23 of 26 --
+
+MTSYA · Design System · Web Components
+Brunello Cucinelli
+URL: brunellocucinelli.com. The Italian humanist-luxury master.
+TAKE: the storytelling page style — long essays, philosophical prose, large warm photography of
+the village of Solomeo. MTSYA's ‘the story' page is built on this template. Also: the way they treat
+the brand's place (Solomeo) as a character. MTSYA does the same with the brand's myth.
+LEAVE: the formal serif logo (theirs is austere, MTSYA's is folk-art warm).
+Loro Piana
+URL: loropiana.com. The Italian fabric house.
+TAKE: the material storytelling. Every product page leads with the fibre, the source, the process.
+MTSYA's product pages descend directly. Also: the material photography — close-up of the cloth,
+in soft light, almost still life.
+LEAVE: their kummel red interior signature (we have terracotta but used differently).
+Hermès
+URL: hermes.com. The reference for everything.
+TAKE: the packaging-as-brand discipline. The orange box is more recognised than the logo;
+MTSYA's cream box with embossed fish is built on the same logic. The website's editorial
+richness — long-form essays, beautifully photographed, never selling explicitly.
+LEAVE: the price point, the orange accent (we have terracotta), the heritage references (MTSYA
+has its own myth).
+Aesop
+URL: aesop.com. The Australian apothecary brand.
+TAKE: the typography hierarchy — clean serifs, generous spacing, the way they let copy breathe.
+The product page's ingredient-led narrative — every product leads with what's in it, not with
+how good it is. MTSYA's fabric-led product pages descend from this template. Also: their email
+voice (the email IS a letter), and their store design (warm wood, dim lighting, library aesthetic).
+24
+
+-- 24 of 26 --
+
+MTSYA · Design System · Web Components
+LEAVE: the apothecary categorisation system — MTSYA has five products, not fifty.
+11.11 / eleven eleven
+URL: 11-11.in. The Indian quiet-luxury reference.
+TAKE: the indigo discipline (MTSYA's deep ink is the menswear cousin). The way they treat
+material as a process, not a feature. The flagship store's indigo passage as a design idea —
+MTSYA's box is the equivalent moment, the buyer's first sensory experience of the brand world.
+The Indian-craft-luxury voice without folk-art surface.
+LEAVE: their multi-product range (kurtas, dresses, etc.) — MTSYA stays in plain shirts.
+Nicobar
+URL: nicobar.com. The Good Earth lineage's modern Indian quiet-luxury house.
+TAKE: the way they pair restrained palette with subtle Indian voice. The ‘alphabet series'
+typographic experiments. The lifestyle-but-disciplined photography mood.
+LEAVE: the unisex / lifestyle product range — MTSYA is menswear-focused.
+Raw Mango
+URL: rawmango.com. Sanjay Garg's house. The most uncompromising brand on this list.
+TAKE: the ‘Indian without kitsch' principle — quote it, frame it, hang it on the studio wall. The
+use of forest green on cream as a colour pairing (terracotta on cream is MTSYA's equivalent).
+The surreal, slightly editorial product photography. The willingness to be unashamed about
+cultural depth.
+LEAVE: the runway-occasion-wear DNA (MTSYA is daily wear).
+Closing
+This document is opinionated by design. Every choice has a reason. Most of those reasons are in
+the brand book. If a choice in this document seems wrong, the right move is to disagree with the
+25
+
+-- 25 of 26 --
+
+MTSYA · Design System · Web Components
+principle behind it — not to change the value silently. Update the brand book first; then update
+this document; then update the website. Never the other way around.
+The brand will outlive any single designer, any specific tool, any one founder. It will not outlive
+the system being broken silently by people who didn't ask why.
+· · ·
+मत्स् य
+the wardrobe that endures the deluge
+· · ·
+MTSYA Design System & Web Component Guidelines · Edition 1.0 · May 2026 · Update annually, by one person, with
+deliberation.
+26
+
+-- 26 of 26 --
+

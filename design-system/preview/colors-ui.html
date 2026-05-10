@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>UI palette</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:24px 32px;}
+  .row{display:grid;grid-template-columns:repeat(7,1fr);gap:16px;}
+  .sw{display:flex;flex-direction:column;}
+  .chip{height:96px;border:1px solid rgba(31,58,77,.06);}
+  .ring{outline:1px solid var(--color-rule);outline-offset:-1px;}
+  .name{font-family:var(--font-ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-fg-2);margin-top:10px;}
+  .hex{font-family:var(--font-ui);font-size:12px;color:var(--color-fg);margin-top:2px;font-feature-settings:"lnum" 1;}
+  .pct{font-family:var(--font-serif);font-style:italic;font-size:12px;color:var(--color-fg-2);margin-top:2px;}
+</style></head>
+<body><div class="wrap"><div class="row">
+  <div class="sw"><div class="chip ring" style="background:#F5F1EA"></div><div class="name">Paper Cream</div><div class="hex">#F5F1EA</div><div class="pct">75%</div></div>
+  <div class="sw"><div class="chip" style="background:#1F3A4D"></div><div class="name">Deep Ink</div><div class="hex">#1F3A4D</div><div class="pct">20%</div></div>
+  <div class="sw"><div class="chip" style="background:#5A6B78"></div><div class="name">Stone</div><div class="hex">#5A6B78</div><div class="pct">3%</div></div>
+  <div class="sw"><div class="chip" style="background:#9DA8B2"></div><div class="name">Quiet</div><div class="hex">#9DA8B2</div><div class="pct">1%</div></div>
+  <div class="sw"><div class="chip" style="background:#BFC4C9"></div><div class="name">Rule</div><div class="hex">#BFC4C9</div><div class="pct">1%</div></div>
+  <div class="sw"><div class="chip" style="background:#C9603A"></div><div class="name">Terracotta</div><div class="hex">#C9603A</div><div class="pct">1% wax-seal</div></div>
+  <div class="sw"><div class="chip" style="background:#000"></div><div class="name">MFG Black</div><div class="hex">#000000</div><div class="pct">care label · never web</div></div>
+</div></div></body></html>

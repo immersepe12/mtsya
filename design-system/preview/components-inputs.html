@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:28px 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px 48px;}
+  .field{display:flex;flex-direction:column;}
+  .err{font-family:var(--font-ui);font-size:13px;color:#C9603A;margin-top:8px;}
+</style></head>
+<body><div class="wrap">
+  <div class="field"><label class="input-label">Email</label><input class="input" placeholder="you@somewhere"></div>
+  <div class="field"><label class="input-label">Email · focus</label><input class="input" value="kushal@mtsya" style="border-bottom:2px solid #1F3A4D;padding-bottom:11px;" autofocus></div>
+  <div class="field"><label class="input-label">Address</label><input class="input" value="14 Lodi Estate, New Delhi"></div>
+  <div class="field"><label class="input-label">Pincode</label><input class="input" value="11001" class="input--error" style="border-bottom-color:#C9603A;"><span class="err">Six digits, please.</span></div>
+</div></body></html>

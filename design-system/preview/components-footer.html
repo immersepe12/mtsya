@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Footer</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .foot{padding:32px 40px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;color:var(--color-fg-2);}
+  .word{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:.2em;color:var(--color-fg);margin-bottom:10px;}
+  .promise{font-family:var(--font-serif);font-style:italic;font-size:14px;color:var(--color-fg-2);}
+  .nav{display:flex;flex-direction:column;gap:8px;}
+  .nav a{font-family:var(--font-ui);font-size:13px;color:var(--color-fg-2);letter-spacing:.05em;}
+  .sub{display:flex;gap:8px;align-items:flex-end;}
+  .sub .input{flex:1;font-size:14px;}
+  .legal{grid-column:1/-1;border-top:1px solid #BFC4C9;padding-top:14px;font-family:var(--font-ui);font-size:11px;letter-spacing:.05em;color:var(--color-fg-2);display:flex;justify-content:space-between;}
+</style></head>
+<body><footer class="foot">
+  <div><div class="word">mtsya</div><div class="promise">the wardrobe that endures the deluge</div></div>
+  <div class="nav"><a>shirts</a><a>tees</a><a>the story</a><a>journal</a><a>contact</a></div>
+  <div class="sub"><div style="flex:1"><label class="input-label">Letters, twice a year</label><input class="input" placeholder="email"></div><button class="btn btn--primary">Subscribe</button></div>
+  <div class="legal"><span>© 2026 MTSYA · Made in India</span><span>Privacy · Returns</span></div>
+</footer></body></html>

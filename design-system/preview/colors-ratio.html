@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Application ratios</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:24px 32px;}
+  .bar{display:flex;height:64px;width:100%;}
+  .seg{display:flex;align-items:flex-end;justify-content:flex-start;padding:8px 10px;font-family:var(--font-ui);font-size:10px;letter-spacing:.18em;text-transform:uppercase;}
+  .legend{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px;}
+  .legend .row{display:flex;align-items:center;gap:8px;font-family:var(--font-ui);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-fg-2);}
+  .dot{width:12px;height:12px;}
+  .note{font-family:var(--font-serif);font-style:italic;font-size:13px;color:var(--color-fg-2);margin-top:18px;}
+</style></head>
+<body><div class="wrap">
+  <div class="bar">
+    <div class="seg" style="flex:75;background:#F5F1EA;color:#5A6B78;border:1px solid #BFC4C9;border-right:0;">Paper 75</div>
+    <div class="seg" style="flex:20;background:#1F3A4D;color:#F5F1EA;">Ink 20</div>
+    <div class="seg" style="flex:3;background:#5A6B78;color:#F5F1EA;">3</div>
+    <div class="seg" style="flex:1;background:#9DA8B2;"></div>
+    <div class="seg" style="flex:1;background:#BFC4C9;"></div>
+    <div class="seg" style="flex:1;background:#C9603A;"></div>
+  </div>
+  <div class="legend">
+    <div class="row"><span class="dot" style="background:#F5F1EA;outline:1px solid #BFC4C9;"></span>Paper · air</div>
+    <div class="row"><span class="dot" style="background:#1F3A4D"></span>Ink · voice</div>
+    <div class="row"><span class="dot" style="background:#5A6B78"></span>Stone · 2°</div>
+    <div class="row"><span class="dot" style="background:#9DA8B2"></span>Quiet · 3°</div>
+    <div class="row"><span class="dot" style="background:#C9603A"></span>Wax-seal · 1%</div>
+  </div>
+  <div class="note">Always more whitespace than feels comfortable — the Loro Piana / The Row generosity rule.</div>
+</div></body></html>

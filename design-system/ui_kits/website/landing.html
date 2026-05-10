@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>mtsya — the wardrobe that endures the deluge</title>
+<link rel="icon" href="../../assets/mtsya-logo.png">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-serif);
+    overflow-x: hidden;
+  }
+  a { cursor: pointer; }
+  .wrap { max-width: 1440px; margin: 0 auto; padding: 0 80px; }
+
+  /* ======================= Header ======================= */
+  header.site {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(245,241,234,0.92);
+    backdrop-filter: saturate(120%) blur(8px);
+    border-bottom: 1px solid var(--mtsya-rule);
+  }
+  header.site .row {
+    height: 80px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  header.site nav { display: flex; gap: 32px; align-items: center; }
+  header.site nav a {
+    font-family: var(--font-ui); font-size: 13px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: lowercase;
+    color: var(--color-fg);
+  }
+  header.site nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .word {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 22px; letter-spacing: 0.2em;
+    text-transform: lowercase; color: var(--color-fg);
+    line-height: 1;
+  }
+
+  /* ======================= Hero ========================= */
+  .hero {
+    position: relative;
+    height: calc(100vh - 80px);
+    min-height: 720px;
+    background:
+      linear-gradient(180deg, transparent 60%, rgba(31,58,77,0.04) 100%),
+      linear-gradient(180deg, #F4EFE5 0%, #F4EFE5 62%, #EFE6D2 62%, #EFE6D2 100%);
+    overflow: hidden;
+  }
+  .hero .grain {
+    position: absolute; inset: 0; pointer-events: none; opacity: .35;
+    background-image:
+      radial-gradient(rgba(31,58,77,0.06) 1px, transparent 1px),
+      radial-gradient(rgba(31,58,77,0.04) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
+  .hero-fish {
+    position: absolute; left: 50%; top: 46%;
+    transform: translate(-50%, -50%);
+    width: 420px; height: 420px;
+    opacity: 0.95;
+  }
+  .hero-fish img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .hero-corner {
+    position: absolute; bottom: 32px;
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(31,58,77,0.5);
+  }
+  .hero-corner.left  { left: 80px; }
+  .hero-corner.right { right: 80px; text-align: right; }
+  .hero-corner b { display: block; color: rgba(31,58,77,0.85); font-weight: 500; letter-spacing: 0.22em; margin-bottom: 4px; }
+  .hero-tag {
+    position: absolute; left: 50%; bottom: 96px;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .hero-tag .deva {
+    font-family: var(--font-deva); font-weight: 300;
+    font-size: 28px; color: var(--color-fg);
+    letter-spacing: 0.02em;
+  }
+  .hero-tag .en {
+    font-family: var(--font-display); font-style: italic;
+    font-size: 17px; color: var(--mtsya-stone);
+    margin-top: 8px;
+  }
+
+  /* ======================= Quiet statement ============== */
+  .statement {
+    padding: 160px 80px 128px;
+    text-align: center;
+  }
+  .statement h2 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 56px; line-height: 1.18;
+    color: var(--color-fg);
+    max-width: 18ch; margin: 0 auto;
+    text-wrap: balance;
+  }
+  .statement h2 em {
+    font-style: italic; color: var(--mtsya-stone);
+  }
+  .statement .eyebrow {
+    margin-bottom: 32px;
+  }
+
+  /* ======================= The five ===================== */
+  .five {
+    padding: 96px 0 96px;
+  }
+  .five-head {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding: 0 80px;
+    margin-bottom: 64px;
+  }
+  .five-head h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 40px; line-height: 1.2; margin: 0;
+  }
+  .five-head .meta {
+    font-family: var(--font-ui); font-size: 12px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--mtsya-stone);
+    text-align: right;
+  }
+  .five-head .meta b { color: var(--color-fg); font-weight: 500; }
+
+  .five-grid {
+    padding: 0 80px;
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+  }
+  .shirt {
+    display: block; cursor: pointer;
+  }
+  .shirt .panel {
+    aspect-ratio: 4/5;
+    position: relative;
+    overflow: hidden;
+  }
+  .shirt .panel::after {
+    content: attr(data-tag);
+    position: absolute; bottom: 12px; right: 14px;
+    font-family: var(--font-ui); font-size: 9px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(31,58,77,0.4);
+  }
+  .shirt[data-dark] .panel::after { color: rgba(244,239,229,0.55); }
+  .shirt-meta {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-top: 16px;
+  }
+  .shirt-name {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 20px; color: var(--color-fg); line-height: 1.2;
+  }
+  .shirt-sub {
+    font-family: var(--font-serif); font-style: italic;
+    font-size: 13px; color: var(--mtsya-stone);
+    margin-top: 6px;
+  }
+  .shirt-price {
+    font-family: var(--font-ui); font-size: 13px;
+    color: var(--color-fg);
+    font-feature-settings: "lnum" 1;
+  }
+
+  /* ======================= Letter ======================= */
+  .letter {
+    padding: 192px 80px 160px;
+    background: var(--mtsya-paper-cream);
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .letter-inner { max-width: 65ch; width: 100%; }
+  .letter .eyebrow { text-align: center; margin-bottom: 48px; }
+  .letter p {
+    font-family: var(--font-serif); font-size: 19px;
+    line-height: 1.65; color: var(--color-fg);
+    margin: 0 0 24px;
+    max-width: none;
+  }
+  .letter .pull {
+    font-family: var(--font-display); font-style: italic;
+    font-size: 30px; line-height: 1.4;
+    color: var(--mtsya-stone);
+    text-align: center;
+    margin: 48px auto;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .letter .signoff {
+    text-align: center; margin-top: 48px;
+  }
+  .letter .signoff .fish {
+    width: 64px; height: 64px;
+    display: inline-block;
+  }
+  .letter .signoff .fish img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+  }
+  .letter .signoff .name {
+    font-family: var(--font-serif); font-style: italic;
+    color: var(--mtsya-stone); font-size: 16px; margin-top: 16px;
+  }
+
+  /* ======================= Cloth ======================== */
+  .cloth {
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 720px;
+  }
+  .cloth-image {
+    background:
+      linear-gradient(135deg, #EFE6D2 0%, #F4EFE5 60%, #E7DFC8 100%);
+    position: relative;
+  }
+  .cloth-image .hairlines {
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg,
+        rgba(31,58,77,0.06) 0,
+        rgba(31,58,77,0.06) 1px,
+        transparent 1px,
+        transparent 9px),
+      repeating-linear-gradient(90deg,
+        rgba(31,58,77,0.04) 0,
+        rgba(31,58,77,0.04) 1px,
+        transparent 1px,
+        transparent 11px);
+    mix-blend-mode: multiply;
+  }
+  .cloth-image .label {
+    position: absolute; left: 32px; bottom: 32px;
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(31,58,77,0.5);
+  }
+  .cloth-text {
+    padding: 128px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .cloth-text .eyebrow { margin-bottom: 32px; }
+  .cloth-text h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 44px; line-height: 1.2; margin: 0 0 32px;
+    max-width: 18ch;
+    text-wrap: balance;
+  }
+  .cloth-text p {
+    font-family: var(--font-serif); font-size: 18px;
+    line-height: 1.65; color: var(--color-fg);
+    max-width: 52ch; margin: 0 0 20px;
+  }
+  .specs {
+    margin-top: 48px;
+    border-top: 1px solid var(--mtsya-rule);
+  }
+  .specs .row {
+    display: grid; grid-template-columns: 180px 1fr;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--mtsya-rule);
+    align-items: baseline;
+  }
+  .specs .row dt {
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mtsya-stone); font-weight: 500;
+  }
+  .specs .row dd {
+    font-family: var(--font-serif); font-size: 17px;
+    color: var(--color-fg); margin: 0;
+  }
+  .specs .row dd em { font-style: italic; color: var(--mtsya-stone); }
+
+  /* ======================= Tenets ======================= */
+  .tenets {
+    padding: 192px 80px;
+    background: #EFE6D2;
+  }
+  .tenets-head {
+    text-align: center; margin-bottom: 96px;
+  }
+  .tenets-head h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 44px; line-height: 1.2; margin: 16px 0 0;
+    max-width: 22ch;
+    margin-left: auto; margin-right: auto;
+    text-wrap: balance;
+  }
+  .tenets-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    max-width: 1280px; margin: 0 auto;
+  }
+  .tenet {
+    border-top: 1px solid var(--mtsya-deep-ink);
+    padding-top: 32px;
+  }
+  .tenet .num {
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--color-fg); font-weight: 500;
+    font-feature-settings: "lnum" 1;
+    margin-bottom: 24px;
+  }
+  .tenet h4 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 26px; line-height: 1.25; margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  .tenet p {
+    font-family: var(--font-serif); font-size: 16px;
+    line-height: 1.6; color: var(--color-fg); margin: 0;
+    max-width: none;
+  }
+
+  /* ======================= The fish ===================== */
+  .fish-section {
+    padding: 192px 80px;
+    background: var(--mtsya-deep-ink);
+    color: var(--mtsya-paper-cream);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 96px;
+    align-items: center;
+  }
+  .fish-section .left { text-align: center; }
+  .fish-section .left .emblem {
+    width: 320px; height: 320px;
+    display: inline-block;
+    filter: invert(1) sepia(0.05) brightness(1.05);
+  }
+  .fish-section .left .emblem img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+  }
+  .fish-section .left .deva {
+    font-family: var(--font-deva); font-weight: 300;
+    font-size: 64px; color: var(--mtsya-paper-cream);
+    margin-top: 32px;
+  }
+  .fish-section h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 44px; line-height: 1.2; margin: 0 0 32px;
+    color: var(--mtsya-paper-cream);
+    max-width: 18ch;
+    text-wrap: balance;
+  }
+  .fish-section .eyebrow {
+    color: rgba(245,241,234,0.55);
+    margin-bottom: 24px;
+  }
+  .fish-section p {
+    font-family: var(--font-serif); font-size: 18px;
+    line-height: 1.65; color: rgba(245,241,234,0.86);
+    margin: 0 0 20px; max-width: 52ch;
+  }
+  .fish-section a.read {
+    display: inline-block; margin-top: 32px;
+    font-family: var(--font-display); font-size: 22px;
+    color: var(--mtsya-paper-cream);
+    text-decoration: underline; text-underline-offset: 6px;
+  }
+
+  /* ======================= Quiet quotes ================= */
+  .quotes {
+    padding: 160px 80px;
+    text-align: center;
+  }
+  .quotes .eyebrow { margin-bottom: 64px; }
+  .quotes-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .quote q {
+    quotes: '“' '”';
+    font-family: var(--font-display); font-style: italic;
+    font-size: 22px; line-height: 1.45;
+    color: var(--color-fg);
+    display: block; margin-bottom: 24px;
+    text-wrap: balance;
+  }
+  .quote .src {
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mtsya-stone);
+  }
+
+  /* ======================= Journal ====================== */
+  .journal {
+    padding: 96px 80px 160px;
+    border-top: 1px solid var(--mtsya-rule);
+  }
+  .journal-head {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 64px;
+  }
+  .journal-head h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 36px; margin: 0;
+  }
+  .journal-head a.more {
+    font-family: var(--font-ui); font-size: 12px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--color-fg);
+    text-decoration: underline; text-underline-offset: 4px;
+  }
+  .journal-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+  .entry .panel {
+    aspect-ratio: 3/2;
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .entry .panel.a { background: #EFE6D2; }
+  .entry .panel.b { background: #B8BCB6; }
+  .entry .panel.c { background: #545A3D; }
+  .entry .date {
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mtsya-stone); font-feature-settings: "lnum" 1;
+    margin-bottom: 12px;
+  }
+  .entry h4 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 24px; line-height: 1.3; margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .entry p {
+    font-family: var(--font-serif); font-size: 16px;
+    line-height: 1.55; color: var(--mtsya-stone);
+    margin: 0; max-width: none;
+  }
+
+  /* ======================= Letters ====================== */
+  .letters {
+    padding: 128px 80px;
+    background: #EFE6D2;
+  }
+  .letters-inner {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 96px; align-items: center;
+  }
+  .letters h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 36px; line-height: 1.2; margin: 0 0 16px;
+    max-width: 14ch;
+    text-wrap: balance;
+  }
+  .letters p {
+    font-family: var(--font-serif); font-size: 17px;
+    line-height: 1.6; color: var(--color-fg);
+    margin: 0; max-width: 42ch;
+  }
+  .letters form {
+    display: flex; gap: 16px; align-items: flex-end;
+  }
+  .letters .input-wrap { flex: 1; }
+  .letters .input-label {
+    display: block;
+    font-family: var(--font-ui); font-size: 11px;
+    font-weight: 500; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--mtsya-stone);
+    margin-bottom: 8px;
+  }
+  .letters input {
+    display: block; width: 100%;
+    background: transparent; border: 0;
+    border-bottom: 1px solid var(--mtsya-deep-ink);
+    padding: 10px 0;
+    font-family: var(--font-serif); font-size: 17px;
+    color: var(--color-fg); outline: none;
+  }
+  .letters .btn {
+    font-family: var(--font-ui); font-size: 12px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    background: var(--mtsya-deep-ink);
+    color: var(--mtsya-paper-cream);
+    border: 1px solid var(--mtsya-deep-ink);
+    padding: 14px 28px;
+    cursor: pointer;
+  }
+  .letters small {
+    display: block; margin-top: 16px;
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.05em; color: var(--mtsya-stone);
+    font-style: italic;
+  }
+
+  /* ======================= Footer ======================= */
+  footer.site {
+    padding: 96px 80px 32px;
+    background: var(--mtsya-paper-cream);
+  }
+  .foot-grid {
+    max-width: 1440px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--mtsya-rule);
+  }
+  .foot-grid .col h5 {
+    font-family: var(--font-ui); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mtsya-stone); margin: 0 0 16px;
+  }
+  .foot-grid .col a {
+    display: block;
+    font-family: var(--font-serif); font-size: 16px;
+    color: var(--color-fg); margin: 8px 0;
+  }
+  .foot-grid .col a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .foot-grid .brand p {
+    font-family: var(--font-serif); font-style: italic;
+    font-size: 15px; color: var(--mtsya-stone);
+    margin: 16px 0 0; max-width: 28ch;
+  }
+  .foot-bottom {
+    max-width: 1440px; margin: 32px auto 0;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-ui); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--mtsya-stone);
+  }
+  .foot-bottom .deva {
+    font-family: var(--font-deva); font-weight: 300;
+    font-size: 14px; letter-spacing: 0.04em; text-transform: none;
+    color: var(--mtsya-stone);
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================ Header ============================ -->
+<header class="site" data-screen-label="Header">
+  <div class="wrap row">
+    <a href="#" class="word">mtsya</a>
+    <nav>
+      <a>shirts</a>
+      <a>tees</a>
+      <a>the story</a>
+      <a>journal</a>
+      <a>bag</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================ Hero =============================== -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="grain"></div>
+  <div class="hero-fish">
+    <img src="../../assets/logos/mtsya-fish.png" alt="mtsya">
+  </div>
+  <div class="hero-corner left">
+    <b>Edition 02</b>
+    five shirts · five tees<br>since 2024
+  </div>
+  <div class="hero-corner right">
+    <b>₹3,000</b>
+    Egyptian Giza · TENCEL Lyocell<br>made in india
+  </div>
+  <div class="hero-tag">
+    <div class="deva">मत्स्य</div>
+    <div class="en">the first form, the keeper, the guide</div>
+  </div>
+</section>
+
+<!-- ============================ Statement ========================= -->
+<section class="statement" data-screen-label="02 Statement">
+  <div class="eyebrow">a quiet wardrobe</div>
+  <h2>Five plain shirts. Five plain tees. <em>Colours a man can live inside for years.</em></h2>
+</section>
+
+<!-- ============================ The five ========================== -->
+<section class="five" data-screen-label="03 The Five">
+  <div class="five-head">
+    <h3>the five shirts</h3>
+    <div class="meta">
+      <b>₹3,000 each</b><br>
+      egyptian giza · tencel
+    </div>
+  </div>
+  <div class="five-grid">
+    <a class="shirt">
+      <div class="panel" style="background: #F4EFE5;" data-tag="MANU WHITE"></div>
+      <div class="shirt-meta">
+        <span class="shirt-name">Manu White</span>
+        <span class="shirt-price">₹3,000</span>
+      </div>
+      <div class="shirt-sub">the boat — what carries</div>
+    </a>
+    <a class="shirt" data-dark>
+      <div class="panel" style="background: #1B2A47;" data-tag="DELUGE INDIGO"></div>
+      <div class="shirt-meta">
+        <span class="shirt-name">Deluge Indigo</span>
+        <span class="shirt-price">₹3,000</span>
+      </div>
+      <div class="shirt-sub">the night — when the rain came</div>
+    </a>
+    <a class="shirt">
+      <div class="panel" style="background: #EFE6D2;" data-tag="VEDA CREAM"></div>
+      <div class="shirt-meta">
+        <span class="shirt-name">Veda Cream</span>
+        <span class="shirt-price">₹3,000</span>
+      </div>
+      <div class="shirt-sub">old paper — preserved</div>
+    </a>
+    <a class="shirt">
+      <div class="panel" style="background: #B8BCB6;" data-tag="TIDE STONE"></div>
+      <div class="shirt-meta">
+        <span class="shirt-name">Tide Stone</span>
+        <span class="shirt-price">₹3,000</span>
+      </div>
+      <div class="shirt-sub">wet rock — the boat rested</div>
+    </a>
+    <a class="shirt" data-dark>
+      <div class="panel" style="background: #545A3D;" data-tag="COAST OLIVE"></div>
+      <div class="shirt-meta">
+        <span class="shirt-name">Coast Olive</span>
+        <span class="shirt-price">₹3,000</span>
+      </div>
+      <div class="shirt-sub">dry land — life again</div>
+    </a>
+  </div>
+</section>
+
+<!-- ============================ Letter ============================ -->
+<section class="letter" data-screen-label="04 Letter">
+  <div class="letter-inner">
+    <div class="eyebrow">a letter from the studio</div>
+    <p>There was a deluge. A boat was carried through it, tied to the horn of a fish, and what the boat carried became the world.</p>
+    <p>A wardrobe is a small thing. It is, in the end, fewer than a hundred objects. The working part of it — the part a man actually reaches for — is fewer than thirty. Of those, fewer than ten will see him through the year that matters. There is, somewhere in that drawer, a single shirt he packs first. He does not always know which one. But there is one.</p>
+    <p class="pull">MTSYA makes those things. Not collections, not seasons, not trends.</p>
+    <p>Five plain shirts and five plain T-shirts in Egyptian Giza cotton woven with TENCEL Lyocell, ₹3,000 each. Colours a man can live inside for years. Details that are felt rather than seen.</p>
+    <p>This is not minimalism. Minimalism is a style, and styles change. This is something older. This is what the fish carried in the boat.</p>
+    <div class="signoff">
+      <span class="fish"><img src="../../assets/logos/mtsya-fish.png" alt=""></span>
+      <div class="name">— kushal at mtsya</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Cloth ============================= -->
+<section class="cloth" data-screen-label="05 Cloth">
+  <div class="cloth-image">
+    <div class="hairlines"></div>
+    <div class="label">cloth · 60 giza · 40 tencel · 130 gsm</div>
+  </div>
+  <div class="cloth-text">
+    <div class="eyebrow">the cloth</div>
+    <h3>Egyptian Giza, woven with TENCEL Lyocell.</h3>
+    <p>A 60/40 blend in a 130 gsm twill. The Giza gives the shirt its hand and its memory of pressing; the lyocell gives it drape and the way it falls back into shape after a day in the heat.</p>
+    <p>One mill in Coimbatore. One pattern, refined for two years before we cut the first run. Buttons turned from corozo nut. Seam allowance that lets a tailor open the shirt and let it out, twice, over a decade.</p>
+    <dl class="specs">
+      <div class="row"><dt>blend</dt><dd>60 % Egyptian Giza · 40 % TENCEL Lyocell</dd></div>
+      <div class="row"><dt>weight</dt><dd>130 gsm <em>· soft enough to pack, weighty enough to fall</em></dd></div>
+      <div class="row"><dt>weave</dt><dd>2/1 twill, single-needle, 14 spi</dd></div>
+      <div class="row"><dt>buttons</dt><dd>Corozo nut, four-hole, hand-finished</dd></div>
+      <div class="row"><dt>made</dt><dd>Coimbatore, Tamil Nadu</dd></div>
+      <div class="row"><dt>care</dt><dd>Cold wash · line dry · iron warm</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================ Tenets ============================ -->
+<section class="tenets" data-screen-label="06 Tenets">
+  <div class="tenets-head">
+    <div class="eyebrow">the discipline</div>
+    <h3>Five things we will not do, no matter who asks.</h3>
+  </div>
+  <div class="tenets-grid">
+    <div class="tenet">
+      <div class="num">tenet · 01</div>
+      <h4>No collections, no seasons.</h4>
+      <p>Ten garments. The same ten. We do not refresh, drop, or rotate. When something is replaced, the older edition is named and dated.</p>
+    </div>
+    <div class="tenet">
+      <div class="num">tenet · 02</div>
+      <h4>One price. ₹3,000.</h4>
+      <p>Same price for every shirt and every tee. No discounting, no sales, no codes, no early-access. The price is the price; the cloth is the cloth.</p>
+    </div>
+    <div class="tenet">
+      <div class="num">tenet · 03</div>
+      <h4>Repair before replace.</h4>
+      <p>We hold matching cloth and buttons for ten years. Send it back; we mend it. The first repair is on us.</p>
+    </div>
+    <div class="tenet">
+      <div class="num">tenet · 04</div>
+      <h4>Quiet, never loud.</h4>
+      <p>No logo on the outside. No emoji. No exclamation marks. The garment speaks when the wearer chooses to. Until then, it does its work.</p>
+    </div>
+    <div class="tenet">
+      <div class="num">tenet · 05</div>
+      <h4>The studio answers.</h4>
+      <p>One inbox, read by us. A reply within two working days. No chatbots, no tickets, no "your call is important to us."</p>
+    </div>
+    <div class="tenet">
+      <div class="num">tenet · 06</div>
+      <h4>The fish stays the fish.</h4>
+      <p>The mark is older than the brand. We do not animate it, gradient it, or stretch it for a banner. It sits, and it watches.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ The fish ========================== -->
+<section class="fish-section" data-screen-label="07 The Fish">
+  <div class="left">
+    <span class="emblem"><img src="../../assets/logos/mtsya-fish.png" alt=""></span>
+    <div class="deva">मत्स्य</div>
+  </div>
+  <div class="right">
+    <div class="eyebrow">the story</div>
+    <h3>Why a fish carries a boat through the flood.</h3>
+    <p>In the oldest telling, the world is ending. A small fish appears in a man's cupped hands, asks to be kept safe, and grows. It grows past the bowl, past the river, past the ocean. When the deluge comes, the fish returns, and tells the man to build a boat, and to tie it to the horn that has grown on its head.</p>
+    <p>The fish pulls the boat through the storm. What the boat carried became the world.</p>
+    <p>We did not choose the name lightly. A wardrobe, like that boat, carries forward what is worth keeping. We make the few things you would tie to a horn.</p>
+    <a class="read" href="#">read the full story →</a>
+  </div>
+</section>
+
+<!-- ============================ Quotes ============================ -->
+<section class="quotes" data-screen-label="08 Said of MTSYA">
+  <div class="eyebrow">said of mtsya</div>
+  <div class="quotes-grid">
+    <div class="quote">
+      <q>The shirt does not announce itself. It is the one I packed first when I left for a year, and the one I unpacked last when I came home.</q>
+      <div class="src">A. Mehta · Bangalore · letter, march 2026</div>
+    </div>
+    <div class="quote">
+      <q>I have washed it 84 times. The collar is still the collar. The cuffs still close. I keep waiting for it to give in. It does not.</q>
+      <div class="src">R. Subramaniam · chennai · letter, jan 2026</div>
+    </div>
+    <div class="quote">
+      <q>An object made by people who have decided what they will not do. That, more than the cloth, is what one is paying for.</q>
+      <div class="src">The Voice of fashion · november 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Journal =========================== -->
+<section class="journal" data-screen-label="09 Journal">
+  <div class="journal-head">
+    <h3>from the journal</h3>
+    <a class="more">read all entries →</a>
+  </div>
+  <div class="journal-grid">
+    <article class="entry">
+      <div class="panel a"></div>
+      <div class="date">04 may 2026 · field note</div>
+      <h4>The first wash, and what it tells you.</h4>
+      <p>Why we ship the shirt unwashed; what the first cold wash does to the Giza; how to read the cloth the morning after.</p>
+    </article>
+    <article class="entry">
+      <div class="panel b"></div>
+      <div class="date">22 march 2026 · studio</div>
+      <h4>Why a corozo button, and not a shell.</h4>
+      <p>Two years of testing. Six rejected suppliers. The case for a nut over a shell, in writing, with photographs of failure.</p>
+    </article>
+    <article class="entry">
+      <div class="panel c"></div>
+      <div class="date">11 february 2026 · letter</div>
+      <h4>A reply to a reader who asked why we do not do black.</h4>
+      <p>Black is a finish, not a colour. Coast Olive is a colour. The difference matters, and we have a thousand words on it.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ Letters =========================== -->
+<section class="letters" data-screen-label="10 Letters">
+  <div class="letters-inner">
+    <div>
+      <div class="eyebrow">letters, twice a year</div>
+      <h3>A note from the studio. Nothing more.</h3>
+      <p>Two letters a year. One when a new edition is cut, one in the off-season. No marketing, no urgency, no countdowns. We have never sent a third.</p>
+    </div>
+    <div>
+      <form onsubmit="event.preventDefault();">
+        <div class="input-wrap">
+          <label class="input-label" for="email">your email</label>
+          <input id="email" type="email" placeholder="you@somewhere.com">
+        </div>
+        <button class="btn" type="submit">subscribe</button>
+      </form>
+      <small>two letters a year. unsubscribe in one click.</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Footer ============================ -->
+<footer class="site" data-screen-label="Footer">
+  <div class="foot-grid">
+    <div class="col brand">
+      <span class="word">mtsya</span>
+      <p>the wardrobe that endures the deluge.</p>
+    </div>
+    <div class="col">
+      <h5>shop</h5>
+      <a>shirts</a>
+      <a>tees</a>
+      <a>gift card</a>
+      <a>repair</a>
+    </div>
+    <div class="col">
+      <h5>house</h5>
+      <a>the story</a>
+      <a>the cloth</a>
+      <a>journal</a>
+      <a>contact</a>
+    </div>
+    <div class="col">
+      <h5>service</h5>
+      <a>shipping</a>
+      <a>returns</a>
+      <a>care</a>
+      <a>privacy</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 mtsya · made in india</span>
+    <span class="deva">मत्स्य · the first form, the keeper, the guide</span>
+    <span>instagram · letters</span>
+  </div>
+</footer>
+
+</body>
+</html>

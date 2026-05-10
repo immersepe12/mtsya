@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Iconography rule</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:24px 32px;display:grid;grid-template-columns:1fr 1fr;gap:14px 48px;}
+  .row{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:16px;}
+  .icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--color-fg-2);text-decoration:line-through;text-decoration-thickness:1px;font-family:var(--font-ui);}
+  .text{font-family:var(--font-ui);font-size:13px;letter-spacing:.05em;color:var(--color-fg);}
+  .text b{font-family:var(--font-ui);font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--color-fg);font-weight:500;display:block;}
+  .text i{font-family:var(--font-serif);font-style:italic;color:var(--color-fg-2);font-size:13px;letter-spacing:0;display:block;margin-top:4px;}
+</style></head>
+<body><div class="wrap">
+  <div class="row"><div class="icon">🛒</div><div class="text"><b>bag (2)</b><i>cart icon → text link</i></div></div>
+  <div class="row"><div class="icon">≡</div><div class="text"><b>menu</b><i>hamburger → text link</i></div></div>
+  <div class="row"><div class="icon">🔍</div><div class="text"><b>search</b><i>magnifier → text link</i></div></div>
+  <div class="row"><div class="icon">👤</div><div class="text"><b>account</b><i>avatar → text link</i></div></div>
+  <div class="row"><div class="icon">★</div><div class="text"><b>—</b><i>no ratings exist</i></div></div>
+  <div class="row"><div class="icon">♡</div><div class="text"><b>—</b><i>no wishlist exists</i></div></div>
+</div></body></html>

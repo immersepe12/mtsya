@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Borders & radii</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:24px 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .item{display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+  .swatch{width:140px;height:80px;background:transparent;}
+  .hairline{border:1px solid #BFC4C9;}
+  .emphasis{border:2px solid #1F3A4D;}
+  .none{border:1px dashed rgba(31,58,77,.2);}
+  .fill{background:#1F3A4D;}
+  .label{font-family:var(--font-ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-fg-2);}
+  .label b{color:var(--color-fg);display:block;font-weight:500;font-family:var(--font-display);font-size:16px;letter-spacing:0;text-transform:none;margin-bottom:4px;}
+  .x{font-family:var(--font-serif);font-style:italic;font-size:13px;color:#C9603A;margin-top:2px;}
+</style></head>
+<body><div class="wrap">
+  <div class="item"><div class="swatch hairline"></div><div class="label"><b>Hairline</b>1 px · #BFC4C9</div></div>
+  <div class="item"><div class="swatch emphasis"></div><div class="label"><b>Emphasis</b>2 px · Deep Ink</div></div>
+  <div class="item"><div class="swatch fill" style="border-radius:0;"></div><div class="label"><b>Radius 0</b>default · always</div></div>
+  <div class="item"><div class="swatch none" style="box-shadow:0 8px 24px rgba(0,0,0,.18);"></div><div class="label"><b>Shadow</b>never<span class="x">drop shadows betray the brand</span></div></div>
+</div></body></html>

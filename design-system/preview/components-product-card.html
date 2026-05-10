@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Product card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:24px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;}
+  .card{display:flex;flex-direction:column;gap:16px;}
+  .img{aspect-ratio:4/5;background:linear-gradient(180deg,#F4EFE5 0%,#EFE6D2 100%);position:relative;}
+  .img.b{background:#1B2A47;}
+  .img.c{background:#B8BCB6;}
+  .img::after{content:attr(data-tag);position:absolute;bottom:10px;right:12px;font-family:var(--font-ui);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(31,58,77,.4);}
+  .img.b::after{color:rgba(244,239,229,.6);}
+  .name{font-family:var(--font-display);font-size:18px;color:var(--color-fg);}
+  .sub{font-family:var(--font-serif);font-style:italic;font-size:14px;color:var(--color-fg-2);margin-top:-10px;}
+  .price{font-family:var(--font-ui);font-size:14px;color:var(--color-fg);font-feature-settings:"onum" 1;margin-top:-6px;}
+</style></head>
+<body><div class="wrap">
+  <div class="card"><div class="img" data-tag="manu white"></div><div class="name">Manu White</div><div class="sub">the boat — what carries</div><div class="price">₹3,000</div></div>
+  <div class="card"><div class="img b" data-tag="deluge indigo"></div><div class="name">Deluge Indigo</div><div class="sub">the night — when the rain came</div><div class="price">₹3,000</div></div>
+  <div class="card"><div class="img c" data-tag="tide stone"></div><div class="name">Tide Stone</div><div class="sub">wet rock — the boat rested</div><div class="price">₹3,000</div></div>
+</div></body></html>

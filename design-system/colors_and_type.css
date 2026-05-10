@@ -1,0 +1,297 @@
+/* ============================================================
+   MTSYA · colors_and_type.css
+   The atomic visual tokens for the brand.
+   Read alongside README.md (sections "Visual Foundations" + "Iconography").
+   ============================================================ */
+
+/* ---- Type imports ----------------------------------------------------------
+   EB Garamond is now self-hosted from /fonts/ (variable font, weight 400–800).
+   Inter (UI substitute for Optima) and Mukta Mahee (Devanagari) are still
+   loaded from Google Fonts until the licensed Optima files arrive. */
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-Regular.ttf')        format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-Italic.ttf')         format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-Medium.ttf')         format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-MediumItalic.ttf')   format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-SemiBold.ttf')       format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-SemiBoldItalic.ttf') format('truetype'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-Bold.ttf')           format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-BoldItalic.ttf')     format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-ExtraBold.ttf')      format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('fonts/EBGaramond-ExtraBoldItalic.ttf') format('truetype'); font-weight: 800; font-style: italic; font-display: swap; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mukta+Mahee:wght@300;400;600&display=swap');
+
+:root {
+  /* ---- Colour ------------------------------------------------------------ */
+
+  /* Brand palette */
+  --mtsya-paper-cream: #F5F1EA;   /* 75 % — default background, the brand's air */
+  --mtsya-deep-ink:    #1F3A4D;   /* 20 % — text, wordmark, fish, primary fill  */
+  --mtsya-stone:       #5A6B78;   /*  3 % — captions, secondary text            */
+  --mtsya-quiet:       #9DA8B2;   /*  1 % — disabled, placeholders, tertiary    */
+  --mtsya-rule:        #BFC4C9;   /*  1 % — hairline dividers, image frames     */
+  --mtsya-terracotta:  #C9603A;   /*  1 % only — wax-seal moments, never fills  */
+  --mtsya-deep-ink-hover: #15293A;/* primary button hover state                 */
+  --mtsya-mfg-black:   #000000;   /* care labels in print only — NEVER on web   */
+
+  /* Product palette — used ONLY inside product photography.
+     Never as UI colour, section background, button, or link. */
+  --mtsya-manu-white:    #F4EFE5;
+  --mtsya-deluge-indigo: #1B2A47;
+  --mtsya-veda-cream:    #EFE6D2;
+  --mtsya-tide-stone:    #B8BCB6;
+  --mtsya-coast-olive:   #545A3D;
+
+  /* ---- Semantic colour tokens ------------------------------------------- */
+  --color-bg:       var(--mtsya-paper-cream);
+  --color-fg:       var(--mtsya-deep-ink);
+  --color-fg-2:     var(--mtsya-stone);
+  --color-fg-3:     var(--mtsya-quiet);
+  --color-rule:     var(--mtsya-rule);
+  --color-accent:   var(--mtsya-terracotta);
+
+  --color-link:           var(--mtsya-deep-ink);
+  --color-link-hover:     var(--mtsya-deep-ink);
+  --color-button-bg:      var(--mtsya-deep-ink);
+  --color-button-fg:      var(--mtsya-paper-cream);
+  --color-button-hover:   var(--mtsya-deep-ink-hover);
+  --color-button-disabled:var(--mtsya-stone);
+  --color-input-border:   var(--mtsya-stone);
+  --color-input-focus:    var(--mtsya-deep-ink);
+  --color-input-error:    var(--mtsya-terracotta);
+  --color-placeholder:    var(--mtsya-quiet);
+
+  /* ---- Type families ---------------------------------------------------- */
+  --font-display: 'EB Garamond', 'Adobe Caslon Pro', 'Caslon', Georgia, serif; /* wordmark + headlines */
+  --font-serif:   'EB Garamond', 'Adobe Caslon Pro', 'Caslon', Georgia, serif; /* body — same family */
+  --font-ui:      'Inter', 'Optima', 'Avenir', system-ui, sans-serif;          /* buttons, captions   */
+  --font-deva:    'Mukta Mahee', 'Noto Sans Devanagari', system-ui, sans-serif;/* मत्स्य + Hindi */
+
+  /* ---- Type scale (px) — desktop ---------------------------------------- */
+  --text-wordmark-size:   80px;   /* hero wordmark, 64–96 range */
+  --text-wordmark-lh:     1.05;
+  --text-wordmark-weight: 700;
+  --text-wordmark-track:  0.2em;  /* +200 */
+
+  --text-h1-size:   44px;
+  --text-h1-lh:     1.20;
+  --text-h2-size:   30px;
+  --text-h2-lh:     1.30;
+
+  --text-eyebrow-size:  14px;
+  --text-eyebrow-lh:    1.30;
+  --text-eyebrow-track: 0.2em;
+  --text-eyebrow-weight:500;
+
+  --text-body-size: 18px;
+  --text-body-lh:   1.55;
+  --text-body-meas: 65ch;        /* the canonical reading column */
+
+  --text-caption-size:  13px;
+  --text-caption-lh:    1.45;
+  --text-caption-track: 0.02em;
+
+  --text-button-size:   13px;
+  --text-button-lh:     1.0;
+  --text-button-track:  0.15em;
+  --text-button-weight: 500;
+
+  /* ---- Spacing scale (8 px only) ---------------------------------------- */
+  --space-xs:  8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 96px;
+  --space-2xl: 128px;
+
+  /* ---- Layout ----------------------------------------------------------- */
+  --layout-max:        1440px;
+  --layout-gutter:     24px;
+  --layout-margin-d:   80px;     /* desktop side margin */
+  --layout-margin-m:   24px;     /* mobile side margin  */
+  --layout-cols:       12;
+
+  /* ---- Borders, radii, shadows ------------------------------------------ */
+  --radius-none: 0;
+  --radius-sm:   2px;            /* rare, only when absolutely needed */
+  --border-hairline: 1px solid var(--mtsya-rule);
+  --border-emphasis: 2px solid var(--mtsya-deep-ink);
+  --shadow: none;                /* drop shadows betray the brand */
+
+  /* ---- Motion ----------------------------------------------------------- */
+  --motion-fast:   200ms ease;   /* the only allowed motion */
+}
+
+/* ============================================================
+   Semantic element styles
+   ============================================================ */
+
+html, body {
+  background: var(--color-bg);
+  color:      var(--color-fg);
+  font-family: var(--font-serif);
+  font-size:  var(--text-body-size);
+  line-height:var(--text-body-lh);
+  font-feature-settings: "onum" 1;       /* oldstyle figures in body */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Wordmark — lowercase, wide-tracked, the only place the brand "shouts" */
+.mtsya-wordmark {
+  font-family: var(--font-display);
+  font-weight: var(--text-wordmark-weight);
+  font-size:   var(--text-wordmark-size);
+  line-height: var(--text-wordmark-lh);
+  letter-spacing: var(--text-wordmark-track);
+  text-transform: lowercase;
+  color: var(--color-fg);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size:   var(--text-h1-size);
+  line-height: var(--text-h1-lh);
+  letter-spacing: 0;
+  color: var(--color-fg);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size:   var(--text-h2-size);
+  line-height: var(--text-h2-lh);
+  letter-spacing: 0;
+  color: var(--color-fg);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-weight: var(--text-eyebrow-weight);
+  font-size:   var(--text-eyebrow-size);
+  line-height: var(--text-eyebrow-lh);
+  letter-spacing: var(--text-eyebrow-track);
+  text-transform: uppercase;
+  color: var(--color-fg-2);
+}
+
+p, .body {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size:   var(--text-body-size);
+  line-height: var(--text-body-lh);
+  color: var(--color-fg);
+  text-align: left;                /* justified-left, ragged-right */
+  max-width: var(--text-body-meas);
+  margin: 0 0 var(--space-sm);
+  font-feature-settings: "onum" 1; /* oldstyle figures in body */
+}
+
+.caption {
+  font-family: var(--font-ui);
+  font-size:   var(--text-caption-size);
+  line-height: var(--text-caption-lh);
+  letter-spacing: var(--text-caption-track);
+  color: var(--color-fg-2);
+}
+
+.italic-note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-fg-2);
+}
+
+.price {
+  font-family: var(--font-ui);
+  font-feature-settings: "lnum" 1; /* lining figures for prices */
+  color: var(--color-fg);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+hr.divider {
+  border: 0;
+  border-top: var(--border-hairline);
+  margin: var(--space-lg) 0;
+}
+
+/* ---- Buttons (the only two) ---------------------------------------------- */
+.btn {
+  font-family: var(--font-ui);
+  font-size:   var(--text-button-size);
+  line-height: var(--text-button-lh);
+  font-weight: var(--text-button-weight);
+  letter-spacing: var(--text-button-track);
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--motion-fast), color var(--motion-fast), border-color var(--motion-fast);
+  display: inline-block;
+  text-align: center;
+}
+.btn--primary {
+  background: var(--color-button-bg);
+  color: var(--color-button-fg);
+  border-color: var(--color-button-bg);
+}
+.btn--primary:hover { background: var(--color-button-hover); border-color: var(--color-button-hover); text-decoration: none; }
+.btn--primary[disabled] { background: var(--color-button-disabled); border-color: var(--color-button-disabled); cursor: not-allowed; }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-fg);
+  border-color: var(--color-fg);
+}
+.btn--ghost:hover { background: var(--color-fg); color: var(--color-button-fg); text-decoration: none; }
+
+/* ---- Inputs (bottom-border only) ----------------------------------------- */
+.input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-input-border);
+  padding: 12px 0;
+  font-family: var(--font-serif);
+  font-size: 17px;
+  color: var(--color-fg);
+  border-radius: 0;
+  outline: none;
+  transition: border-color var(--motion-fast), border-width var(--motion-fast);
+}
+.input::placeholder { color: var(--color-placeholder); }
+.input:focus { border-bottom: 2px solid var(--color-input-focus); padding-bottom: 11px; }
+.input--error { border-bottom-color: var(--color-input-error); }
+.input-label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-fg-2);
+  margin-bottom: 8px;
+}
+
+/* ---- Image frame --------------------------------------------------------- */
+img, .image-frame {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  max-width: 100%;
+}

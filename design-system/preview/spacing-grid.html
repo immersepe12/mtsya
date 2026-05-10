@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Grid</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:24px 32px;}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;height:120px;}
+  .col{background:rgba(31,58,77,.08);border:1px solid rgba(31,58,77,.12);}
+  .meta{display:flex;justify-content:space-between;margin-top:14px;font-family:var(--font-ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-fg-2);}
+  .meta b{color:var(--color-fg);font-weight:500;}
+</style></head>
+<body><div class="wrap">
+  <div class="grid">
+    <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+    <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+    <div class="col"></div><div class="col"></div><div class="col"></div><div class="col"></div>
+  </div>
+  <div class="meta">
+    <span><b>12 columns</b></span>
+    <span><b>24 px</b> gutters</span>
+    <span><b>1440 px</b> max</span>
+    <span><b>80 / 24 px</b> margins</span>
+  </div>
+</div></body></html>

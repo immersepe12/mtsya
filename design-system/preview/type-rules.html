@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Type rules</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:24px 32px;display:grid;grid-template-columns:1fr 1fr;gap:14px 48px;}
+  .rule{display:flex;gap:14px;align-items:baseline;}
+  .yn{font-family:var(--font-ui);font-size:11px;letter-spacing:.2em;text-transform:uppercase;width:28px;flex:none;}
+  .ok{color:#1F3A4D;}
+  .no{color:#C9603A;}
+  .demo{font-family:var(--font-serif);font-size:17px;color:var(--color-fg);line-height:1.4;}
+  .demo b{font-weight:700;}
+  .demo i{font-style:italic;}
+  .crossed{text-decoration:line-through;text-decoration-color:#C9603A;text-decoration-thickness:1px;color:var(--color-fg-2);}
+  .label{font-family:var(--font-ui);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-fg-2);margin-left:8px;}
+</style></head>
+<body><div class="wrap">
+  <div class="rule"><span class="yn ok">do</span><span class="demo">'smart quotes always'</span></div>
+  <div class="rule"><span class="yn no">no</span><span class="demo crossed">"straight quotes"</span></div>
+  <div class="rule"><span class="yn ok">do</span><span class="demo">₹3,000<span class="label">currency</span></span></div>
+  <div class="rule"><span class="yn no">no</span><span class="demo crossed">Rs. 3000 / INR 3,000</span></div>
+  <div class="rule"><span class="yn ok">do</span><span class="demo"><i>matsya, pralaya</i><span class="label">italic for foreign words</span></span></div>
+  <div class="rule"><span class="yn no">no</span><span class="demo crossed"><i>this is important</i><span class="label" style="text-decoration:none;">italic for emphasis</span></span></div>
+  <div class="rule"><span class="yn ok">do</span><span class="demo">17 · 18 · 1,440<span class="label">oldstyle in body</span></span></div>
+  <div class="rule"><span class="yn no">no</span><span class="demo crossed"><b>bold body text</b></span></div>
+</div></body></html>

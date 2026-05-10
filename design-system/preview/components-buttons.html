@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--color-bg);}
+  .wrap{padding:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px 16px;align-items:start;}
+  .group{display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+  .label{font-family:var(--font-ui);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--color-fg-2);}
+</style></head>
+<body><div class="wrap">
+  <div class="group"><span class="label">Primary · default</span><button class="btn btn--primary">Add to bag</button></div>
+  <div class="group"><span class="label">Primary · hover</span><button class="btn btn--primary" style="background:#15293A;border-color:#15293A;">Add to bag</button></div>
+  <div class="group"><span class="label">Primary · disabled</span><button class="btn btn--primary" disabled>Add to bag</button></div>
+  <div class="group"><span class="label">Ghost · default</span><button class="btn btn--ghost">Continue</button></div>
+  <div class="group"><span class="label">Ghost · hover</span><button class="btn btn--ghost" style="background:#1F3A4D;color:#F5F1EA;">Continue</button></div>
+  <div class="group"><span class="label">Full width</span><button class="btn btn--primary" style="width:100%">Place order · ₹3,000</button></div>
+</div></body></html>
