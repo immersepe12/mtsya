@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MTSYA · DELUGE 01 — rate the drop</title>
+<meta name="description" content="Rate the MTSYA DELUGE 01 designs." />
+<style>
+  :root{
+    --ink:#0e1820; --ink-2:#132330; --line:#2b4356;
+    --cream:#ece6da; --muted:#93a7b6; --muted-2:#6c8497;
+    --blue:#7fa6c9; --blue-deep:#26506e; --sel:#8fb3d4;
+    --serif:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua','EB Garamond',Georgia,serif;
+    --ui:'Inter','Helvetica Neue',Arial,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--ink); color:var(--cream); font-family:var(--ui);
+    -webkit-font-smoothing:antialiased; line-height:1.5;
+    background-image:radial-gradient(1200px 600px at 50% -10%, #1a2f3f 0%, var(--ink) 60%);
+    min-height:100vh;
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px}
+  header{text-align:center; padding:72px 24px 40px}
+  .mark{font-family:var(--serif); font-weight:700; letter-spacing:.28em;
+    font-size:clamp(30px,6vw,52px); text-indent:.28em; margin:0}
+  .deva{font-size:15px; letter-spacing:.1em; color:var(--muted); margin:10px 0 0}
+  .drop{font-family:var(--ui); letter-spacing:.34em; font-size:12px; text-transform:uppercase;
+    color:var(--blue); margin:26px 0 0}
+  h1{font-family:var(--serif); font-weight:500; font-size:clamp(24px,4vw,34px);
+    margin:14px 0 0; letter-spacing:.01em}
+  .lede{max-width:60ch; margin:16px auto 0; color:var(--muted); font-size:16px}
+  .scalekey{margin:18px auto 0; color:var(--muted-2); font-size:13px; letter-spacing:.04em}
+  .scalekey b{color:var(--muted); font-weight:600}
+
+  .namebar{max-width:520px; margin:34px auto 0; display:flex; flex-direction:column; gap:8px; text-align:left}
+  .namebar label{font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted-2)}
+  .namebar input{
+    background:transparent; border:0; border-bottom:1px solid var(--line);
+    color:var(--cream); font-family:var(--serif); font-size:20px; padding:10px 2px; outline:none;
+    transition:border-color .2s ease;
+  }
+  .namebar input:focus{border-bottom-color:var(--blue)}
+  .namebar input::placeholder{color:var(--muted-2)}
+
+  .count{position:sticky; top:0; z-index:5; background:linear-gradient(var(--ink),#0e1820ee);
+    backdrop-filter:blur(6px); text-align:center; padding:14px 0; margin-top:40px;
+    border-bottom:1px solid var(--line); font-size:13px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--muted)}
+  .count b{color:var(--cream); font-weight:600}
+
+  .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px; padding:36px 0 20px}
+  @media (max-width:720px){ .grid{grid-template-columns:1fr; gap:22px} header{padding-top:52px} }
+
+  .card{background:var(--ink-2); border:1px solid var(--line); border-radius:2px; overflow:hidden;
+    display:flex; flex-direction:column; transition:border-color .2s ease}
+  .card.rated{border-color:var(--sel)}
+  .imgwrap{position:relative; background:#0b141b; aspect-ratio:1/1; overflow:hidden}
+  .imgwrap img{width:100%; height:100%; object-fit:cover; display:block; opacity:.96;
+    transition:opacity .2s ease, transform .3s ease}
+  .card:hover .imgwrap img{opacity:1; transform:scale(1.02)}
+  .score-badge{position:absolute; top:12px; right:12px; font-size:13px; letter-spacing:.06em;
+    font-family:var(--serif); background:#0e1820cc; color:var(--sel); border:1px solid var(--blue-deep);
+    padding:5px 12px; border-radius:2px; opacity:0; transition:opacity .2s ease}
+  .card.rated .score-badge{opacity:1}
+
+  .meta{padding:18px 18px 20px; display:flex; flex-direction:column; gap:6px; flex:1}
+  .code{font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--blue)}
+  .name{font-family:var(--serif); font-size:22px; margin:0}
+  .fabric{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted-2)}
+  .story{color:var(--muted); font-size:14px; margin:4px 0 0; flex:1}
+
+  .raterow{display:flex; align-items:center; gap:12px; margin-top:18px}
+  .rating{display:flex; gap:8px}
+  .pip{width:38px; height:38px; border:1px solid var(--line); border-radius:50%;
+    background:transparent; color:var(--muted-2); font-size:13px; font-weight:600;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    transition:all .15s ease; font-family:var(--ui)}
+  .pip:hover{border-color:var(--blue)}
+  .pip.on{background:var(--blue-deep); border-color:var(--blue-deep); color:#fff}
+  .pip.top{background:var(--blue); border-color:var(--blue); color:var(--ink)}
+  .rate-hint{font-size:12px; color:var(--muted-2); letter-spacing:.02em}
+
+  .foot{max-width:560px; margin:8px auto 0; padding:20px 0 80px; text-align:center}
+  .comment{width:100%; background:transparent; border:1px solid var(--line); border-radius:2px;
+    color:var(--cream); font-family:var(--serif); font-size:16px; padding:12px; outline:none;
+    resize:vertical; min-height:70px}
+  .comment:focus{border-color:var(--blue)}
+  .submit{margin-top:20px; width:100%; padding:18px; background:var(--cream); color:var(--ink);
+    border:1px solid var(--cream); font-size:13px; font-family:var(--ui); letter-spacing:.14em;
+    text-transform:uppercase; font-weight:600; cursor:pointer; border-radius:2px; transition:background .2s ease}
+  .submit:hover{background:#fff}
+  .submit:disabled{opacity:.4; cursor:not-allowed}
+  .note{font-size:13px; color:var(--muted-2); margin-top:14px; min-height:18px}
+  .note.err{color:#d98a6a}
+
+  .done{display:none; text-align:center; padding:100px 24px}
+  .done .mark{margin-bottom:16px}
+  .done h2{font-family:var(--serif); font-weight:500; font-size:30px; margin:0 0 10px}
+  .done p{color:var(--muted); max-width:46ch; margin:0 auto}
+
+  .setup{max-width:760px; margin:0 auto 40px; padding:16px 20px; border:1px dashed #7a5a3a;
+    background:#20140b; color:#e6c8a8; border-radius:2px; font-size:14px; display:none}
+  .setup code{background:#00000033; padding:2px 6px; border-radius:3px; font-family:ui-monospace,monospace}
+</style>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <p class="mark">mtsya</p>
+      <p class="deva">मत्स्य</p>
+      <p class="drop">Deluge 01 — the vote</p>
+      <h1>Rate the drop</h1>
+      <p class="lede">Eight studies for the first drop. Each carries the same story a different way — through the cloth, never a print. Add your name, then give every piece a score from one to five.</p>
+      <p class="scalekey"><b>1</b> not for me &nbsp;·&nbsp; <b>3</b> it's fine &nbsp;·&nbsp; <b>5</b> would buy today</p>
+    </header>
+
+    <div class="setup" id="setup">
+      <strong>Setup needed:</strong> paste your Formspree form ID into <code>FORMSPREE_ID</code> near the top of the
+      <code>&lt;script&gt;</code> in this file. Until then, votes won't send.
+    </div>
+
+    <div class="wrap">
+      <div class="namebar">
+        <label for="name">Your name</label>
+        <input id="name" type="text" autocomplete="name" placeholder="e.g. Kushal" />
+      </div>
+    </div>
+
+    <div class="count"><span id="countText">Rate each piece 1–5</span></div>
+
+    <div class="wrap">
+      <div class="grid" id="grid"></div>
+
+      <div class="foot">
+        <textarea class="comment" id="comment" placeholder="Anything to add? (optional) — colour, fit, a piece we're missing…"></textarea>
+        <button class="submit" id="submit">Submit my ratings</button>
+        <p class="note" id="note"></p>
+      </div>
+    </div>
+  </main>
+
+  <section class="done" id="done">
+    <p class="mark">mtsya</p>
+    <h2>Your ratings are in.</h2>
+    <p>Thank you — the water keeps what's worth keeping. We'll tally the drop and share what survives.</p>
+  </section>
+
+<script>
+  // ============================================================
+  //  Formspree form ID (the part after /f/ in your endpoint).
+  // ============================================================
+  const FORMSPREE_ID = "mnjkloza";
+
+  // ---- The designs. Add/remove by editing this list + dropping an image in ./designs ----
+  const DESIGNS = [
+    { code:"TIDE",    name:"Tide",    img:"designs/01-tide.png",     fabric:"Washed jersey · back scale field",
+      story:"A tonal scale tide rises up the back and recedes; a salt waterline crosses the chest." },
+    { code:"DELUGE",  name:"Deluge",  img:"designs/02-deluge.jpeg",  fabric:"Indigo dip-dye",
+      story:"Deep indigo climbs the body and dissolves into pale — the flood at its full height." },
+    { code:"CURRENT", name:"Current", img:"designs/03-current.png",  fabric:"Two-tone ottoman rib",
+      story:"Wash lifts the pale core yarn on the rib peaks; indigo ombre rises from a hull-seam hem." },
+    { code:"DEPTH",   name:"Depth",   img:"designs/04-depth.png",    fabric:"Mono washed indigo rib",
+      story:"One indigo breathing in its own shades — quiet residue of water and sun." },
+    { code:"STRATA",  name:"Strata",  img:"designs/05-strata.jpeg",  fabric:"Yarn-dyed knit bands",
+      story:"Irregular indigo bands on ink — layers of water depth, densest far below the surface." },
+    { code:"ABYSS",   name:"Abyss",   img:"designs/06-abyss.jpeg",   fabric:"Wavy ripple rib · washed black",
+      story:"A deep rippling knit like the surface of moving water, in near-solid washed black." },
+    { code:"RIPPLE",  name:"Ripple",  img:"designs/07-ripple.png",   fabric:"Wavy ripple rib · dual-tone indigo",
+      story:"The ripple knit in light-and-dark blue — pale crests over deep troughs, curving like current." },
+    { code:"GHAT",    name:"Ghat Utility Pant", img:"designs/08-ghat.jpeg", fabric:"French-terry knit-utility",
+      story:"The one bottom of the drop — 8-pocket utility with a waterline bleach rising from the hem." },
+  ];
+
+  const state = { ratings:{} };  // code -> 1..5
+  const grid = document.getElementById('grid');
+  const countText = document.getElementById('countText');
+  const note = document.getElementById('note');
+
+  if (FORMSPREE_ID === "REPLACE_WITH_FORMSPREE_ID") {
+    document.getElementById('setup').style.display = 'block';
+  }
+
+  DESIGNS.forEach(d => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.code = d.code;
+    const pips = [1,2,3,4,5].map(n =>
+      `<button class="pip" type="button" data-val="${n}" aria-label="${n} out of 5">${n}</button>`).join('');
+    card.innerHTML = `
+      <div class="imgwrap">
+        <img src="${d.img}" alt="${d.name}" loading="lazy" />
+        <span class="score-badge" data-badge>—</span>
+      </div>
+      <div class="meta">
+        <span class="code">${d.code}</span>
+        <p class="name">${d.name}</p>
+        <span class="fabric">${d.fabric}</span>
+        <p class="story">${d.story}</p>
+        <div class="raterow">
+          <div class="rating">${pips}</div>
+          <span class="rate-hint" data-hint>rate 1–5</span>
+        </div>
+      </div>`;
+    card.querySelectorAll('.pip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = Number(btn.dataset.val);
+        state.ratings[d.code] = (state.ratings[d.code] === val) ? undefined : val;
+        if (state.ratings[d.code] === undefined) delete state.ratings[d.code];
+        render();
+      });
+    });
+    grid.appendChild(card);
+  });
+
+  function render(){
+    document.querySelectorAll('.card').forEach(c => {
+      const code = c.dataset.code;
+      const val = state.ratings[code];
+      c.classList.toggle('rated', !!val);
+      c.querySelectorAll('.pip').forEach(p => {
+        const n = Number(p.dataset.val);
+        p.classList.toggle('on', !!val && n <= val);
+        p.classList.toggle('top', !!val && n === val);
+      });
+      c.querySelector('[data-badge]').textContent = val ? `${val}/5` : '—';
+      c.querySelector('[data-hint]').textContent = val ? `you rated ${val}` : 'rate 1–5';
+    });
+    const rated = Object.keys(state.ratings).length;
+    if (rated === 0){ countText.textContent = "Rate each piece 1–5"; return; }
+    const avg = (Object.values(state.ratings).reduce((a,b)=>a+b,0)/rated).toFixed(1);
+    countText.innerHTML = `<b>${rated}</b> of ${DESIGNS.length} rated · your avg <b>${avg}</b>`;
+  }
+
+  document.getElementById('submit').addEventListener('click', async () => {
+    const name = document.getElementById('name').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+    note.className = 'note';
+    if (!name){ note.textContent = "Please add your name first."; note.className='note err';
+      document.getElementById('name').focus(); return; }
+    if (Object.keys(state.ratings).length === 0){ note.textContent = "Rate at least one piece before submitting."; note.className='note err'; return; }
+    if (FORMSPREE_ID === "REPLACE_WITH_FORMSPREE_ID"){
+      note.textContent = "Voting isn't wired up yet — the Formspree ID is missing."; note.className='note err'; return; }
+
+    const btn = document.getElementById('submit');
+    btn.disabled = true; note.textContent = "Sending…";
+
+    const payload = { name, comment: comment || "(none)" };
+    let summary = [];
+    DESIGNS.forEach(d => {
+      const v = state.ratings[d.code] || "";
+      payload[`rating_${d.code}`] = v;                 // one column per design in the CSV
+      if (v) summary.push(`${d.code}:${v}`);
+    });
+    payload.ratings_summary = summary.join(", ");
+    payload.rated_count = Object.keys(state.ratings).length;
+    payload._subject = `MTSYA DELUGE 01 ratings — ${name}`;
+
+    try{
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method:"POST",
+        headers:{ "Content-Type":"application/json", "Accept":"application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (res.ok){
+        document.getElementById('app').style.display='none';
+        document.getElementById('done').style.display='block';
+        window.scrollTo(0,0);
+      } else {
+        const data = await res.json().catch(()=> ({}));
+        note.textContent = (data.errors && data.errors[0] && data.errors[0].message) || "Something went wrong — please try again.";
+        note.className='note err'; btn.disabled=false;
+      }
+    } catch(err){
+      note.textContent = "Network error — check your connection and try again.";
+      note.className='note err'; btn.disabled=false;
+    }
+  });
+
+  render();
+</script>
+</body>
+</html>

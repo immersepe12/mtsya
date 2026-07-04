@@ -1,0 +1,19 @@
+Generate exactly ONE image.
+
+Create a photorealistic apparel mockup of a premium oversized streetwear t-shirt, front view and back view side by side, flat-lay on a neutral concrete-grey background. Moody, editorial product-photography lighting, no models, no props. Both garments completely visible with clear margin — nothing cropped by the image border.
+
+The attached reference image is the brand's logo: a cluster of four fish scales arranged in a diamond formation tapering to a point at the bottom. Reproduce this exact geometry as a THIN OUTLINE ONLY, no fill, executed as embroidered stitching.
+
+FABRIC — this is the hero of the design: a heavyweight two-tone engineered rib knit (ottoman rib). The face yarn is dyed indigo, the core yarn is left undyed white. After garment washing, the wash bites the raised rib peaks and exposes the pale core yarn as fine vertical pinstripe lines, while the dye stays pooled dark in the rib grooves. The entire surface reads as a fine washed vertical rib texture — the pattern lives inside the knit, revealed by the wash, not printed. Show this rib texture clearly and close enough to read.
+
+DYE: over this ribbed cloth, an ombre depth-fade — deep indigo at the hem rising into a pale washed grey-blue at the shoulders and sleeves, calm and roughly horizontal like water that rose quietly overnight, with an organic cloudy blend zone across the mid-torso. The ombre must interact with the rib: darker dye held in the grooves, wash-bleached peaks, so the fade shimmers through the vertical rib lines. No motifs, no splatter, no tie-dye streaks.
+
+CONSTRUCTION — visible stitch and seam play: raglan sleeves, with the raglan seams finished in exposed decorative coverstitch taping in tonal indigo thread — the seam itself is a design line. Near the front hem, two diagonal panel seams angle inward like the planking of a boat hull, stitched with the same exposed tonal coverstitch. Ribbed collar. Sleeve hems finished raw with a slight curl. Oversized boxy body.
+
+Front: the reference logo embroidered small on the left chest in the pale upper zone — tonal thread one shade darker than the surrounding fabric, tone-on-tone, raised stitch texture, outline only. Quiet from a distance.
+
+Back: completely clean except small Devanagari text "मत्स्य" embroidered at the back nape just below the collar in tonal darker thread. No wordmark, no graphics.
+
+A small woven deep-indigo fabric label stitched into the bottom side hem, reading "DELUGE 01".
+
+Style: premium Indian streetwear — mythology through process, not clip-art. No fish illustrations, no god imagery, no loud colors, no prints or graphics beyond what is specified.

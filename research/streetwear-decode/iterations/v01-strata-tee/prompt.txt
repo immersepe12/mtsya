@@ -1,0 +1,19 @@
+Generate exactly ONE image.
+
+Create a photorealistic apparel mockup of a premium knitted t-shirt, front view and back view laid flat side by side on a neutral concrete-grey background. Moody, editorial product-photography lighting, no models, no props. Both garments completely visible with clear margin — nothing cropped by the image border.
+
+CRITICAL — THE LOGO: the attached reference image is the brand logo and its geometry is exact and non-negotiable. It is EXACTLY FOUR fish scales in a tight diamond: ONE scale on top, TWO scales in the middle row, ONE scale at the bottom tapering to a sharp point. Do NOT add extra scales, do NOT enlarge the cluster, do NOT redesign it. Reproduce it stroke for stroke as a THIN OUTLINE ONLY, no fill, executed as embroidered stitching, kept SMALL on the chest.
+
+FABRIC — the hero: this is a KNITTED tee, not cut-and-sew jersey — a fine-gauge but heavyweight knit with clearly visible knit stitch structure and the slubby, slightly uneven character of hand-spun cotton yarn.
+
+PATTERN — knitted into the yarn, never printed: irregular horizontal bands of deep natural indigo against a washed near-black ink ground. The bands are YARN-DYED — knitted from indigo-dyed yarn — so their edges are soft and slightly bleeding where the hand-dyed yarn took color unevenly, with subtle tonal shifts inside each band. Band widths are irregular: some wide, some thin, some clustered close, some spaced apart — no regular repeating stripe rhythm. The bands sit slightly denser and deeper-toned toward the hem, thinning and spacing out toward the chest and shoulders — like layers of water depth, darkest far below the surface. The overall effect is quiet: black-on-indigo tonal strata, visible up close, almost solid from far away.
+
+Fit and construction: relaxed oversized fit with dropped shoulders, knitted ribbed collar, knitted trim at sleeve ends and hem. The garment drapes with the soft weight of a fine knit.
+
+Front: the reference logo embroidered small on the left chest — thread one shade LIGHTER than the dark ground, like a stitch bleached by water. Tone-on-tone, raised stitch texture, outline only. Quiet from a distance, revealed up close.
+
+Back: completely clean except small Devanagari text "मत्स्य" embroidered at the back nape, horizontally centered directly below the collar, in the same lighter tonal thread. No wordmark, no graphics.
+
+A small woven deep-indigo fabric label stitched into the bottom side hem, reading "DELUGE 01".
+
+Style: premium Indian streetwear with a craft-luxury soul — mythology through process and material, not clip-art. No fish illustrations, no god imagery, no loud colors, no prints or graphics beyond what is specified.

@@ -1,0 +1,17 @@
+Generate exactly ONE image.
+
+Create a photorealistic apparel mockup of a premium oversized streetwear t-shirt, front view and back view laid flat side by side (two separate garments, not overlapping) on a neutral concrete-grey background. Moody, editorial product-photography lighting, no models, no props. Both garments completely visible with clear margin — nothing cropped by the image border.
+
+CRITICAL — THE LOGO: the attached reference image is the brand logo and its geometry is exact and non-negotiable. It is EXACTLY FOUR fish scales in a tight diamond: ONE scale on top, TWO scales in the middle row, ONE scale at the bottom tapering to a sharp point. Do NOT add extra scales, do NOT enlarge the cluster, do NOT redesign it. Reproduce it stroke for stroke as a THIN OUTLINE ONLY, no fill, executed as embroidered stitching, kept SMALL on the left chest. Place it on a calm, smoother patch of fabric so the ripple texture does not distort or hide it — the four-scale shape must stay crisp and fully legible. Double-check: four scales only, one-two-one, bottom point.
+
+FABRIC — the hero of the design: a heavyweight engineered RIB knit, but the raised ribs are WAVY, not straight. Instead of running dead-straight, the ribs undulate in gentle continuous horizontal waves across the whole garment — a ripple knit, like the surface of moving water or sand ripples left by a receding tide. The wave rhythm is organic and slightly irregular, never a mechanical zig-zag. This ripple pattern is KNITTED INTO the cloth — a 3D raised texture, revealed by light and shadow across the wavy rib peaks — NEVER printed, never a surface graphic. Show this wavy rib texture clearly and close enough to read the ripples.
+
+COLOR: deep solid washed BLACK — the garment is about 90% uniform deep black. The fade is VERY SUBTLE, barely there: the wash only faintly catches the very tops of the raised wavy-rib peaks, lifting them just a hair toward dark charcoal, while everything else stays deep black. This is a whisper of texture, not a contrast — from a normal distance the shirt reads as solid black, and only up close do the faint ripples reveal themselves. NO heavy grey, NO high contrast between peaks and grooves, NO big fade patches, NO blue, NO indigo, NO ombre, NO second color. Keep it dark, quiet, and almost monochrome black.
+
+CONSTRUCTION: oversized boxy fit with dropped shoulders. Ribbed collar. One subtle diagonal panel seam crossing the lower front, finished with tonal exposed coverstitch, like a plank of a boat hull. Sleeve hems and body hem finished raw with a slight curl.
+
+Front: the reference logo embroidered small on the left chest — thread one shade LIGHTER than the black fabric (soft charcoal-grey), tone-on-tone, raised stitch texture, outline only. Quiet from a distance, revealed up close.
+Back: completely clean except small Devanagari text "मत्स्य" embroidered at the back nape, horizontally centered directly below the collar, in the same lighter tonal thread. No wordmark, no graphics.
+A small woven black fabric label stitched into the bottom side hem, reading "DELUGE 01".
+
+Style: premium Indian streetwear — mythology through process and material, not clip-art. No fish illustrations, no god imagery, no loud colors, no prints or graphics beyond what is specified.

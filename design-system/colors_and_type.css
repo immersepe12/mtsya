@@ -108,7 +108,7 @@
   --layout-gutter:     24px;
   --layout-margin-d:   80px;     /* desktop side margin */
   --layout-margin-m:   24px;     /* mobile side margin  */
-  --layout-cols:       12;
+  --layout-cols:       12; /* @kind other */
 
   /* ---- Borders, radii, shadows ------------------------------------------ */
   --radius-none: 0;
@@ -118,7 +118,7 @@
   --shadow: none;                /* drop shadows betray the brand */
 
   /* ---- Motion ----------------------------------------------------------- */
-  --motion-fast:   200ms ease;   /* the only allowed motion */
+  --motion-fast:   200ms ease; /* @kind other */
 }
 
 /* ============================================================

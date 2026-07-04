@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="130" viewBox="0 0 440 130">
+<defs>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+</defs>
+<rect x="0" y="0" width="440" height="130" fill="#F5F1EA" stroke="#BFC4C9" stroke-width="1"></rect><image x="28" y="37" width="56" height="56" preserveAspectRatio="xMidYMid meet"></image><line x1="104" y1="39" x2="104" y2="91" stroke="#BFC4C9" stroke-width="1"></line><text x="126" y="56" text-anchor="start" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:15px;fill:#1F3A4D;font-weight:500">Kushal</text><text x="126" y="73" text-anchor="start" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:12.5px;fill:#5A6B78;font-weight:400">founder · mtsya</text><text x="126" y="90" text-anchor="start" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:12.5px;fill:#1F3A4D;font-weight:400">mtsya.in · kushal@mtsya.in</text>
+</svg>

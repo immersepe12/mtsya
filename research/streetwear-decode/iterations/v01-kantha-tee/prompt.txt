@@ -1,0 +1,17 @@
+Generate exactly ONE image.
+
+Create a photorealistic apparel mockup of a premium heavyweight t-shirt, front view and back view laid flat side by side (two separate garments, not overlapping) on a neutral concrete-grey background. Moody, editorial product-photography lighting, no models, no props. Both garments completely visible with clear margin — nothing cropped by the image border.
+
+CRITICAL — THE LOGO: the attached reference image is the brand logo and its geometry is exact and non-negotiable. It is EXACTLY FOUR fish scales in a tight diamond: ONE scale on top, TWO scales in the middle row, ONE scale at the bottom tapering to a sharp point. Do NOT add extra scales, do NOT enlarge the cluster, do NOT redesign it. Reproduce it stroke for stroke as a THIN OUTLINE ONLY, no fill, executed as embroidered stitching, kept SMALL on the chest.
+
+FABRIC & HERO CRAFT — hand running-stitch (kantha): heavyweight garment-washed deep-indigo cotton, boxy oversized fit with dropped shoulders. The entire garment is covered in hand-sewn KANTHA running stitches — fine parallel rows of small hand stitches worked in a thread that is one shade LIGHTER and slightly warmer than the indigo ground (a faded ecru-tinted indigo), so the stitch rows read as a soft, hand-made texture — visible up close, dissolving to a quiet tonal shimmer from a distance. This is real hand-stitch craft, NOT a printed pattern and NOT machine topstitching.
+
+STITCH BEHAVIOR — the story: the running-stitch rows are DENSE and tightly packed near the hem, then progressively thin out, space apart, and disperse as they rise toward the chest and shoulders — like a waterline of thread receding, the flood pulling back. The rows are slightly wavy and irregular, as hand stitching always is, never mechanically straight. Toward the shoulders the stitching becomes sparse and quiet; near the hem it is a dense woven-looking field.
+
+CONSTRUCTION — one subtle diagonal PANEL SEAM crossing the lower front, where two pieces of very slightly different indigo cloth are joined (one a touch darker), like planks of a boat hull pieced together from salvaged cloth. The seam is finished with visible hand stitching. Ribbed collar, raw-edged hem with a slight curl.
+
+Front: the reference logo embroidered small on the left chest in the same lighter tonal thread, outline only, quiet.
+Back: clean except small Devanagari text "मत्स्य" embroidered at the back nape, horizontally centered directly below the collar, in the same lighter tonal thread. No wordmark, no graphics.
+A small woven deep-indigo fabric label stitched into the bottom side hem, reading "DELUGE 01".
+
+Style: premium Indian streetwear with a craft-luxury soul — mythology through process and hand-craft, not clip-art. No fish illustrations, no god imagery, no loud colors, no prints or graphics beyond what is specified.

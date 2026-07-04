@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="229mm" height="162mm" viewBox="0 0 229 162">
+<defs>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <pattern id="stripe" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#F5F1EA"></rect><rect width="4" height="8" fill="#EFE9DD"></rect></pattern>
+</defs>
+<rect x="0.2" y="0.2" width="228.6" height="161.6" fill="#F5F1EA" stroke="#BFC4C9" stroke-width="0.3"></rect><line x1="0" y1="0" x2="114.5" y2="81" stroke="#BFC4C9" stroke-width="0.3"></line><line x1="229" y1="0" x2="114.5" y2="81" stroke="#BFC4C9" stroke-width="0.3"></line><image x="105.5" y="59" width="18" height="18" preserveAspectRatio="xMidYMid meet"></image><text x="114.5" y="142" text-anchor="middle" style="font-family:&#39;EB Garamond&#39;,&#39;Adobe Caslon Pro&#39;,Georgia,serif;font-size:3px;fill:#1F3A4D;font-weight:400">the studio · tiruppur 641604 · india</text><text x="114.5" y="148" text-anchor="middle" style="font-family:&#39;EB Garamond&#39;,&#39;Adobe Caslon Pro&#39;,Georgia,serif;font-size:3px;fill:#5A6B78;font-weight:400">mtsya.in · kushal@mtsya.in</text>
+</svg>

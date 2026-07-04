@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="105mm" height="148mm" viewBox="0 0 105 148">
+<defs>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <pattern id="stripe" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#F5F1EA"></rect><rect width="4" height="8" fill="#EFE9DD"></rect></pattern>
+</defs>
+<rect x="0.2" y="0.2" width="104.6" height="147.6" fill="#F5F1EA" stroke="#BFC4C9" stroke-width="0.3"></rect><image x="40.5" y="22" width="24" height="24" preserveAspectRatio="xMidYMid meet"></image><text x="52.5" y="72" text-anchor="middle" style="font-family:&#39;EB Garamond&#39;,&#39;Adobe Caslon Pro&#39;,Georgia,serif;font-size:6px;fill:#1F3A4D;font-weight:400;font-style:italic">with thanks</text><text x="52.5" y="80" text-anchor="middle" style="font-family:&#39;EB Garamond&#39;,&#39;Adobe Caslon Pro&#39;,Georgia,serif;font-size:6px;fill:#1F3A4D;font-weight:400;font-style:italic">— kushal</text><line x1="10.5" y1="116" x2="94.5" y2="116" stroke="#BFC4C9" stroke-width="0.25"></line><text x="52.5" y="124" text-anchor="middle" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:2.6px;fill:#9DA8B2;font-weight:400;letter-spacing:0.6px">SPACE FOR ONE HANDWRITTEN LINE</text>
+</svg>

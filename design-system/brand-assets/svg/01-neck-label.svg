@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="38mm" height="14mm" viewBox="0 0 38 14">
+<defs>
+  <filter id="terra" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#C9603A"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="terraDk" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#9A3D20"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="brass" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#6E5828"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+</defs>
+<rect x="0.1" y="0.1" width="37.8" height="13.8" fill="#F5F1EA" stroke="#BFC4C9" stroke-width="0.2"></rect><text x="19.4" y="5.9" text-anchor="middle" style="font-family:&#39;EB Garamond&#39;,&#39;Adobe Caslon Pro&#39;,Georgia,serif;font-size:6.420559600000001px;fill:#1F3A4D;font-weight:700;letter-spacing:2.054579072px;text-transform:lowercase">mtsya</text><text x="19" y="9.2" text-anchor="middle" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:2.1166679999999998px;fill:#1F3A4D;font-weight:500;letter-spacing:0.59266704px">M</text><text x="19" y="12.1" text-anchor="middle" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:1.5169453999999998px;fill:#1F3A4D;letter-spacing:0.24271126399999998px">MTSYA <tspan style="font-family:&#39;Mukta Mahee&#39;,&#39;Noto Sans Devanagari&#39;,sans-serif;letter-spacing:0">· मत्स्य ·</tspan> MADE IN INDIA</text>
+</svg>

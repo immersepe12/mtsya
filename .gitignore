@@ -31,3 +31,9 @@ yarn-error.log*
 # IDE
 .idea
 .vscode
+
+# Streetwear design iteration renders — kept local, not versioned (110MB of drafts).
+# Every iteration stays reproducible via scripts/generate-design.mjs + its prompt.txt.
+research/streetwear-decode/iterations/**/image-*.png
+research/streetwear-decode/iterations/**/image-*.jpeg
+research/streetwear-decode/iterations/**/response-*.json

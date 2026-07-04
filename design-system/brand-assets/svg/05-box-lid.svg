@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="260mm" height="200mm" viewBox="0 0 260 200">
+<defs>
+  <filter id="terra" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#C9603A"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="terraDk" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#9A3D20"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="brass" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#6E5828"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+</defs>
+<rect x="0.2" y="0.2" width="259.6" height="199.6" fill="#F5F1EA" stroke="#BFC4C9" stroke-width="0.4"></rect><image x="106" y="76" width="48" height="48" preserveAspectRatio="xMidYMid meet" filter="url(#rule)" opacity="0.6"></image>
+</svg>

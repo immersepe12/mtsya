@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="72mm" height="38mm" viewBox="0 0 72 38">
+<defs>
+  <filter id="terra" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#C9603A"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="terraDk" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#9A3D20"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="brass" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#6E5828"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+</defs>
+<circle cx="14" cy="14" r="11" fill="#9A7B3A" stroke="#6E5828" stroke-width="0.3"></circle><circle cx="14" cy="14" r="9" fill="none" stroke="#6E5828" stroke-width="0.2"></circle><image x="6.5" y="6.5" width="15" height="15" preserveAspectRatio="xMidYMid meet" filter="url(#brass)"></image><text x="14" y="30" text-anchor="middle" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:1.6px;fill:#5A6B78;font-weight:400;letter-spacing:0.25px">BRASS DIE · 22mm</text><circle cx="48" cy="14" r="11" fill="#C9603A"></circle><image x="40.5" y="6.5" width="15" height="15" preserveAspectRatio="xMidYMid meet" filter="url(#terraDk)" opacity="0.9"></image><text x="48" y="30" text-anchor="middle" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:1.6px;fill:#5A6B78;font-weight:400;letter-spacing:0.25px">WAX IMPRESSION</text>
+</svg>

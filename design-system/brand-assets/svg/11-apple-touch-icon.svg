@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+<defs>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+</defs>
+<rect x="0" y="0" width="180" height="180" fill="#F5F1EA"></rect><image x="40" y="40" width="100" height="100" preserveAspectRatio="xMidYMid meet"></image>
+</svg>

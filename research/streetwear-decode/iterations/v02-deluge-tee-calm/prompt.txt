@@ -1,0 +1,15 @@
+Create a photorealistic apparel mockup of a premium oversized streetwear t-shirt, front and back view, flat-lay on a neutral concrete-grey background. Moody, editorial product-photography lighting, fabric texture clearly visible, no models, no props.
+
+The attached reference image is the brand's logo: a cluster of four fish scales arranged in a diamond formation tapering to a point at the bottom, like a water drop made of scales. Reproduce this logo's exact geometry as a THIN OUTLINE ONLY, no fill, executed as embroidered stitching.
+
+Garment: boxy oversized fit with strongly exaggerated dropped shoulders — the shoulder seam falls well down the upper arm, wide relaxed silhouette. Heavyweight 260 GSM cotton jersey with visible fabric texture, ribbed collar.
+
+Dye: the entire shirt is an ombre depth-fade, garment-dyed — deep indigo at the hem rising into a pale washed grey-blue at the shoulders and sleeves. The rise is CALM and horizontal, like water that rose quietly overnight: a soft, level waterline across the mid-torso, no vertical streaks, no splatter, no tie-dye chaos. Within the transition band where indigo dissolves into pale, the dye breaks into a faint pattern of overlapping scallop / fish-scale shapes — a resist-dye effect in the tradition of shibori or bandhani, as if the water's surface itself is made of quiet scales. This scale texture must look dyed into the cloth, soft-edged and irregular — never printed, never sharp, visible only as a subtle rhythm inside the blend zone. Front and back slightly asymmetric, as real dye would be.
+
+Front: the reference logo embroidered small on the left chest, in the pale upper zone — tonal thread, the same washed grey-blue as the surrounding fabric but one shade darker. Tone-on-tone, not a contrasting color, visible raised embroidery stitch texture, outline only, no fill. Quiet from a distance, revealed up close.
+
+Back: completely clean except for small Devanagari text "मत्स्य" at the back nape, just below the collar, in tonal darker thread. No wordmark, no graphics, nothing else — the rising dye is the statement.
+
+A small woven deep-indigo fabric label stitched into the bottom side hem. The label text reads exactly, letter for letter: "DELUGE 01" — capital D, E, L, U, G, E, space, zero, one. Render this text sharply and correctly. Visible thread texture, clearly a sewn woven tag, not printed.
+
+Style: premium Indian streetwear — mythology through process, not clip-art. No fish illustrations, no god imagery, no loud colors, no prints or graphics beyond what is specified.

@@ -1,0 +1,856 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Tier-2 Batch A — Print Inserts & Stationery" subtitle="Seven print inserts and stationery pieces for months 1–3 post-launch" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MTSYA · Tier-2 Batch A — Print Inserts & Stationery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Regular.ttf')   format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Italic.ttf')    format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Medium.ttf')    format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-SemiBold.ttf')  format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Bold.ttf')      format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mukta+Mahee:wght@300;400;600&display=swap');
+
+  :root {
+    --cream: #F5F1EA;
+    --cream-2: #EFE9DD;       /* fold tone for the dust bag */
+    --ink: #1F3A4D;
+    --stone: #5A6B78;
+    --quiet: #9DA8B2;
+    --rule: #BFC4C9;
+    --terracotta: #C9603A;
+
+    --serif: 'EB Garamond', 'Adobe Caslon Pro', Georgia, serif;
+    --ui:    'Inter', 'Optima', 'Avenir', system-ui, sans-serif;
+
+    --s: 2.4;                  /* display scale for tiny pieces */
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "onum" 1;
+    overflow-x: hidden;
+  }
+
+  img { display: block; max-width: 100%; }
+  a   { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---- Scaffolding ----------------------------------------------------- */
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 64px 40px 120px;
+  }
+  .eyebrow {
+    font-family: var(--ui);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+  .title { font-family: var(--serif); font-weight: 400; margin: 0; color: var(--ink); text-wrap: pretty; }
+
+  .cover { padding-bottom: 64px; border-bottom: 1px solid var(--rule); }
+  .cover h1 { font-size: 56px; line-height: 1.05; margin: 12px 0 24px; font-weight: 400; }
+  .cover .lede { font-size: 17px; line-height: 1.55; max-width: 56ch; margin: 0 0 32px; }
+  .cover__meta {
+    display: grid; grid-template-columns: 140px 1fr;
+    gap: 4px 24px;
+    font-family: var(--ui); font-size: 11px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    line-height: 1.8; margin: 0;
+  }
+  .cover__meta dt { color: var(--stone); }
+  .cover__meta dd { margin: 0; color: var(--ink); }
+
+  .asset {
+    padding: 48px 0 56px;
+    border-top: 1px solid var(--rule);
+  }
+  .asset__head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
+  .asset__num {
+    font-family: var(--ui); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.22em; color: var(--stone); min-width: 28px;
+  }
+  .asset__title { font-size: 24px; line-height: 1.25; font-weight: 500; }
+  .asset__stage {
+    display: flex; flex-direction: column;
+    align-items: flex-start; gap: 16px;
+    margin-bottom: 32px;
+  }
+  .asset__caption {
+    font-family: var(--ui); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone);
+  }
+  .asset__caption .actual { color: var(--quiet); margin-left: 10px; }
+
+  .specs { font-family: var(--ui); font-size: 12.5px; line-height: 1.6; color: var(--ink); }
+  .specs dl {
+    margin: 0;
+    display: grid; grid-template-columns: 140px 1fr;
+    gap: 10px 24px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule);
+  }
+  .specs dt {
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); padding-top: 3px;
+  }
+  .specs dd { margin: 0; }
+  .specs .supplier {
+    margin: 18px 0 0; padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--serif); font-size: 14px;
+    font-style: italic; color: var(--stone);
+    max-width: 70ch;
+  }
+  .specs .supplier b { font-style: normal; font-weight: 500; color: var(--ink); }
+  .specs .source { margin-top: 14px; font-family: var(--ui); font-size: 11px; color: var(--stone); letter-spacing: 0.04em; }
+  .specs .source b { color: var(--ink); font-weight: 500; }
+  .specs .source code {
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 11px; color: var(--ink);
+    background: var(--cream-2); padding: 1px 6px;
+  }
+
+  /* =====================================================================
+     Per-asset renders
+     ===================================================================== */
+
+  /* 01 — Dust bag */
+  .dustbag {
+    width: calc(300px * 1.4);   /* 30 cm wide @ ~1.4x display */
+    height: calc(400px * 1.4);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    position: relative;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* drawstring channel */
+  .dustbag::before {
+    content: "";
+    position: absolute;
+    top: 36px; left: 8px; right: 8px;
+    height: 14px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  /* drawstring (a hairline pair) */
+  .dustbag::after {
+    content: "";
+    position: absolute;
+    top: 43px; left: 12px;
+    width: 24px; height: 1px;
+    background: var(--quiet);
+    box-shadow:
+      88px 0 0 var(--quiet),
+      176px 0 0 var(--quiet),
+      264px 0 0 var(--quiet),
+      352px 0 0 var(--quiet);
+  }
+  .dustbag__seam {
+    position: absolute;
+    inset: 8px;
+    border: 1px dashed var(--quiet);
+    opacity: 0.5;
+  }
+  .dustbag__fish { width: 80mm; max-width: 60%; }
+  .dustbag__note {
+    font-family: var(--ui); font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--quiet); margin-top: 32px;
+  }
+
+  /* 02 — Compliments slip */
+  .slip {
+    width: calc(105mm * var(--s));
+    height: calc(148mm * var(--s));
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .slip img { width: 24mm; margin: 8px 0 80px; }
+  .slip__thanks {
+    font-family: var(--serif); font-style: italic;
+    font-size: 22px; line-height: 1.4;
+    color: var(--ink); text-align: center; margin: 0;
+  }
+  .slip__rule {
+    width: 80%; height: 1px; background: var(--rule);
+    margin: 64px 0 8px;
+  }
+  .slip__note {
+    font-family: var(--ui); font-size: 9px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--quiet); margin: 0;
+  }
+
+  /* 03 — Letterhead A4 */
+  .letterhead {
+    width: calc(210mm * 1.2);
+    height: calc(297mm * 1.2);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 30px 42px;
+    display: flex; flex-direction: column;
+  }
+  .letterhead__head {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 64px;
+  }
+  .letterhead__head img { width: 26px; }
+  .letterhead__mark {
+    font-family: var(--serif); font-weight: 700;
+    font-size: 22px; letter-spacing: 0.32em;
+    text-transform: lowercase; line-height: 1;
+    padding-left: 0.32em;
+  }
+  .letterhead__body {
+    flex: 1;
+    font-family: var(--serif); font-size: 12px;
+    line-height: 1.75; color: var(--stone);
+  }
+  .letterhead__body .placeholder {
+    font-style: italic; color: var(--quiet); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .letterhead__body p { margin: 0 0 12px; }
+  .letterhead__foot {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--serif); font-size: 10px;
+    color: var(--ink);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+
+  /* 04 — Envelopes */
+  .envelopes { display: flex; flex-direction: column; gap: 28px; }
+  .envelope {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .envelope--dl { width: calc(220mm * 1.4); height: calc(110mm * 1.4); }
+  .envelope--c5 { width: calc(229mm * 1.4); height: calc(162mm * 1.4); }
+  /* The triangular back flap (shown back-of-envelope, fish at the apex) */
+  .envelope__flap {
+    position: absolute;
+    top: 0; left: 50%;
+    width: 70%;
+    aspect-ratio: 2 / 1;
+    transform: translateX(-50%);
+    background:
+      linear-gradient(to bottom, transparent calc(50% - 0.5px), var(--rule) calc(50% - 0.5px), var(--rule) calc(50% + 0.5px), transparent calc(50% + 0.5px)) no-repeat,
+      transparent;
+  }
+  /* Solid alternative flap (no gradients): two hairlines forming the V */
+  .envelope__flap {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50%;
+    pointer-events: none;
+  }
+  .envelope__flap::before,
+  .envelope__flap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border-bottom: 1px solid var(--rule);
+  }
+  .envelope__flap::before { left: 0;   transform-origin: bottom right; transform: skewX(28deg); }
+  .envelope__flap::after  { right: 0;  transform-origin: bottom left;  transform: skewX(-28deg); }
+
+  .envelope__fish {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18mm;
+  }
+  .envelope__return {
+    position: absolute;
+    bottom: 18px; left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: var(--serif); font-size: 10px;
+    line-height: 1.6; color: var(--ink);
+  }
+  .envelope__return b { font-weight: 500; letter-spacing: 0.04em; }
+
+  /* 05 — QC signature card */
+  .qc {
+    width: calc(90mm * 3);
+    height: calc(60mm * 3);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 22px 28px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+  }
+  .qc__head {
+    font-family: var(--ui); font-size: 9px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone);
+  }
+  .qc__body {
+    font-family: var(--serif); font-size: 16px;
+    line-height: 1.6; color: var(--ink); margin: 4px 0;
+  }
+  .qc__body .underline {
+    display: inline-block; min-width: 110px;
+    border-bottom: 1px solid var(--ink);
+    padding: 0 4px;
+  }
+  .qc__foot {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .qc__foot img { width: 18mm; }
+  .qc__foot .label {
+    font-family: var(--ui); font-size: 9px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--quiet);
+  }
+
+  /* 06 — Returns card */
+  .returns {
+    width: calc(105mm * var(--s));
+    height: calc(148mm * var(--s));
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 32px 28px;
+  }
+  .returns h4 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 24px; line-height: 1.2; margin: 0 0 24px;
+  }
+  .returns__body {
+    font-family: var(--serif); font-size: 14px;
+    line-height: 1.65; color: var(--ink);
+  }
+  .returns__body p { margin: 0 0 12px; }
+  .returns__list { margin: 16px 0 0; padding: 0; list-style: none; }
+  .returns__list li {
+    font-family: var(--serif); font-size: 13px;
+    line-height: 1.8; color: var(--ink);
+    padding-left: 20px; position: relative;
+  }
+  .returns__list li::before {
+    content: counter(step);
+    counter-increment: step;
+    position: absolute; left: 0; top: 2px;
+    font-family: var(--ui); font-size: 9px;
+    letter-spacing: 0.18em; color: var(--stone);
+  }
+  .returns__list { counter-reset: step; }
+  .returns__foot {
+    font-family: var(--serif); font-style: italic;
+    color: var(--stone); font-size: 13px;
+    margin-top: 16px;
+  }
+
+  /* 07 — Postcard A6 */
+  .postcard-pair { display: flex; flex-direction: column; gap: 24px; }
+  .postcard {
+    width: calc(148mm * 2.0);
+    height: calc(105mm * 2.0);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  .postcard--front { padding: 0; }
+  .photo-placeholder {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        var(--cream-2) 0 14px,
+        var(--cream) 14px 28px);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .photo-placeholder .label {
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 11px; letter-spacing: 0.18em;
+    color: var(--stone); background: var(--cream);
+    padding: 8px 14px; border: 1px solid var(--rule);
+    text-transform: uppercase;
+  }
+  .postcard--back {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    padding: 24px;
+    gap: 24px;
+  }
+  .postcard--back .divider-v {
+    background: var(--rule);
+  }
+  .postcard__msg {
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+  }
+  .postcard__msg .greeting {
+    font-family: var(--serif); font-style: italic;
+    font-size: 13px; color: var(--stone);
+    line-height: 1.5;
+  }
+  .postcard__close { display: flex; align-items: center; gap: 12px; }
+  .postcard__close img { width: 16px; }
+  .postcard__close .mark {
+    font-family: var(--serif); font-weight: 700;
+    font-size: 14px; letter-spacing: 0.32em;
+    text-transform: lowercase; line-height: 1;
+    padding-left: 0.32em;
+  }
+  .postcard__addr {
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+  }
+  .postcard__addr .stamp {
+    align-self: flex-end;
+    width: 36px; height: 44px;
+    border: 1px solid var(--quiet);
+  }
+  .postcard__addr .address-lines {
+    display: flex; flex-direction: column; gap: 14px;
+    margin-top: 18px;
+  }
+  .postcard__addr .address-lines span {
+    height: 1px; background: var(--rule);
+  }
+
+  /* Colophon */
+  .colophon {
+    margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 48px;
+  }
+  .colophon h3 {
+    font-family: var(--ui); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); margin: 0 0 12px;
+  }
+  .colophon ul { margin: 0; padding: 0; list-style: none; }
+  .colophon li {
+    font-family: var(--serif); font-size: 14px; line-height: 1.65;
+  }
+  .colophon li::before { content: "—"; color: var(--quiet); margin-right: 8px; }
+
+  /* Narrow-viewport guard */
+  @media (max-width: 720px) {
+    :root { --s: 1.6; }
+    .page { padding: 40px 24px 80px; }
+    .cover h1 { font-size: 40px; }
+    .specs dl { grid-template-columns: 1fr; gap: 4px 0; }
+    .specs dt { padding-top: 12px; }
+    .colophon { grid-template-columns: 1fr; }
+    .letterhead { width: 100%; height: auto; min-height: 580px; }
+    .envelope--dl, .envelope--c5 { width: 100%; height: auto; aspect-ratio: 2 / 1; }
+    .dustbag { width: 100%; height: auto; aspect-ratio: 3 / 4; }
+    .postcard { width: 100%; height: auto; aspect-ratio: 148 / 105; }
+  }
+</style>
+</head>
+<body>
+<main class="page" data-screen-label="01 Batch A">
+
+  <!-- COVER ============================================================ -->
+  <section class="cover" data-screen-label="00 Cover">
+    <p class="eyebrow">मत्स्य &middot; MTSYA &middot; Tier&#8201;2 &middot; Batch&nbsp;A</p>
+    <h1 class="title">Print inserts &amp; stationery</h1>
+    <p class="lede">
+      Seven pieces for the first hundred orders. The dust bag inside the rigid
+      box; the slip that lands on the shirt; the letterhead and envelopes the
+      studio writes from; the small card that proves a person packed the order.
+      Each piece designed to fit beside the Tier&nbsp;1 system without raising
+      its voice.
+    </p>
+    <dl class="cover__meta">
+      <dt>Tier</dt><dd>2 &middot; months 1&ndash;3 post-launch</dd>
+      <dt>Batch</dt><dd>A &mdash; print inserts &amp; stationery (7 pieces)</dd>
+      <dt>Issued</dt><dd>May 2026</dd>
+      <dt>Reviewer</dt><dd>Kushal &mdash; pauses for review before Batch&nbsp;B</dd>
+      <dt>Reference</dt><dd>colors_and_type.css &middot; Tier&nbsp;1 manifest</dd>
+    </dl>
+  </section>
+
+
+  <!-- 01. Dust bag ----------------------------------------------------- -->
+  <article class="asset" data-screen-label="02 Dust bag">
+    <header class="asset__head">
+      <span class="asset__num">01</span>
+      <h3 class="asset__title title">Cotton dust bag print artwork</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="dustbag">
+        <span class="dustbag__seam"></span>
+        <img class="dustbag__fish" src="fish.png" alt="">
+        <p class="dustbag__note">inside face &mdash; faces shirt when folded</p>
+      </div>
+      <p class="asset__caption">
+        Outside blank; inside print only
+        <span class="actual">Bag 30 &times; 40 cm; fish 80 mm centred</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Bag</dt><dd>Drawstring tote, cream cotton canvas, 8&nbsp;oz, undyed</dd>
+        <dt>Dimensions</dt><dd>300 &times; 400&nbsp;mm finished; double-stitched side seams</dd>
+        <dt>Print location</dt><dd>Inside face only &mdash; faces the shirt when the bag is folded</dd>
+        <dt>Print method</dt><dd>Single-screen silk-screen print, Deep Ink&nbsp;#1F3A4D, water-based</dd>
+        <dt>Fish</dt><dd>80&nbsp;mm wide, centred 200&nbsp;mm from the bottom seam</dd>
+        <dt>Drawstring</dt><dd>Natural unbleached cotton cord, 4&nbsp;mm, twin-channel, no aglet</dd>
+        <dt>Outside</dt><dd>Completely blank &mdash; no wordmark, no label, no tag</dd>
+      </dl>
+      <p class="supplier">
+        Supplier &mdash; <b>Sigma Labels, Mumbai</b> for screen-print on bags supplied by
+        <b>EcoRight, Tirupur</b> (organic cotton canvas). Order 500 bags for the first
+        run; carriage-paid sample run before commit.
+      </p>
+      <p class="source"><b>Editable source</b> &mdash; <code>brand-assets/sources/dust-bag.ai</code> (Illustrator, single-colour vector). Figma frame <code>tier-2/A-01</code>.</p>
+    </aside>
+  </article>
+
+
+  <!-- 02. Compliments slip --------------------------------------------- -->
+  <article class="asset" data-screen-label="03 Compliments slip">
+    <header class="asset__head">
+      <span class="asset__num">02</span>
+      <h3 class="asset__title title">Compliments slip</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="slip">
+        <img src="fish.png" alt="">
+        <p class="slip__thanks">with thanks<br>&mdash; kushal</p>
+        <span class="slip__rule"></span>
+        <p class="slip__note">space for one handwritten line</p>
+      </div>
+      <p class="asset__caption">
+        Slips into the box, on top of the tissue, beneath the founder&rsquo;s letter
+        <span class="actual">A6 &mdash; 105 &times; 148 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Cream uncoated, 200&nbsp;gsm (suggest Munken Pure)</dd>
+        <dt>Print</dt><dd>Letterpress preferred; offset acceptable for runs over 1,000</dd>
+        <dt>Dimensions</dt><dd>105 &times; 148&nbsp;mm (A6), portrait, square corners</dd>
+        <dt>Fish</dt><dd>24&nbsp;mm wide, centred, 22&nbsp;mm from top edge</dd>
+        <dt>Type</dt><dd>&ldquo;with thanks &mdash; kushal&rdquo; in Caslon italic 22&nbsp;pt, centred</dd>
+        <dt>Handwriting line</dt><dd>A 1&nbsp;px hairline, 80% of card width, 32&nbsp;mm above bottom edge</dd>
+        <dt>Back</dt><dd>Blank</dd>
+      </dl>
+      <p class="supplier">
+        Supplier &mdash; <b>The Letterpress, Bengaluru</b>. Order in 500-unit batches. Kushal
+        writes the note on each by hand before the box is sealed.
+      </p>
+      <p class="source"><b>Editable source</b> &mdash; <code>brand-assets/sources/compliments-slip.indd</code> (InDesign). Figma frame <code>tier-2/A-02</code>.</p>
+    </aside>
+  </article>
+
+
+  <!-- 03. Letterhead --------------------------------------------------- -->
+  <article class="asset" data-screen-label="04 Letterhead">
+    <header class="asset__head">
+      <span class="asset__num">03</span>
+      <h3 class="asset__title title">Letterhead (A4)</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="letterhead">
+        <div class="letterhead__head">
+          <img src="fish.png" alt="">
+          <span class="letterhead__mark">mtsya</span>
+        </div>
+        <div class="letterhead__body">
+          <p class="placeholder">&mdash; letter body, body copy by author &mdash;</p>
+          <p>Tiruppur, the studio</p>
+          <p style="margin-top: 18px;">Dear &mdash;</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at justo nec arcu vehicula consequat. Vivamus condimentum diam at libero consequat, in placerat erat dignissim.</p>
+          <p>Curabitur ut metus a augue tempor accumsan. Donec lectus enim, elementum vitae lacinia ut, faucibus a magna.</p>
+          <p style="margin-top: 18px;">&mdash; kushal</p>
+        </div>
+        <div class="letterhead__foot">
+          <span>the studio &middot; tiruppur 641604 &middot; india</span>
+          <span>kushal&#64;mtsya.in &middot; +91 98XXX XXXXX &middot; mtsya.in</span>
+        </div>
+      </div>
+      <p class="asset__caption">
+        Header at top-left, single-line footer along the bottom edge
+        <span class="actual">A4 &mdash; 210 &times; 297 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Cream uncoated, 100&nbsp;gsm (Munken Pure or Fedrigoni Tatami)</dd>
+        <dt>Print</dt><dd>Single-colour offset, Deep Ink&nbsp;#1F3A4D; digital for &lt; 100 sheets</dd>
+        <dt>Dimensions</dt><dd>210 &times; 297&nbsp;mm</dd>
+        <dt>Margins</dt><dd>35&nbsp;mm left + right; 25&nbsp;mm top + bottom</dd>
+        <dt>Header</dt><dd>Fish 18&nbsp;mm + wordmark Caslon Bold 22&nbsp;pt, left-aligned, 25&nbsp;mm from top</dd>
+        <dt>Footer</dt><dd>Caslon 10&nbsp;pt Deep Ink, single line, address left / contact right</dd>
+        <dt>Type body</dt><dd>Caslon 11&nbsp;pt / 17&nbsp;pt line height, ragged right</dd>
+      </dl>
+      <p class="supplier">
+        Supplier &mdash; <b>Pragati Offset, Bengaluru</b> for offset runs of 500+. Print in
+        flat sheets; do not pre-fold (the letter sits flat in a C5 envelope).
+      </p>
+      <p class="source"><b>Editable source</b> &mdash; <code>brand-assets/sources/letterhead.docx</code> (Word, for daily use) and <code>letterhead.indd</code> (master). Figma frame <code>tier-2/A-03</code>.</p>
+    </aside>
+  </article>
+
+
+  <!-- 04. Envelopes ---------------------------------------------------- -->
+  <article class="asset" data-screen-label="05 Envelopes">
+    <header class="asset__head">
+      <span class="asset__num">04</span>
+      <h3 class="asset__title title">Envelopes &mdash; DL and C5</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="envelopes">
+        <div>
+          <div class="envelope envelope--dl">
+            <span class="envelope__flap"></span>
+            <img class="envelope__fish" src="fish.png" alt="">
+            <div class="envelope__return">
+              <b>the studio &middot; tiruppur 641604 &middot; india</b><br>
+              mtsya.in &middot; kushal&#64;mtsya.in
+            </div>
+          </div>
+          <p class="asset__caption" style="margin-top: 10px;">DL back &mdash; 110 &times; 220 mm</p>
+        </div>
+        <div>
+          <div class="envelope envelope--c5">
+            <span class="envelope__flap"></span>
+            <img class="envelope__fish" src="fish.png" alt="">
+            <div class="envelope__return">
+              <b>the studio &middot; tiruppur 641604 &middot; india</b><br>
+              mtsya.in &middot; kushal&#64;mtsya.in
+            </div>
+          </div>
+          <p class="asset__caption" style="margin-top: 10px;">C5 back &mdash; 162 &times; 229 mm</p>
+        </div>
+      </div>
+      <p class="asset__caption">Fronts left entirely blank; back-of-envelope only</p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Cream uncoated, 120&nbsp;gsm wove, FSC, no window</dd>
+        <dt>Sizes</dt><dd>DL 110 &times; 220&nbsp;mm; C5 162 &times; 229&nbsp;mm</dd>
+        <dt>Closure</dt><dd>Gummed flap, peel-and-seal not used (deliberately wet-seal)</dd>
+        <dt>Print</dt><dd>Single-colour Deep Ink, offset, back face only</dd>
+        <dt>Fish</dt><dd>18&nbsp;mm wide, centred horizontally, at the flap apex</dd>
+        <dt>Return address</dt><dd>Caslon 9&nbsp;pt, centred below fish, 18&nbsp;mm from bottom edge</dd>
+        <dt>Front</dt><dd>Blank for handwritten or printed addressee; never preprinted</dd>
+      </dl>
+      <p class="supplier">
+        Supplier &mdash; <b>Pragati Offset, Bengaluru</b> or <b>Anya Paper, Mumbai</b>. Order
+        500 DL + 250 C5 in the first batch. Specify gummed (not peel-and-seal) flap.
+      </p>
+      <p class="source"><b>Editable source</b> &mdash; <code>brand-assets/sources/envelopes.indd</code>. Figma frames <code>tier-2/A-04-dl</code>, <code>tier-2/A-04-c5</code>.</p>
+    </aside>
+  </article>
+
+
+  <!-- 05. QC signature card -------------------------------------------- -->
+  <article class="asset" data-screen-label="06 QC card">
+    <header class="asset__head">
+      <span class="asset__num">05</span>
+      <h3 class="asset__title title">Quality-check signature card</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="qc">
+        <p class="qc__head">Inspected &amp; packed</p>
+        <p class="qc__body">
+          This shirt was inspected and packed by
+          <span class="underline">&nbsp;</span>
+          on
+          <span class="underline" style="min-width: 90px;">&nbsp;</span>.
+        </p>
+        <div class="qc__foot">
+          <span class="label">a person at the end of the process</span>
+          <img src="fish.png" alt="">
+        </div>
+      </div>
+      <p class="asset__caption">
+        Tucked beside the shirt; the lines are filled in by hand
+        <span class="actual">Shown 3&times; &mdash; actual 60 &times; 90 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Cream uncoated, 300&nbsp;gsm (Fedrigoni Materica Kraft)</dd>
+        <dt>Dimensions</dt><dd>60 &times; 90&nbsp;mm, portrait, square corners</dd>
+        <dt>Print</dt><dd>Letterpress, single hit Deep Ink, slight bite into paper</dd>
+        <dt>Fish</dt><dd>18&nbsp;mm wide, bottom-right, 8&nbsp;mm in from each edge</dd>
+        <dt>Type</dt><dd>Body Caslon 13&nbsp;pt / 20&nbsp;pt; eyebrow Optima 9&nbsp;pt caps</dd>
+        <dt>Fill fields</dt><dd>Two 0.5&nbsp;pt hairlines for handwritten name + date</dd>
+        <dt>Back</dt><dd>Blank</dd>
+      </dl>
+      <p class="supplier">
+        Supplier &mdash; <b>Letterpress Studio, Bengaluru</b>. Order 1,000 per run; the QC
+        team signs each card by hand. Use archival ballpoint, navy.
+      </p>
+      <p class="source"><b>Editable source</b> &mdash; <code>brand-assets/sources/qc-card.indd</code>. Figma frame <code>tier-2/A-05</code>.</p>
+    </aside>
+  </article>
+
+
+  <!-- 06. Returns / exchange card -------------------------------------- -->
+  <article class="asset" data-screen-label="07 Returns card">
+    <header class="asset__head">
+      <span class="asset__num">06</span>
+      <h3 class="asset__title title">Return / exchange instruction card</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="returns">
+        <h4>Returns</h4>
+        <div class="returns__body">
+          <p>Within 30 days, no questions, no need to explain.</p>
+          <ol class="returns__list">
+            <li>Email <a href="#">returns&#64;mtsya.in</a>.</li>
+            <li>We send you a shipping label.</li>
+            <li>Put the shirt back in the box.</li>
+            <li>Drop at any courier point.</li>
+          </ol>
+          <p class="returns__foot">We will refund within seven days.</p>
+        </div>
+      </div>
+      <p class="asset__caption">
+        Tucked behind the founder&rsquo;s letter; back deliberately blank
+        <span class="actual">A6 &mdash; 105 &times; 148 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Cream uncoated, 200&nbsp;gsm (Munken Pure)</dd>
+        <dt>Print</dt><dd>Offset Deep Ink; single side; back blank</dd>
+        <dt>Dimensions</dt><dd>105 &times; 148&nbsp;mm (A6), portrait, square corners</dd>
+        <dt>Type</dt>
+        <dd>
+          Header &mdash; Caslon 24&nbsp;pt / 30&nbsp;pt<br>
+          Body &mdash; Caslon 14&nbsp;pt / 22&nbsp;pt<br>
+          Steps &mdash; Caslon 13&nbsp;pt, numerals in Optima 9&nbsp;pt caps
+        </dd>
+        <dt>Tone</dt><dd>Calm, four short steps; no exclamation, no &ldquo;hassle-free&rdquo;</dd>
+      </dl>
+      <p class="supplier">
+        Supplier &mdash; <b>Pragati Offset, Bengaluru</b>. Reprint quarterly so terms can
+        be revised without throwing away stock.
+      </p>
+      <p class="source"><b>Editable source</b> &mdash; <code>brand-assets/sources/returns-card.indd</code>. Figma frame <code>tier-2/A-06</code>.</p>
+    </aside>
+  </article>
+
+
+  <!-- 07. Postcard ----------------------------------------------------- -->
+  <article class="asset" data-screen-label="08 Postcard">
+    <header class="asset__head">
+      <span class="asset__num">07</span>
+      <h3 class="asset__title title">Postcard &mdash; trunk shows &amp; press</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="postcard-pair">
+        <div>
+          <div class="postcard postcard--front">
+            <div class="photo-placeholder">
+              <span class="label">hero photograph &middot; mood: worn &middot; 148 &times; 105 mm</span>
+            </div>
+          </div>
+          <p class="asset__caption" style="margin-top: 10px;">Front &mdash; full-bleed photograph (placeholder)</p>
+        </div>
+        <div>
+          <div class="postcard postcard--back">
+            <div class="postcard__msg">
+              <p class="greeting">[ one handwritten sentence ]</p>
+              <div class="postcard__close">
+                <img src="fish.png" alt="">
+                <span class="mark">mtsya</span>
+              </div>
+            </div>
+            <div class="divider-v"></div>
+            <div class="postcard__addr">
+              <div class="stamp"></div>
+              <div class="address-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <p class="asset__caption" style="margin-top: 10px;">Back &mdash; standard postcard split, message left, address right</p>
+        </div>
+      </div>
+      <p class="asset__caption">
+        Landscape A6; first run for trunk-show invites and press follow-ups
+        <span class="actual">148 &times; 105 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Cream uncoated, 350&nbsp;gsm (Fedrigoni Sirio Pearl Aged Cream)</dd>
+        <dt>Print</dt><dd>Front: 4-colour offset photograph. Back: single-colour Deep Ink</dd>
+        <dt>Dimensions</dt><dd>148 &times; 105&nbsp;mm (A6 landscape), square corners</dd>
+        <dt>Postage</dt><dd>India Post 5&nbsp;Rs domestic; international 25&nbsp;Rs (placeholder stamp box top-right)</dd>
+        <dt>Layout (back)</dt><dd>Message left + 1&nbsp;px hairline + address right; wordmark and fish at message close</dd>
+        <dt>Stock photo</dt><dd>Never. Front is always a commissioned Worn or Still photograph</dd>
+      </dl>
+      <p class="supplier">
+        Supplier &mdash; <b>Pragati Offset, Bengaluru</b> for offset; <b>The Paper Project,
+        Mumbai</b> for stock. Order in 500-unit runs; reprint per campaign.
+      </p>
+      <p class="source"><b>Editable source</b> &mdash; <code>brand-assets/sources/postcard.indd</code>. Figma frame <code>tier-2/A-07</code>. Front photograph slot accepts 1772 &times; 1240 px CMYK TIFF at 300&nbsp;dpi.</p>
+    </aside>
+  </article>
+
+
+  <!-- COLOPHON -->
+  <section class="colophon" data-screen-label="09 Colophon">
+    <div>
+      <h3>Anti-patterns honoured</h3>
+      <ul>
+        <li>No drop shadows, no gradients, no rounded corners over 2&nbsp;px.</li>
+        <li>No icons anywhere &mdash; language carries the meaning.</li>
+        <li>No exclamation marks, no &ldquo;hurry,&rdquo; no &ldquo;limited.&rdquo;</li>
+        <li>Terracotta makes no appearance in Batch&nbsp;A.</li>
+        <li>Backs are blank. The brand has nothing further to say there.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Awaiting review &mdash; before Batch B</h3>
+      <ul>
+        <li>Confirm dust-bag canvas weight (8&nbsp;oz vs 10&nbsp;oz).</li>
+        <li>Confirm letterhead margins (35 / 25&nbsp;mm) before offset proof.</li>
+        <li>Confirm envelope ratio &mdash; both DL and C5, or DL only for season one.</li>
+        <li>Confirm the QC card&rsquo;s presence in every shipment, or only the first 100.</li>
+        <li>Sign off on the postcard hero mood &mdash; Worn or Still for the first run.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

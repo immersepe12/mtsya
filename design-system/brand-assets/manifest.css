@@ -1,0 +1,958 @@
+/* ============================================================
+   MTSYA · Tier-1 Production Manifest — document styles
+   Paper-Cream background, Deep-Ink text. Display only:
+   the brand's working tokens are in /colors_and_type.css.
+   ============================================================ */
+
+@font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Regular.ttf')      format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Italic.ttf')       format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Medium.ttf')       format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-SemiBold.ttf')     format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Bold.ttf')         format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mukta+Mahee:wght@300;400;600&display=swap');
+
+:root {
+  --cream: #F5F1EA;
+  --cream-deep: #E8E2D6;      /* blind-emboss tone */
+  --ink: #1F3A4D;
+  --ink-2: #15293A;
+  --stone: #5A6B78;
+  --quiet: #9DA8B2;
+  --rule: #BFC4C9;
+  --terracotta: #C9603A;
+  --terracotta-deep: #A14826;
+  --brass: #9A7B3A;
+  --kraft: #C9B68F;
+
+  --serif: 'EB Garamond', 'Adobe Caslon Pro', Georgia, serif; /* @kind font */
+  --ui:    'Inter', 'Optima', 'Avenir', system-ui, sans-serif; /* @kind font */
+  --deva:  'Mukta Mahee', 'Noto Sans Devanagari', system-ui, sans-serif; /* @kind font */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "onum" 1;
+}
+
+img { display: block; max-width: 100%; }
+
+/* ---- Document scaffolding ------------------------------------------------ */
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 80px 160px;
+}
+
+.eyebrow {
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.title {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.title--cover     { font-size: 72px; line-height: 1.05; }
+.title--section   { font-size: 38px; line-height: 1.15; }
+.title--asset     { font-size: 30px; line-height: 1.2;  font-weight: 500; }
+
+.lede {
+  font-size: 19px;
+  line-height: 1.55;
+  max-width: 60ch;
+  color: var(--ink);
+  margin: 0;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+/* ---- Cover --------------------------------------------------------------- */
+
+.cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: end;
+  padding-bottom: 128px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cover__meta {
+  font-family: var(--ui);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  line-height: 2;
+}
+
+.cover__meta dt { float: left; width: 140px; }
+.cover__meta dd { margin: 0; padding-left: 140px; color: var(--ink); }
+
+.toc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+  margin: 64px 0 0;
+  padding-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.toc h4 {
+  margin: 0 0 16px;
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.toc ol { list-style: none; padding: 0; margin: 0 0 24px; }
+.toc li {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 2.0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.toc li::before {
+  font-family: var(--ui);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--quiet);
+  content: attr(data-n);
+  align-self: center;
+  min-width: 26px;
+}
+.toc li span {
+  flex: 1;
+  border-bottom: 1px dotted var(--rule);
+  margin: 0 12px 6px 12px;
+}
+
+/* ---- Section header ------------------------------------------------------ */
+
+.section-head {
+  margin: 128px 0 64px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  align-items: baseline;
+}
+.section-head__num {
+  font-family: var(--serif);
+  font-size: 38px;
+  color: var(--quiet);
+  font-feature-settings: "lnum" 1;
+}
+.section-head__body p {
+  margin: 12px 0 0;
+  color: var(--stone);
+  max-width: 56ch;
+}
+
+/* ---- Asset block --------------------------------------------------------- */
+
+.asset {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 80px;
+  padding: 64px 0 80px;
+  border-top: 1px solid var(--rule);
+}
+
+.asset__head {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+.asset__num {
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--stone);
+  min-width: 36px;
+}
+.asset__caption {
+  font-family: var(--ui);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-top: 16px;
+}
+.asset__caption .actual {
+  color: var(--quiet);
+  margin-left: 12px;
+}
+
+.asset__stage {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 0;
+}
+.asset__stage--centered { align-items: center; }
+.asset__stage--padded   { padding: 24px 0 0; }
+
+/* The "stage hairline" — a faint inner frame so the rendered asset has
+   somewhere to sit visually without us inventing a shadow. */
+.frame {
+  border: 1px solid var(--rule);
+  background: var(--cream);
+  padding: 32px;
+  position: relative;
+}
+
+/* ---- Spec sheet ---------------------------------------------------------- */
+
+.specs {
+  font-family: var(--ui);
+  font-size: 12px;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.specs dl { margin: 0; }
+.specs dt {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-top: 18px;
+}
+.specs dt:first-child { margin-top: 0; }
+.specs dd { margin: 4px 0 0; }
+
+.specs .supplier {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--stone);
+}
+.specs .supplier b {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ---- Caliper indicator (shows actual-size mm for a 3x display) ----------- */
+
+.caliper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ui);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--quiet);
+}
+.caliper__bar {
+  height: 1px;
+  background: var(--quiet);
+  position: relative;
+}
+.caliper__bar::before,
+.caliper__bar::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 1px;
+  height: 7px;
+  background: var(--quiet);
+}
+.caliper__bar::before { left: 0; }
+.caliper__bar::after  { right: 0; }
+
+/* ===========================================================================
+   Asset-specific renders
+   =========================================================================== */
+
+/* Scale factor for tiny pieces (labels, tape, business card front).
+   Use as `width: calc(38mm * var(--s))` so the asset stays mm-true while
+   appearing legible on screen. */
+:root { --s: 3.0; /* @kind other */ }
+
+/* ---- 1. Neck label ------------------------------------------------------- */
+
+.neck-label {
+  width: calc(38mm * var(--s));
+  height: calc(14mm * var(--s));
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+}
+.neck-label__mark {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 22px;
+  letter-spacing: 0.32em;
+  text-transform: lowercase;
+  line-height: 1;
+  padding-left: 0.32em; /* compensate trailing tracking */
+}
+.neck-label__size {
+  font-family: var(--ui);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  color: var(--ink);
+  margin-top: 4px;
+}
+.neck-label__foot {
+  font-family: var(--ui);
+  font-size: 6.5px;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+.neck-label__foot .deva {
+  font-family: var(--deva);
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 7.5px;
+  padding: 0 4px;
+  position: relative;
+  top: 0.5px;
+}
+
+/* ---- 2. Seam tag --------------------------------------------------------- */
+
+.seam-tag {
+  width: calc(90mm * var(--s));
+  height: calc(18mm * var(--s));
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seam-tag::before,
+.seam-tag::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 1px;
+  background: var(--rule);
+}
+.seam-tag::before { top: 4px; }
+.seam-tag::after  { bottom: 4px; }
+.seam-tag img {
+  height: 70%;
+  width: auto;
+}
+.seam-tag__stitch {
+  position: absolute;
+  inset: 4px;
+  border: 1px dashed var(--quiet);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ---- 3. Care label ------------------------------------------------------- */
+
+.care-pair {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.care-label {
+  width: calc(30mm * var(--s));
+  background: #FAF7F1; /* satin reads slightly brighter than paper cream */
+  border: 1px solid var(--rule);
+  padding: 12px 10px;
+  font-family: var(--ui);
+  font-size: 7px;
+  letter-spacing: 0.04em;
+  color: #000;       /* care labels are the one place black is permitted */
+  line-height: 1.5;
+}
+.care-label h5 {
+  margin: 0 0 4px;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.care-label .care-icons {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+.care-label .care-icons svg {
+  width: 18px;
+  height: 18px;
+  stroke: #000;
+  fill: none;
+  stroke-width: 1.2;
+}
+.care-label p { margin: 4px 0; max-width: none; font-size: 7px; color: #000; }
+.care-label .deva { font-family: var(--deva); font-size: 8px; line-height: 1.45; }
+
+/* ---- 4. Carton tape ------------------------------------------------------ */
+
+.tape {
+  width: 100%;
+  height: calc(50mm * 1.4);
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.tape__edge-top, .tape__edge-bot {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--ink-2);
+}
+.tape__edge-top { top: 0; }
+.tape__edge-bot { bottom: 0; }
+.tape__strip {
+  display: flex;
+  align-items: center;
+  gap: 28%;
+  padding-left: 14%;
+  width: 100%;
+}
+.tape__mark {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--cream);
+  font-size: 38px;
+  letter-spacing: 0.32em;
+  text-transform: lowercase;
+  line-height: 1;
+  padding-left: 0.32em;
+}
+.tape__tick {
+  position: absolute;
+  bottom: -22px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-family: var(--ui);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  padding: 0 14%;
+}
+
+/* ---- 5. Inner box lid ---------------------------------------------------- */
+
+.lid {
+  width: calc(260mm * 1.4);
+  height: calc(200mm * 1.4);
+  max-width: 100%;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.lid__emboss {
+  width: calc(48mm * 1.4 * 2.2); /* fish reads at ~48mm; staged a touch larger */
+  filter: brightness(0.94) contrast(0.55);
+  opacity: 0.55;
+  /* The brand forbids drop shadows; the emboss is rendered by tinting the
+     fish toward the cream-deep tone (#E8E2D6) so it reads as a colourless
+     deboss into paper. */
+}
+
+/* ---- 6. Tissue paper repeat ---------------------------------------------- */
+
+.tissue {
+  width: 600px;
+  height: 600px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  position: relative;
+  overflow: hidden;
+}
+.tissue__fish {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0.85;
+  object-fit: contain;
+}
+
+/* ---- 7. Wax seal --------------------------------------------------------- */
+
+.seal-pair {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+.brass-die {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: var(--brass);
+  border: 1px solid #6E5828;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brass-die::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 1px solid #6E5828;
+}
+.brass-die img {
+  width: 70%;
+  filter: brightness(0.35) sepia(1) saturate(2);
+  opacity: 0.55;
+}
+.wax-impression {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Wax is genuinely irregular — approximated with a single solid colour
+     and slight off-round mask. Final impression made on tissue, signed. */
+}
+.wax-impression img {
+  width: 70%;
+  filter: brightness(0.65) sepia(1) saturate(3) hue-rotate(-15deg);
+  opacity: 0.8;
+}
+
+/* ---- 8. Hangtag ---------------------------------------------------------- */
+
+.hangtag-pair {
+  display: flex;
+  gap: 32px;
+}
+.hangtag {
+  width: calc(50mm * 3);
+  height: calc(90mm * 3);
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  position: relative;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.hangtag__hole {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+}
+.hangtag--front {
+  align-items: center;
+  justify-content: center;
+}
+.hangtag--front img {
+  width: calc(28mm * 3);
+  height: auto;
+}
+.hangtag__row {
+  font-family: var(--ui);
+  font-size: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+  padding: 8px 0;
+  border-top: 1px solid var(--rule);
+}
+.hangtag__row:first-of-type { border-top: 0; padding-top: 32px; }
+.hangtag__row dt { color: var(--stone); font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; }
+.hangtag__row dd { margin: 0; }
+.hangtag__name {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 32px 0 12px;
+  text-align: left;
+}
+
+/* ---- 9. Founder's letter ------------------------------------------------- */
+
+.letter {
+  width: calc(148mm * 2.2);
+  height: calc(210mm * 2.2);
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  padding: 44px 48px 36px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--serif);
+}
+.letter__fold {
+  position: absolute;
+}
+.letter__title {
+  font-family: var(--serif);
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 0 0 4px;
+}
+.letter__date {
+  font-family: var(--ui);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 36px;
+}
+.letter__body {
+  font-family: var(--serif);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink);
+  flex: 1;
+}
+.letter__body p { margin: 0 0 12px; max-width: none; }
+.letter__sign {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--stone);
+  margin-top: 24px;
+}
+.letter__fish {
+  width: 38px;
+  align-self: center;
+  margin-top: 18px;
+}
+
+/* ---- 10. Favicon --------------------------------------------------------- */
+
+.favicons {
+  display: flex;
+  gap: 48px;
+  align-items: flex-end;
+}
+.favicons figure { margin: 0; text-align: center; }
+.favicons .swatch {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.favicons .swatch--32 { width: 256px; height: 256px; }
+.favicons .swatch--16 { width: 128px; height: 128px; }
+.favicons .swatch img { width: 70%; }
+.favicons figcaption {
+  font-family: var(--ui);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-top: 12px;
+}
+.favicons .actual-tile {
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+/* ---- 11. Apple touch icon ----------------------------------------------- */
+
+.touch-icon {
+  width: 360px;
+  height: 360px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.touch-icon img { width: 55%; }
+
+/* ---- 12. Open Graph ----------------------------------------------------- */
+
+.og {
+  width: 100%;
+  aspect-ratio: 1200 / 630;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  padding: 48px 64px;
+  gap: 56px;
+}
+.og__fish { width: 220px; height: auto; }
+.og__text { display: flex; flex-direction: column; gap: 18px; }
+.og__mark {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 72px;
+  letter-spacing: 0.32em;
+  text-transform: lowercase;
+  line-height: 1;
+  padding-left: 0.32em;
+  color: var(--ink);
+}
+.og__rule { width: 80px; height: 1px; background: var(--ink); }
+.og__tag {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1.3;
+  color: var(--ink);
+  max-width: 28ch;
+}
+
+/* ---- 13. Email signature ------------------------------------------------ */
+
+.sig {
+  width: 480px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 64px 1px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.sig__fish { width: 64px; height: auto; }
+.sig__rule { background: var(--rule); width: 1px; height: 56px; }
+.sig__body { font-family: var(--ui); font-size: 13px; line-height: 1.5; color: var(--ink); }
+.sig__body .name  { font-weight: 500; }
+.sig__body .role  { color: var(--stone); font-size: 12px; letter-spacing: 0.04em; }
+.sig__body .url   { color: var(--ink); font-size: 12px; letter-spacing: 0.04em; }
+
+/* ---- 14, 15. Emails ----------------------------------------------------- */
+
+.email {
+  width: 600px;
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  padding: 56px 48px 48px;
+  font-family: var(--serif);
+  color: var(--ink);
+}
+.email__subject {
+  font-family: var(--ui);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 8px;
+}
+.email__subject b { color: var(--ink); font-weight: 500; }
+.email__head {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.3;
+  margin: 0 0 32px;
+}
+.email__body p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+  max-width: none;
+}
+.email__order {
+  margin: 32px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 0;
+  font-family: var(--ui);
+  font-size: 13px;
+  line-height: 1.7;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 24px;
+}
+.email__order dt { color: var(--stone); font-size: 12px; letter-spacing: 0.06em; }
+.email__order dd { margin: 0; font-feature-settings: "lnum" 1; }
+.email__order .total {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.email__sign {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--stone);
+  margin-top: 24px;
+}
+.email__fish {
+  display: block;
+  width: 28px;
+  margin: 32px auto 0;
+}
+.email__foot {
+  margin-top: 40px;
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+  font-family: var(--ui);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--quiet);
+  text-align: center;
+}
+.email a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- 16. Business card -------------------------------------------------- */
+
+.cards {
+  display: flex;
+  gap: 32px;
+}
+.card {
+  width: calc(90mm * 3);
+  height: calc(55mm * 3);
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card--front {
+  flex-direction: column;
+  gap: 16px;
+}
+.card--front img { width: calc(28mm * 3); }
+.card--front .mark {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.32em;
+  text-transform: lowercase;
+  line-height: 1;
+  padding-left: 0.32em;
+  color: var(--ink);
+}
+.card--back {
+  align-items: flex-start;
+  padding: 36px 40px;
+  flex-direction: column;
+  justify-content: center;
+}
+.card__name {
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+.card__role {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--stone);
+  margin: 0 0 36px;
+}
+.card__contact {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.card__contact .url { color: var(--ink); }
+
+/* ---- Closing colophon --------------------------------------------------- */
+
+.colophon {
+  margin-top: 128px;
+  padding-top: 64px;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+.colophon h3 {
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin: 0 0 16px;
+}
+.colophon ul { margin: 0; padding: 0; list-style: none; }
+.colophon li {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.colophon li::before {
+  content: "—";
+  color: var(--quiet);
+  margin-right: 10px;
+}
+
+/* ---- Responsiveness floor ----------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .page { padding: 56px 32px 96px; }
+  .cover { grid-template-columns: 1fr; gap: 48px; padding-bottom: 64px; }
+  .toc { grid-template-columns: 1fr; }
+  .asset { grid-template-columns: 1fr; gap: 32px; }
+  .section-head { grid-template-columns: 48px 1fr; gap: 16px; }
+  .title--cover { font-size: 48px; }
+  :root { --s: 2.2; /* @kind other */ }
+}

@@ -1,0 +1,13 @@
+Create a photorealistic apparel mockup of a premium oversized streetwear t-shirt, front and back view, flat-lay on a neutral concrete-grey background. Moody, editorial product-photography lighting.
+
+The attached reference image is the brand's logo: a cluster of four fish scales arranged in a diamond formation tapering to a point at the bottom, like a water drop made of scales. Reproduce this logo's exact geometry wherever the emblem appears — but render it as a THIN OUTLINE ONLY with no fill inside the shapes, executed as embroidered stitching.
+
+Garment: boxy oversized fit, drop shoulders, heavyweight 260 GSM cotton jersey with visible fabric texture, ribbed collar. Color: "Monsoon" — a washed grey-blue with an acid/salt-wash finish, uneven mottled fading like it survived a flood. The wash must look organic and irregular, not printed. On the front, keep a faint pale horizontal waterline halo across the chest, like a tide ring left by receding water.
+
+Front: the reference logo small on the left chest, EMBROIDERED in tonal thread — the thread color is the same washed grey-blue as the fabric itself but one shade darker, tone-on-tone, NOT blue, NOT a contrasting color. Visible raised embroidery stitch texture with fine thread detail, outline only, no fill. The mark should be quiet — almost invisible from a distance, revealing itself up close like a stitch scar the flood left behind.
+
+Back: large hero graphic — a tessellating pattern of the same single scale shape (matching the scallop unit of the logo) rising from the hem and dissolving toward the mid-back like a receding waterline, in deep indigo tone-on-tone. The top and side edges of the pattern must break up irregularly, scales scattering and fading like water, never ending in a hard straight edge. Above the graphic, the wordmark "MTSYA" in an engraved etched-serif typeface. Small Devanagari text "मत्स्य" placed at the back nape, just below the collar, small and quiet — not under the wordmark.
+
+A small woven deep-indigo fabric label stitched into the bottom left hem reading "DELUGE 01" — visible thread texture, clearly a sewn woven tag, not printed.
+
+Style: premium Indian streetwear — mythology through process, not clip-art. No fish illustrations, no god imagery, no loud colors, no additional graphics beyond what is specified.

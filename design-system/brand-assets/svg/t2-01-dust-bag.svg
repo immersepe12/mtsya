@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="300mm" height="400mm" viewBox="0 0 300 400">
+<defs>
+  <filter id="rule" x="-5%" y="-5%" width="110%" height="110%"><feFlood flood-color="#BFC4C9"></feFlood><feComposite in2="SourceGraphic" operator="in"></feComposite></filter>
+  <pattern id="stripe" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#F5F1EA"></rect><rect width="4" height="8" fill="#EFE9DD"></rect></pattern>
+</defs>
+<rect x="0.3" y="0.3" width="299.4" height="399.4" fill="#F5F1EA" stroke="#BFC4C9" stroke-width="0.5"></rect><line x1="8" y1="34" x2="292" y2="34" stroke="#BFC4C9" stroke-width="0.4"></line><line x1="8" y1="46" x2="292" y2="46" stroke="#BFC4C9" stroke-width="0.4"></line><circle cx="24" cy="40" r="1.4" fill="none" stroke="#9DA8B2" stroke-width="0.4"></circle><circle cx="74.4" cy="40" r="1.4" fill="none" stroke="#9DA8B2" stroke-width="0.4"></circle><circle cx="124.8" cy="40" r="1.4" fill="none" stroke="#9DA8B2" stroke-width="0.4"></circle><circle cx="175.2" cy="40" r="1.4" fill="none" stroke="#9DA8B2" stroke-width="0.4"></circle><circle cx="225.6" cy="40" r="1.4" fill="none" stroke="#9DA8B2" stroke-width="0.4"></circle><circle cx="276" cy="40" r="1.4" fill="none" stroke="#9DA8B2" stroke-width="0.4"></circle><rect x="8" y="8" width="284" height="384" fill="none" stroke="#9DA8B2" stroke-width="0.4" stroke-dasharray="2 2"></rect><image x="110" y="160" width="80" height="80" preserveAspectRatio="xMidYMid meet"></image><text x="150" y="232" text-anchor="middle" style="font-family:&#39;Inter&#39;,&#39;Optima&#39;,&#39;Avenir&#39;,system-ui,sans-serif;font-size:4px;fill:#9DA8B2;font-weight:400;letter-spacing:0.8px">INSIDE FACE — FACES SHIRT WHEN FOLDED</text>
+</svg>

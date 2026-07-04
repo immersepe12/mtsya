@@ -1,0 +1,1271 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Tier-1 Production Manifest — Stacked" subtitle="Single-column stacked layout, fits 13″ laptop without side scroll" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MTSYA · Tier-1 Production Manifest — Stacked</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Regular.ttf')   format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Italic.ttf')    format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Medium.ttf')    format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-SemiBold.ttf')  format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url('../fonts/EBGaramond-Bold.ttf')      format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mukta+Mahee:wght@300;400;600&display=swap');
+
+  :root {
+    --cream: #F5F1EA;
+    --cream-deep: #E8E2D6;
+    --ink: #1F3A4D;
+    --ink-2: #15293A;
+    --stone: #5A6B78;
+    --quiet: #9DA8B2;
+    --rule: #BFC4C9;
+    --terracotta: #C9603A;
+    --brass: #9A7B3A;
+
+    --serif: 'EB Garamond', 'Adobe Caslon Pro', Georgia, serif;
+    --ui:    'Inter', 'Optima', 'Avenir', system-ui, sans-serif;
+    --deva:  'Mukta Mahee', 'Noto Sans Devanagari', system-ui, sans-serif;
+
+    /* Display scale for tiny physical pieces shown larger than life-size. */
+    --s: 2.4;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "onum" 1;
+    overflow-x: hidden;
+  }
+
+  img { display: block; max-width: 100%; }
+  a   { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---- Page scaffolding -------------------------------------------------- */
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 64px 40px 120px;
+  }
+
+  .eyebrow {
+    font-family: var(--ui);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+
+  .title { font-family: var(--serif); font-weight: 400; margin: 0; letter-spacing: 0; color: var(--ink); text-wrap: pretty; }
+
+  .cover { padding-bottom: 64px; border-bottom: 1px solid var(--rule); }
+  .cover h1 { font-size: 56px; line-height: 1.05; margin: 12px 0 24px; font-weight: 400; }
+  .cover .lede { font-size: 17px; line-height: 1.55; max-width: 56ch; margin: 0 0 32px; }
+
+  .cover__meta {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 4px 24px;
+    font-family: var(--ui);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1.8;
+    margin: 0;
+  }
+  .cover__meta dt { color: var(--stone); }
+  .cover__meta dd { margin: 0; color: var(--ink); }
+
+  /* ---- Section heads ---------------------------------------------------- */
+  .section-head {
+    margin: 80px 0 32px;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    align-items: baseline;
+  }
+  .section-head .num {
+    font-family: var(--serif);
+    font-size: 30px;
+    color: var(--quiet);
+    font-feature-settings: "lnum" 1;
+  }
+  .section-head h2 { font-size: 30px; line-height: 1.2; margin: 0; }
+  .section-head p { margin: 8px 0 0; color: var(--stone); font-size: 15px; max-width: 60ch; }
+
+  /* ---- Asset block (stacked: head → visual → specs) --------------------- */
+  .asset {
+    padding: 48px 0 56px;
+    border-top: 1px solid var(--rule);
+  }
+  .asset__head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .asset__num {
+    font-family: var(--ui);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--stone);
+    min-width: 28px;
+  }
+  .asset__title { font-size: 24px; line-height: 1.25; font-weight: 500; }
+
+  .asset__stage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .asset__stage--centered { align-items: center; }
+  .asset__caption {
+    font-family: var(--ui);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+  .asset__caption .actual { color: var(--quiet); margin-left: 10px; }
+
+  /* ---- Spec sheet (a two-column dl row) --------------------------------- */
+  .specs { font-family: var(--ui); font-size: 12.5px; line-height: 1.6; color: var(--ink); }
+  .specs dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 10px 24px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule);
+  }
+  .specs dt {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--stone);
+    padding-top: 3px;
+  }
+  .specs dd { margin: 0; }
+  .specs .supplier {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--serif);
+    font-size: 14px;
+    font-style: italic;
+    color: var(--stone);
+    max-width: 70ch;
+  }
+  .specs .supplier b { font-style: normal; font-weight: 500; color: var(--ink); }
+
+  /* =====================================================================
+     Asset-specific renders — sized so every piece fits 960 px wide.
+     ===================================================================== */
+
+  /* 01. Neck label */
+  .neck-label {
+    width: calc(38mm * var(--s));
+    height: calc(14mm * var(--s));
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+  }
+  .neck-label__mark {
+    font-family: var(--serif); font-weight: 700;
+    font-size: 19px; letter-spacing: 0.32em;
+    text-transform: lowercase; line-height: 1;
+    padding-left: 0.32em;
+  }
+  .neck-label__size {
+    font-family: var(--ui); font-size: 8px; letter-spacing: 0.28em;
+    margin-top: 4px;
+  }
+  .neck-label__foot {
+    font-family: var(--ui); font-size: 6px; letter-spacing: 0.18em;
+    margin-top: 6px; text-transform: uppercase;
+  }
+  .neck-label__foot .deva {
+    font-family: var(--deva); letter-spacing: 0;
+    text-transform: none; font-size: 7px; padding: 0 3px;
+  }
+
+  /* 02. Seam tag */
+  .seam-tag {
+    width: calc(70mm * var(--s));
+    height: calc(18mm * var(--s));
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .seam-tag::before, .seam-tag::after {
+    content: ""; position: absolute; left: 8px; right: 8px;
+    height: 1px; background: var(--rule);
+  }
+  .seam-tag::before { top: 4px; }
+  .seam-tag::after  { bottom: 4px; }
+  .seam-tag img { height: 68%; width: auto; }
+  .seam-tag .stitch {
+    position: absolute; inset: 4px;
+    border: 1px dashed var(--quiet);
+    pointer-events: none; opacity: 0.5;
+  }
+
+  /* 03. Care label */
+  .care-pair { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+  .care-label {
+    width: calc(30mm * var(--s));
+    background: #FAF7F1;
+    border: 1px solid var(--rule);
+    padding: 10px 8px;
+    font-family: var(--ui); font-size: 7px; line-height: 1.5; color: #000;
+  }
+  .care-label h5 {
+    margin: 0 0 4px; font-size: 7px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+  }
+  .care-label .icons { display: flex; gap: 6px; margin: 6px 0; }
+  .care-label .icons svg {
+    width: 16px; height: 16px; stroke: #000; fill: none; stroke-width: 1.2;
+  }
+  .care-label p { margin: 4px 0; font-size: 7px; }
+  .care-label .deva { font-family: var(--deva); font-size: 8px; line-height: 1.4; }
+
+  /* 04. Carton tape */
+  .tape {
+    width: 100%;
+    height: 90px;
+    background: var(--ink);
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center;
+  }
+  .tape__strip {
+    display: flex; align-items: center;
+    gap: 28%;
+    padding-left: 8%;
+    width: 100%;
+  }
+  .tape__mark {
+    font-family: var(--serif); font-weight: 700;
+    font-size: 30px; letter-spacing: 0.32em;
+    text-transform: lowercase; line-height: 1;
+    padding-left: 0.32em;
+    color: var(--cream);
+  }
+  .tape__ticks {
+    display: flex; justify-content: space-between;
+    width: 100%; margin-top: 6px;
+    font-family: var(--ui); font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--quiet);
+    padding: 0 8%;
+  }
+
+  /* 05. Box lid */
+  .lid {
+    width: 100%;
+    aspect-ratio: 26 / 20;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lid img {
+    width: 22%;
+    filter: brightness(0.94) contrast(0.55);
+    opacity: 0.55;
+  }
+
+  /* 06. Tissue */
+  .tissue {
+    width: 480px;
+    height: 480px;
+    max-width: 100%;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+  }
+  .tissue__fish { position: absolute; width: 100px; height: 100px; opacity: 0.85; object-fit: contain; }
+
+  /* 07. Wax seal */
+  .seal-pair { display: flex; gap: 56px; align-items: center; flex-wrap: wrap; }
+  .brass-die {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: var(--brass);
+    border: 1px solid #6E5828;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .brass-die::before {
+    content: ""; position: absolute; inset: 10px;
+    border-radius: 50%; border: 1px solid #6E5828;
+  }
+  .brass-die img {
+    width: 70%;
+    filter: brightness(0.35) sepia(1) saturate(2);
+    opacity: 0.55;
+  }
+  .wax-impression {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .wax-impression img {
+    width: 70%;
+    filter: brightness(0.65) sepia(1) saturate(3) hue-rotate(-15deg);
+    opacity: 0.8;
+  }
+  .seal-pair figure { margin: 0; text-align: center; }
+  .seal-pair figcaption {
+    margin-top: 10px;
+    font-family: var(--ui); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone);
+  }
+
+  /* 08. Hangtag */
+  .hangtag-pair { display: flex; gap: 24px; flex-wrap: wrap; }
+  .hangtag {
+    width: calc(50mm * var(--s));
+    height: calc(90mm * var(--s));
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 22px 18px;
+    position: relative;
+    display: flex; flex-direction: column;
+  }
+  .hangtag .hole {
+    position: absolute; top: 14px; left: 50%;
+    transform: translateX(-50%);
+    width: 7px; height: 7px;
+    border: 1px solid var(--ink); border-radius: 50%;
+  }
+  .hangtag--front { align-items: center; justify-content: center; }
+  .hangtag--front img { width: calc(28mm * var(--s)); height: auto; }
+  .hangtag__name {
+    font-family: var(--serif); font-size: 15px; line-height: 1.25;
+    margin: 28px 0 8px;
+  }
+  .hangtag__sub {
+    font-family: var(--serif); font-style: italic;
+    font-size: 11px; color: var(--stone);
+  }
+  .hangtag__row {
+    font-family: var(--ui); font-size: 7.5px; line-height: 1.5;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px 8px;
+    padding: 6px 0;
+    border-top: 1px solid var(--rule);
+    margin: 0;
+  }
+  .hangtag__row:first-of-type { border-top: 0; padding-top: 22px; }
+  .hangtag__row dt { color: var(--stone); font-size: 6.5px; letter-spacing: 0.2em; text-transform: uppercase; }
+  .hangtag__row dd { margin: 0; }
+
+  /* 09. Founder's letter */
+  .letter {
+    width: calc(148mm * 1.3);
+    height: calc(210mm * 1.3);
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 32px 36px 28px;
+    display: flex; flex-direction: column;
+    font-family: var(--serif);
+  }
+  .letter h4 { font-family: var(--serif); font-size: 20px; line-height: 1.2; margin: 0 0 4px; font-weight: 400; }
+  .letter .date {
+    font-family: var(--ui); font-size: 9px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); margin-bottom: 28px;
+  }
+  .letter__body { font-size: 12px; line-height: 1.65; color: var(--ink); flex: 1; }
+  .letter__body p { margin: 0 0 10px; }
+  .letter__placeholder {
+    font-family: var(--serif); font-style: italic;
+    color: var(--quiet); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .letter .sign {
+    font-family: var(--serif); font-style: italic;
+    font-size: 12px; color: var(--stone); margin-top: 18px;
+  }
+  .letter img.fish { width: 32px; align-self: center; margin-top: 14px; }
+
+  /* 10. Favicon */
+  .favicons { display: flex; gap: 32px; align-items: flex-end; flex-wrap: wrap; }
+  .favicons figure { margin: 0; text-align: center; }
+  .favicons .swatch {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .favicons .swatch--32 { width: 192px; height: 192px; }
+  .favicons .swatch--16 { width: 96px;  height: 96px; }
+  .favicons .swatch img { width: 70%; }
+  .favicons .actual { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+  .favicons .actual .swatch { padding: 0; }
+  .favicons figcaption {
+    margin-top: 10px;
+    font-family: var(--ui); font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone);
+  }
+
+  /* 11. Apple touch icon */
+  .touch-icon {
+    width: 280px; height: 280px;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .touch-icon img { width: 55%; }
+
+  /* 12. Open Graph */
+  .og {
+    width: 100%;
+    aspect-ratio: 1200 / 630;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    padding: 32px 48px;
+    gap: 40px;
+  }
+  .og__fish { width: 160px; height: auto; }
+  .og__text { display: flex; flex-direction: column; gap: 14px; }
+  .og__mark {
+    font-family: var(--serif); font-weight: 700;
+    font-size: 54px; letter-spacing: 0.32em;
+    text-transform: lowercase; line-height: 1;
+    padding-left: 0.32em;
+  }
+  .og__rule { width: 64px; height: 1px; background: var(--ink); }
+  .og__tag {
+    font-family: var(--serif); font-style: italic;
+    font-size: 22px; line-height: 1.3;
+    max-width: 28ch;
+  }
+
+  /* 13. Email signature */
+  .sig {
+    width: 420px; max-width: 100%;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 22px 26px;
+    display: grid;
+    grid-template-columns: 56px 1px 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+  .sig img { width: 56px; height: auto; }
+  .sig .rule { background: var(--rule); width: 1px; height: 52px; }
+  .sig__body { font-family: var(--ui); font-size: 12.5px; line-height: 1.5; }
+  .sig__body .name { font-weight: 500; }
+  .sig__body .role { color: var(--stone); font-size: 11.5px; }
+  .sig__body .url  { font-size: 11.5px; margin-top: 6px; }
+
+  /* 14, 15. Emails */
+  .email {
+    width: 600px; max-width: 100%;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 44px 40px 36px;
+    font-family: var(--serif); color: var(--ink);
+  }
+  .email__subject {
+    font-family: var(--ui); font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); margin: 0 0 8px;
+  }
+  .email__subject b { color: var(--ink); font-weight: 500; }
+  .email__head {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 22px; line-height: 1.3; margin: 0 0 24px;
+  }
+  .email__body p { font-size: 14px; line-height: 1.65; margin: 0 0 14px; }
+  .email__order {
+    margin: 24px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 0;
+    font-family: var(--ui); font-size: 12.5px; line-height: 1.7;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 4px 24px;
+  }
+  .email__order dt { color: var(--stone); font-size: 11px; letter-spacing: 0.06em; margin: 0; }
+  .email__order dd { margin: 0; font-feature-settings: "lnum" 1; }
+  .email__order .total {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--rule);
+    padding-top: 10px; margin-top: 6px;
+    display: flex; justify-content: space-between;
+    font-size: 13px;
+  }
+  .email__sign { font-family: var(--serif); font-style: italic; color: var(--stone); margin-top: 20px; }
+  .email__fish { display: block; width: 26px; margin: 28px auto 0; }
+  .email__foot {
+    margin-top: 32px;
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+    font-family: var(--ui); font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--quiet); text-align: center;
+  }
+
+  /* 16. Business card — stack vertically */
+  .cards { display: flex; flex-direction: column; gap: 18px; }
+  .card {
+    width: calc(90mm * var(--s));
+    height: calc(55mm * var(--s));
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card--front { flex-direction: column; gap: 14px; }
+  .card--front img { width: calc(24mm * var(--s)); }
+  .card--front .mark {
+    font-family: var(--serif); font-weight: 700;
+    font-size: 22px; letter-spacing: 0.32em;
+    text-transform: lowercase; line-height: 1;
+    padding-left: 0.32em;
+  }
+  .card--back {
+    flex-direction: column;
+    align-items: flex-start; justify-content: center;
+    padding: 28px 32px;
+  }
+  .card__name { font-family: var(--serif); font-size: 19px; line-height: 1.2; margin: 0 0 4px; }
+  .card__role { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--stone); margin: 0 0 26px; }
+  .card__contact { font-family: var(--serif); font-size: 13px; line-height: 1.7; }
+
+  /* Colophon */
+  .colophon {
+    margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 48px;
+  }
+  .colophon h3 {
+    font-family: var(--ui); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); margin: 0 0 12px;
+  }
+  .colophon ul { margin: 0; padding: 0; list-style: none; }
+  .colophon li {
+    font-family: var(--serif); font-size: 14px; line-height: 1.65;
+  }
+  .colophon li::before { content: "—"; color: var(--quiet); margin-right: 8px; }
+
+  /* Single narrow-viewport guard: below 720px, scale down once more
+     and collapse spec grids. */
+  @media (max-width: 720px) {
+    :root { --s: 1.6; }
+    .page { padding: 40px 24px 80px; }
+    .cover h1 { font-size: 40px; }
+    .specs dl { grid-template-columns: 1fr; gap: 4px 0; }
+    .specs dt { padding-top: 12px; }
+    .colophon { grid-template-columns: 1fr; }
+    .og { grid-template-columns: 96px 1fr; padding: 24px; gap: 20px; }
+    .og__fish { width: 88px; }
+    .og__mark { font-size: 32px; }
+    .og__tag { font-size: 14px; }
+    .letter { width: 100%; height: auto; min-height: 460px; }
+  }
+</style>
+</head>
+<body>
+<main class="page" data-screen-label="01 Manifest">
+
+  <!-- COVER ============================================================= -->
+  <section class="cover" data-screen-label="00 Cover">
+    <p class="eyebrow">मत्स्य &middot; MTSYA &middot; Tier&#8201;1</p>
+    <h1 class="title">Production manifest</h1>
+    <p class="lede">
+      Sixteen pieces. The wardrobe that endures the deluge. Each asset is set to
+      its specified dimensions, in the brand&rsquo;s palette and type, with the fish
+      drawn from the master illustration. Production notes and a supplier hint
+      accompany every piece.
+    </p>
+    <dl class="cover__meta">
+      <dt>Edition</dt><dd>1.0</dd>
+      <dt>Issued</dt><dd>May 2026</dd>
+      <dt>Scope</dt><dd>Garment, packaging, digital, identity</dd>
+      <dt>Owner</dt><dd>Kushal &mdash; Founder</dd>
+      <dt>Reference</dt><dd>README.md &middot; colors_and_type.css</dd>
+      <dt>Colour limit</dt><dd>Deep Ink on Paper Cream. Terracotta once.</dd>
+    </dl>
+  </section>
+
+
+  <!-- GARMENT LABELS =================================================== -->
+  <header class="section-head" data-screen-label="02 Garment Labels">
+    <span class="num">I</span>
+    <div>
+      <h2 class="title">Garment labels</h2>
+      <p>The three pieces a wearer can feel without seeing. Woven where the body
+         touches; satin only where regulation demands.</p>
+    </div>
+  </header>
+
+  <!-- 01. Neck label -->
+  <article class="asset" data-screen-label="03 Neck label">
+    <header class="asset__head">
+      <span class="asset__num">01</span>
+      <h3 class="asset__title title">Main neck label</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="neck-label">
+        <div class="neck-label__mark">mtsya</div>
+        <div class="neck-label__size">M</div>
+        <div class="neck-label__foot">
+          MTSYA <span class="deva">&middot;&nbsp;मत्स्य&nbsp;&middot;</span> MADE IN INDIA
+        </div>
+      </div>
+      <p class="asset__caption">Centre back, neck seam
+        <span class="actual">Shown 2.4&times; &mdash; actual 38 &times; 14 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Construction</dt><dd>Damask weave, ultrasonic-cut edges, mitre-fold ends</dd>
+        <dt>Ground</dt><dd>Paper Cream weft, 100% polyester yarn dyed to&nbsp;#F5F1EA</dd>
+        <dt>Weave</dt><dd>Deep Ink warp, 100% polyester yarn dyed to&nbsp;#1F3A4D</dd>
+        <dt>Thread count</dt><dd>120D &times; 7&nbsp;cm minimum for a clean Caslon lowercase</dd>
+        <dt>Dimensions</dt><dd>38&nbsp;mm wide &times; 14&nbsp;mm tall, finished</dd>
+        <dt>Type</dt><dd>Wordmark Caslon Bold 7&nbsp;pt; size Optima 6&nbsp;pt; foot Optima 4.5&nbsp;pt</dd>
+        <dt>Sizes</dt><dd>S &middot; M &middot; L &middot; XL (one SKU per size)</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Trishul Labels, Mumbai</b>. Match Pantone&nbsp;7546&nbsp;C for Deep Ink and&nbsp;9143&nbsp;C for Paper Cream. Request the heritage damask loom; reject jet-loom samples.</p>
+    </aside>
+  </article>
+
+  <!-- 02. Seam tag -->
+  <article class="asset" data-screen-label="04 Seam tag">
+    <header class="asset__head">
+      <span class="asset__num">02</span>
+      <h3 class="asset__title title">Inside-seam tag</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="seam-tag">
+        <span class="stitch"></span>
+        <img src="fish.png" alt="">
+      </div>
+      <p class="asset__caption">Right hip seam, 90&nbsp;mm above hem
+        <span class="actual">Shown 2.4&times; &mdash; actual 18 mm tape, fish at 12 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Construction</dt><dd>Woven cotton tape, sewn folded in half, fish single-faced</dd>
+        <dt>Material</dt><dd>100% combed cotton tape, 220&nbsp;gsm, undyed cream</dd>
+        <dt>Weave</dt><dd>Deep Ink, single thread thickness; fish at 12&nbsp;mm tall</dd>
+        <dt>Dimensions</dt><dd>18&nbsp;mm wide; 35&nbsp;mm exposed when folded</dd>
+        <dt>Placement</dt><dd>Shirt: right side seam, 90&nbsp;mm above hem. T-shirt: 80&nbsp;mm</dd>
+        <dt>Anti-pattern</dt><dd>No wordmark. No size. Fish only.</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Eshani Texlabs, Tiruppur</b>. Send vector from the master illustration; request a loom proof before bulk run.</p>
+    </aside>
+  </article>
+
+  <!-- 03. Care label -->
+  <article class="asset" data-screen-label="05 Care label">
+    <header class="asset__head">
+      <span class="asset__num">03</span>
+      <h3 class="asset__title title">Care label</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="care-pair">
+        <div class="care-label">
+          <h5>Care &middot; English</h5>
+          <p>60% Egyptian Giza Cotton<br>40% TENCEL&trade; Lyocell</p>
+          <div class="icons">
+            <svg viewBox="0 0 24 24"><path d="M3 9 L5 17 L19 17 L21 9 Q21 7 19 7 L5 7 Q3 7 3 9 Z"/><text x="12" y="14" text-anchor="middle" font-size="6" font-family="Inter" stroke-width="0.4">30</text></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 4 L21 20 L3 20 Z"/><path d="M5 6 L20 19"/></svg>
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="0.8" fill="#000"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M4 17 L20 17 L18 9 Q12 6 6 9 Z"/><circle cx="12" cy="13" r="0.8" fill="#000"/></svg>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><text x="12" y="15" text-anchor="middle" font-size="9" font-family="Inter" stroke-width="0.4">P</text></svg>
+          </div>
+          <p>Wash with like colours.<br>Reshape and dry flat in shade.<br>Warm iron on the reverse.</p>
+          <p>Made in India &middot; Tiruppur<br>RN&nbsp;[ &nbsp;&nbsp;&nbsp;&nbsp; ]<br>MTSYA &middot; mtsya.in</p>
+        </div>
+        <div class="care-label">
+          <h5>देखभाल &middot; Hindi</h5>
+          <p class="deva">60% मिस्र गिज़ा कपास<br>40% टेनसेल&trade; लायोसेल</p>
+          <div class="icons" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 9 L5 17 L19 17 L21 9 Q21 7 19 7 L5 7 Q3 7 3 9 Z"/><text x="12" y="14" text-anchor="middle" font-size="6" font-family="Inter" stroke-width="0.4">30</text></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 4 L21 20 L3 20 Z"/><path d="M5 6 L20 19"/></svg>
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="0.8" fill="#000"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M4 17 L20 17 L18 9 Q12 6 6 9 Z"/><circle cx="12" cy="13" r="0.8" fill="#000"/></svg>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><text x="12" y="15" text-anchor="middle" font-size="9" font-family="Inter" stroke-width="0.4">P</text></svg>
+          </div>
+          <p class="deva">समान रंगों के साथ धोएं.<br>छाया में सपाट सुखाएं.<br>गर्म इस्त्री उल्टी ओर से.</p>
+          <p class="deva">भारत में निर्मित &middot; तिरुपूर</p>
+        </div>
+      </div>
+      <p class="asset__caption">Folded in half; English face out, Hindi face in
+        <span class="actual">Shown 2.4&times; &mdash; actual 30 mm wide</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Construction</dt><dd>Satin ribbon, heat-sealed ends, folded so English faces out</dd>
+        <dt>Material</dt><dd>100% polyester satin, 30&nbsp;mm wide, hand-feel grade</dd>
+        <dt>Print</dt><dd>Black ink &mdash; the one regulatory exception to the palette</dd>
+        <dt>Symbols</dt><dd>ISO 3758:2012 &mdash; wash 30&deg;C, no bleach, tumble dry low, iron low, dry-clean P</dd>
+        <dt>Content</dt><dd>Composition % &middot; country of origin &middot; RN placeholder &middot; care in both languages</dd>
+        <dt>Position</dt><dd>Behind neck label, below seam allowance; English visible when shirt is hung</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Sigma Labels, Bengaluru</b>. Send Indic-script proof before run; Mukta Mahee at 4&nbsp;pt needs a high-DPI screen for the proof.</p>
+    </aside>
+  </article>
+
+
+  <!-- PACKAGING ======================================================== -->
+  <header class="section-head" data-screen-label="06 Packaging">
+    <span class="num">II</span>
+    <div>
+      <h2 class="title">Packaging</h2>
+      <p>The journey from studio to wardrobe. Six pieces. Each quiet on its own;
+         together they should feel like a single object opening.</p>
+    </div>
+  </header>
+
+  <!-- 04. Carton tape -->
+  <article class="asset" data-screen-label="07 Carton tape">
+    <header class="asset__head">
+      <span class="asset__num">04</span>
+      <h3 class="asset__title title">Outer shipping carton tape</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="tape">
+        <div class="tape__strip">
+          <span class="tape__mark">mtsya</span>
+          <span class="tape__mark">mtsya</span>
+          <span class="tape__mark">mtsya</span>
+        </div>
+      </div>
+      <div class="tape__ticks">
+        <span>0 cm</span><span>30 cm</span><span>60 cm</span><span>90 cm</span>
+      </div>
+      <p class="asset__caption">Wordmark centred, repeating every 30&nbsp;cm along the running length
+        <span class="actual">Shown reduced &mdash; actual tape 50 mm wide</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Material</dt><dd>Reinforced kraft gum tape, 50&nbsp;mm wide, water-activated</dd>
+        <dt>Ground</dt><dd>Solid Deep Ink&nbsp;#1F3A4D, printed full-bleed</dd>
+        <dt>Ink</dt><dd>Cream&nbsp;#F5F1EA, single-pass flexo, opacity 100%</dd>
+        <dt>Repeat</dt><dd>One wordmark per 30&nbsp;cm, centred; registration tolerance &plusmn;2&nbsp;mm</dd>
+        <dt>Roll length</dt><dd>200&nbsp;m standard; ~30 cartons per roll</dd>
+        <dt>Wordmark</dt><dd>Caslon Bold, 28&nbsp;mm cap height, +200 tracking</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Pragati Pack, Pune</b>. Specify reverse-flex print so cream ink stays on the unrolled side. Reorder quarterly.</p>
+    </aside>
+  </article>
+
+  <!-- 05. Box lid -->
+  <article class="asset" data-screen-label="08 Box lid">
+    <header class="asset__head">
+      <span class="asset__num">05</span>
+      <h3 class="asset__title title">Inner rigid box &mdash; lid art</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="lid">
+        <img src="fish.png" alt="">
+      </div>
+      <p class="asset__caption">Blind emboss only &mdash; no ink, no foil, no wordmark
+        <span class="actual">Lid 260 &times; 200 mm; fish at 48 mm wide</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Box</dt><dd>Two-piece rigid telescoping, 260 &times; 200 &times; 40&nbsp;mm</dd>
+        <dt>Wrap</dt><dd>Cream uncoated paper, 120&nbsp;gsm, on 1500&nbsp;gsm greyboard</dd>
+        <dt>Lid finish</dt><dd>Blind emboss only (no foil, no colour); fish 48&nbsp;mm, centred</dd>
+        <dt>Depth</dt><dd>0.8&nbsp;mm deboss, female die from the master illustration</dd>
+        <dt>Interior</dt><dd>Cream paper liner, ungummed; tissue (06) nests inside</dd>
+        <dt>Closure</dt><dd>Friction fit; no magnet, no ribbon, no sticker</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>The Paper Project, Mumbai</b> (box); brass female die from <b>Studio Penne, Bengaluru</b>. Order together to keep alignment true.</p>
+    </aside>
+  </article>
+
+  <!-- 06. Tissue -->
+  <article class="asset" data-screen-label="09 Tissue paper">
+    <header class="asset__head">
+      <span class="asset__num">06</span>
+      <h3 class="asset__title title">Tissue paper print</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="tissue" id="tissue"></div>
+      <p class="asset__caption">One 30 &times; 30 cm repeat unit, fish at 12 cm with random rotation
+        <span class="actual">Sheet 50 &times; 70 cm; full bleed</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Acid-free tissue, 22&nbsp;gsm, cream</dd>
+        <dt>Sheet</dt><dd>500 &times; 700&nbsp;mm, folded in half before wrapping</dd>
+        <dt>Print</dt><dd>One colour, Deep Ink&nbsp;#1F3A4D, water-based offset</dd>
+        <dt>Repeat unit</dt><dd>30 &times; 30&nbsp;cm. Three fish at 12&nbsp;cm, rotated 0&deg;&thinsp;/&thinsp;35&deg;&thinsp;/&thinsp;&ndash;72&deg;</dd>
+        <dt>Opacity</dt><dd>75% &mdash; the print should stay quiet under the wrapped shirt</dd>
+        <dt>Use</dt><dd>Wrap shirt in single sheet, fold ends meet at top, seal with wax (07)</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Krafty Lab, Mumbai</b>. Match Pantone&nbsp;7546&nbsp;C; request 5-sheet press proof before run. Flat ink only &mdash; no hot foil.</p>
+    </aside>
+  </article>
+
+  <!-- 07. Wax seal -->
+  <article class="asset" data-screen-label="10 Wax seal">
+    <header class="asset__head">
+      <span class="asset__num">07</span>
+      <h3 class="asset__title title">Wax seal stamp</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="seal-pair">
+        <figure>
+          <div class="brass-die"><img src="fish.png" alt=""></div>
+          <figcaption>Brass die &mdash; 22&nbsp;mm face</figcaption>
+        </figure>
+        <figure>
+          <div class="wax-impression"><img src="fish.png" alt=""></div>
+          <figcaption>Terracotta wax impression</figcaption>
+        </figure>
+      </div>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Die</dt><dd>Solid brass, machined relief, rosewood handle (unfinished)</dd>
+        <dt>Face</dt><dd>22&nbsp;mm diameter, fish in relief, no wordmark, no outer text ring</dd>
+        <dt>Relief depth</dt><dd>1.2&nbsp;mm; line weight rounded for a clean release</dd>
+        <dt>Wax</dt><dd>Sealing wax, terracotta&nbsp;#C9603A, flexible grade</dd>
+        <dt>Use</dt><dd>Seals the tissue fold; hand-pressed; the slight irregularity is the brand&rsquo;s only ornament</dd>
+        <dt>Anti-pattern</dt><dd>No outer text ring (&ldquo;est. 2026&rdquo;, &ldquo;handmade&rdquo;) &mdash; fish alone seals</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Studio Penne, Bengaluru</b> (die); <b>J&nbsp;Herbin terracotta wax beads</b> (imported). Order 100 dies for the studio.</p>
+    </aside>
+  </article>
+
+  <!-- 08. Hangtag -->
+  <article class="asset" data-screen-label="11 Hangtag">
+    <header class="asset__head">
+      <span class="asset__num">08</span>
+      <h3 class="asset__title title">Hangtag</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="hangtag-pair">
+        <div class="hangtag hangtag--front">
+          <span class="hole"></span>
+          <img src="fish.png" alt="">
+        </div>
+        <div class="hangtag">
+          <span class="hole"></span>
+          <p class="hangtag__name">Manu White</p>
+          <p class="hangtag__sub">the boat &mdash; what carries</p>
+          <dl class="hangtag__row">
+            <dt>Colour</dt><dd>Manu White</dd>
+            <dt>Fit</dt><dd>Modern</dd>
+          </dl>
+          <dl class="hangtag__row">
+            <dt>Fabric</dt><dd>60% Egyptian Giza<br>40% TENCEL Lyocell</dd>
+            <dt>GSM</dt><dd>140</dd>
+          </dl>
+          <dl class="hangtag__row">
+            <dt>Made</dt><dd>India &middot; Tiruppur</dd>
+            <dt>Code</dt><dd>MN&nbsp;&middot;&nbsp;01</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="asset__caption">Front: fish only. Back: the facts.
+        <span class="actual">Shown 2.4&times; &mdash; actual 50 &times; 90 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Cream uncoated cover, 350&nbsp;gsm (Fedrigoni Materica Kraft)</dd>
+        <dt>Print</dt><dd>Single-pass letterpress, Deep Ink, slight bite into paper</dd>
+        <dt>Dimensions</dt><dd>50&nbsp;mm wide &times; 90&nbsp;mm tall, square corners</dd>
+        <dt>Fish</dt><dd>Front face, centred, 28&nbsp;mm wide</dd>
+        <dt>Hole</dt><dd>3&nbsp;mm punch, 8&nbsp;mm from top edge, centred</dd>
+        <dt>String</dt><dd>Cream unwaxed cotton, 1.5&nbsp;mm, single loop, no metal</dd>
+        <dt>Type</dt><dd>Optima 8&nbsp;pt / 11&nbsp;pt line height; shirt name Caslon 18&nbsp;pt</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Letterpress Studio, Bengaluru</b>. Damped-paper press for the tactile bite. Reorder 500-unit batches; no foil.</p>
+    </aside>
+  </article>
+
+  <!-- 09. Founder's letter -->
+  <article class="asset" data-screen-label="12 Founders letter">
+    <header class="asset__head">
+      <span class="asset__num">09</span>
+      <h3 class="asset__title title">Founder&rsquo;s letter template</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="letter">
+        <h4>[ title &mdash; kushal to write ]</h4>
+        <p class="date">tiruppur &middot; the studio</p>
+        <div class="letter__body">
+          <p class="letter__placeholder">&mdash; body copy placeholder &mdash;</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at justo nec arcu vehicula consequat. Vivamus condimentum diam at libero consequat, in placerat erat dignissim. Praesent quis felis arcu.</p>
+          <p>Curabitur ut metus a augue tempor accumsan. Donec lectus enim, elementum vitae lacinia ut, faucibus a magna. Ut placerat, dolor at tempus tincidunt, libero risus rutrum velit, a tempor velit nibh sed arcu.</p>
+          <p>Suspendisse potenti. Quisque pulvinar libero in semper lacinia. In vehicula, justo ut posuere viverra, urna risus pretium augue.</p>
+          <p>Sed at nibh nec velit lacinia hendrerit. Integer tempor lectus a augue feugiat.</p>
+        </div>
+        <p class="sign">&mdash; kushal</p>
+        <img class="fish" src="fish.png" alt="">
+      </div>
+      <p class="asset__caption">A5 sheet, folded once to A6, fish at the close
+        <span class="actual">A5 &mdash; 148 &times; 210 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Munken Pure 200&nbsp;gsm, cream, FSC</dd>
+        <dt>Format</dt><dd>A5 single sheet, folded once on the short edge to A6</dd>
+        <dt>Print</dt><dd>Letterpress, single hit Deep Ink, no foil, no ribbon</dd>
+        <dt>Type</dt><dd>Title GT Sectra / Caslon 18&nbsp;pt; body Caslon 13/19&nbsp;pt; locator Optima 9&nbsp;pt caps</dd>
+        <dt>Margins</dt><dd>22&nbsp;mm at every edge &mdash; the air around the type is the point</dd>
+        <dt>Fish</dt><dd>22&nbsp;mm wide, centred below signature</dd>
+        <dt>Quantity</dt><dd>One per order; slips inside the box, above the tissue. Kushal hand-signs.</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>The Letterpress, Bengaluru</b>. Set type, lock formes, run 1,000-sheet batches.</p>
+    </aside>
+  </article>
+
+
+  <!-- DIGITAL ========================================================== -->
+  <header class="section-head" data-screen-label="13 Digital">
+    <span class="num">III</span>
+    <div>
+      <h2 class="title">Digital essentials</h2>
+      <p>The brand on a glass screen. Single colour, generous margin, the same
+         restraint as everything else.</p>
+    </div>
+  </header>
+
+  <!-- 10. Favicon -->
+  <article class="asset" data-screen-label="14 Favicon">
+    <header class="asset__head">
+      <span class="asset__num">10</span>
+      <h3 class="asset__title title">Favicon</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="favicons">
+        <figure>
+          <div class="swatch swatch--32"><img src="fish.png" alt=""></div>
+          <figcaption>32 &times; 32 &mdash; shown 6&times;</figcaption>
+        </figure>
+        <figure>
+          <div class="swatch swatch--16"><img src="fish.png" alt=""></div>
+          <figcaption>16 &times; 16 &mdash; shown 6&times;</figcaption>
+        </figure>
+        <figure class="actual">
+          <div class="swatch" style="width: 32px; height: 32px;"><img src="fish.png" alt=""></div>
+          <div class="swatch" style="width: 16px; height: 16px;"><img src="fish.png" alt=""></div>
+          <figcaption>Actual size</figcaption>
+        </figure>
+      </div>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Format</dt><dd><code>favicon.ico</code> with 16 and 32&nbsp;px frames; <code>favicon-32.png</code> and <code>favicon-16.png</code> alongside</dd>
+        <dt>Colour</dt><dd>Deep Ink fish on Paper Cream</dd>
+        <dt>16 px</dt><dd>Simplified silhouette &mdash; head, body curve, two tail strokes; drop the inner pattern</dd>
+        <dt>32 px</dt><dd>Keep eye, gill arc, suggestion of scales; drop fine line work</dd>
+        <dt>Padding</dt><dd>1&nbsp;px on all sides; never edge-to-edge</dd>
+        <dt>HTML</dt><dd><code>&lt;link rel="icon" href="/favicon.ico"&gt;</code></dd>
+      </dl>
+      <p class="supplier">Production &mdash; <b>hand-redraw in Illustrator</b> at 16/32&nbsp;px on a pixel grid. Auto-shrinking the master will fail.</p>
+    </aside>
+  </article>
+
+  <!-- 11. Apple touch icon -->
+  <article class="asset" data-screen-label="15 Touch icon">
+    <header class="asset__head">
+      <span class="asset__num">11</span>
+      <h3 class="asset__title title">Apple touch icon</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="touch-icon"><img src="fish.png" alt=""></div>
+      <p class="asset__caption">Centred fish, ~22% padding
+        <span class="actual">180 &times; 180 px exported</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Format</dt><dd>PNG-24, 180 &times; 180&nbsp;px, square corners (iOS applies its own mask)</dd>
+        <dt>Background</dt><dd>Solid Paper Cream &mdash; never transparent</dd>
+        <dt>Mark</dt><dd>Deep Ink fish, 100&nbsp;px wide, centred</dd>
+        <dt>Filename</dt><dd><code>/apple-touch-icon.png</code> at site root</dd>
+        <dt>HTML</dt><dd><code>&lt;link rel="apple-touch-icon" href="/apple-touch-icon.png"&gt;</code></dd>
+        <dt>Anti-pattern</dt><dd>No gloss layer, no glyph beneath</dd>
+      </dl>
+      <p class="supplier">Production &mdash; export from master at 180&nbsp;px with 22% padding. Single file; iOS 7+ needs no further sizes.</p>
+    </aside>
+  </article>
+
+  <!-- 12. Open Graph -->
+  <article class="asset" data-screen-label="16 Open Graph">
+    <header class="asset__head">
+      <span class="asset__num">12</span>
+      <h3 class="asset__title title">Open Graph share image</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="og">
+        <img class="og__fish" src="fish.png" alt="">
+        <div class="og__text">
+          <span class="og__mark">mtsya</span>
+          <span class="og__rule"></span>
+          <span class="og__tag">the wardrobe that endures the deluge</span>
+        </div>
+      </div>
+      <p class="asset__caption">Used on every page; the link unfolds calmly inside the message
+        <span class="actual">1200 &times; 630 px</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Format</dt><dd>JPEG, 1200 &times; 630&nbsp;px, sRGB, &lt; 200&nbsp;KB</dd>
+        <dt>Background</dt><dd>Paper Cream, full bleed</dd>
+        <dt>Composition</dt><dd>Fish left of centre; wordmark + tagline right of a 1&nbsp;px hairline</dd>
+        <dt>Type</dt><dd>Wordmark Caslon Bold 72&nbsp;px (+200 track); tagline Caslon italic 28&nbsp;px, max 28&nbsp;ch</dd>
+        <dt>HTML</dt><dd><code>&lt;meta property="og:image" content="/og.jpg"&gt;</code></dd>
+        <dt>Anti-pattern</dt><dd>No product photograph; the wordmark introduces the brand alone</dd>
+      </dl>
+      <p class="supplier">Production &mdash; export from Figma master at 1200 &times; 630&nbsp;px. One file per locale if a Hindi tagline is added later.</p>
+    </aside>
+  </article>
+
+  <!-- 13. Email signature -->
+  <article class="asset" data-screen-label="17 Email signature">
+    <header class="asset__head">
+      <span class="asset__num">13</span>
+      <h3 class="asset__title title">Email signature</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="sig">
+        <img src="fish.png" alt="">
+        <span class="rule"></span>
+        <div class="sig__body">
+          <div class="name">Kushal</div>
+          <div class="role">founder &middot; mtsya</div>
+          <div class="url">mtsya.in &middot; kushal&#64;mtsya.in</div>
+        </div>
+      </div>
+      <p class="asset__caption">Renders the same in Apple Mail, Gmail, and reply threads</p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Format</dt><dd>Inline HTML; fish hosted at <code>https://mtsya.in/sig/fish.png</code> (64&nbsp;px)</dd>
+        <dt>Layout</dt><dd>Two columns split by a 1&nbsp;px hairline; no nested tables deeper than one level</dd>
+        <dt>Type</dt><dd>Inter 13/15 name, 12/15 role and URL; Helvetica fallback</dd>
+        <dt>Colour</dt><dd>Deep Ink text; Stone for role; Rule for the hairline</dd>
+        <dt>Anti-pattern</dt><dd>No social icons, no award badges, no phone unless asked for</dd>
+      </dl>
+      <p class="supplier">Production &mdash; paste the HTML block into the signature preferences for each account; test in Gmail desktop and iOS Mail before issuing to the team.</p>
+    </aside>
+  </article>
+
+  <!-- 14. Order email -->
+  <article class="asset" data-screen-label="18 Order email">
+    <header class="asset__head">
+      <span class="asset__num">14</span>
+      <h3 class="asset__title title">Order confirmation email</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="email">
+        <p class="email__subject">Subject: <b>Your MTSYA shirt is ordered.</b></p>
+        <h4 class="email__head">Your MTSYA shirt is ordered.</h4>
+        <div>
+          <p>Thank you for placing your order. Your shirt is being prepared in the studio in Tiruppur. We work slowly, by hand, and we mean to do it well.</p>
+          <p>Below are the details. If anything needs to be changed, write back to this address within twenty-four hours and a person will read it.</p>
+          <p>The order will leave the studio in three working days. You will hear from us again then, with the courier&rsquo;s tracking number.</p>
+          <dl class="email__order">
+            <dt>Order</dt><dd>MT&middot;2026&middot;0473</dd>
+            <dt>Shirt</dt><dd>Manu White &middot; modern fit &middot; M</dd>
+            <dt>Fabric</dt><dd>60% Egyptian Giza, 40% TENCEL Lyocell</dd>
+            <dt>Quantity</dt><dd>1</dd>
+            <dt>Shipping</dt><dd>Free, in India</dd>
+            <dt>Payment</dt><dd>Card ending 4711</dd>
+            <div class="total"><span>Total</span><span>&#8377;3,000</span></div>
+          </dl>
+          <p>Returns within 30 days, no questions, no need to explain.</p>
+          <p class="email__sign">&mdash; Kushal</p>
+        </div>
+        <img class="email__fish" src="fish.png" alt="">
+        <p class="email__foot">mtsya.in &nbsp;&middot;&nbsp; tiruppur &middot; india</p>
+      </div>
+      <p class="asset__caption">600 px column, cream ground, navy text
+        <span class="actual">~200 words; reads under 30 seconds</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Format</dt><dd>Transactional HTML, 600&nbsp;px single column, table-based</dd>
+        <dt>Background</dt><dd>Paper Cream throughout; no header band, no footer pattern</dd>
+        <dt>Type</dt><dd>Caslon (Georgia fallback) 14/22 body; Inter (Helvetica fallback) 12 order table</dd>
+        <dt>Image</dt><dd>One inline PNG (fish 28&nbsp;px) hosted at <code>https://mtsya.in/email/fish.png</code></dd>
+        <dt>Subject</dt><dd>Your MTSYA shirt is ordered.</dd>
+        <dt>Preheader</dt><dd>The studio has received your order and is preparing the shirt.</dd>
+        <dt>Words</dt><dd>~200, never more; never a discount code, never a referral pitch</dd>
+      </dl>
+      <p class="supplier">Sender &mdash; <b>Postmark</b> for transactional reliability. Send from <code>orders&#64;mtsya.in</code>; reply-to <code>kushal&#64;mtsya.in</code>.</p>
+    </aside>
+  </article>
+
+  <!-- 15. Shipping email -->
+  <article class="asset" data-screen-label="19 Shipping email">
+    <header class="asset__head">
+      <span class="asset__num">15</span>
+      <h3 class="asset__title title">Shipping notification email</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="email">
+        <p class="email__subject">Subject: <b>Your MTSYA shirt is on its way.</b></p>
+        <h4 class="email__head">Your MTSYA shirt is on its way.</h4>
+        <div>
+          <p>Your MTSYA shirt left the studio this morning. It will arrive in 2&ndash;4 days. <a href="#">Track it here</a>.</p>
+          <p class="email__sign">&mdash; Kushal</p>
+        </div>
+        <img class="email__fish" src="fish.png" alt="">
+        <p class="email__foot">mtsya.in &nbsp;&middot;&nbsp; tiruppur &middot; india</p>
+      </div>
+      <p class="asset__caption">A single sentence; the fish closes the message</p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Format</dt><dd>Same 600&nbsp;px column as order email; identical stack</dd>
+        <dt>Subject</dt><dd>Your MTSYA shirt is on its way.</dd>
+        <dt>Preheader</dt><dd>It will arrive in 2&ndash;4 days.</dd>
+        <dt>Tracking link</dt><dd>Underlined Deep Ink; never &ldquo;Click here.&rdquo; The phrase &ldquo;Track it here&rdquo; is the link.</dd>
+        <dt>Words</dt><dd>~30. The brand has nothing further to say at this moment.</dd>
+        <dt>Anti-pattern</dt><dd>No upsell block, no &ldquo;you may also like&rdquo;</dd>
+      </dl>
+      <p class="supplier">Sender &mdash; <b>Postmark</b>, triggered by courier webhook (Delhivery, Shiprocket). Reuses the order template; only the body changes.</p>
+    </aside>
+  </article>
+
+
+  <!-- IDENTITY ========================================================= -->
+  <header class="section-head" data-screen-label="20 Identity">
+    <span class="num">IV</span>
+    <div>
+      <h2 class="title">Identity</h2>
+      <p>What goes into a pocket. The first physical artefact of a new conversation.</p>
+    </div>
+  </header>
+
+  <!-- 16. Business card -->
+  <article class="asset" data-screen-label="21 Business card">
+    <header class="asset__head">
+      <span class="asset__num">16</span>
+      <h3 class="asset__title title">Business card</h3>
+    </header>
+    <div class="asset__stage">
+      <div class="cards">
+        <div class="card card--front">
+          <img src="fish.png" alt="">
+          <span class="mark">mtsya</span>
+        </div>
+        <div class="card card--back">
+          <p class="card__name">Kushal</p>
+          <p class="card__role">founder</p>
+          <div class="card__contact">
+            kushal&#64;mtsya.in<br>
+            +91 98XXX XXXXX<br>
+            mtsya.in
+          </div>
+        </div>
+      </div>
+      <p class="asset__caption">Cream both sides &middot; no bevels &middot; no rounded corners
+        <span class="actual">Shown 2.4&times; &mdash; actual 90 &times; 55 mm</span>
+      </p>
+    </div>
+    <aside class="specs">
+      <dl>
+        <dt>Paper</dt><dd>Triple-thickness cream uncoated, ~600&nbsp;gsm laminated (Fedrigoni Materica Kraft)</dd>
+        <dt>Edge</dt><dd>Painted edge in Deep Ink &mdash; a single hairline of brand colour at hand</dd>
+        <dt>Dimensions</dt><dd>90 &times; 55&nbsp;mm, square corners</dd>
+        <dt>Print</dt><dd>Letterpress, single hit Deep Ink, double-sided</dd>
+        <dt>Fish</dt><dd>Front face, 28&nbsp;mm wide, centred; wordmark beneath at 7&nbsp;mm cap height</dd>
+        <dt>Type</dt><dd>Name Caslon 22/26; role Caslon italic 14/20; contact Caslon 14/24, oldstyle figures</dd>
+      </dl>
+      <p class="supplier">Supplier &mdash; <b>Letterpress Studio, Bengaluru</b> or <b>Studio Penne</b>. Order 250 to start. Edge paint adds two days; worth it.</p>
+    </aside>
+  </article>
+
+
+  <!-- COLOPHON ========================================================= -->
+  <section class="colophon" data-screen-label="22 Colophon">
+    <div>
+      <h3>Anti-patterns honoured</h3>
+      <ul>
+        <li>No drop shadows. Layering by whitespace.</li>
+        <li>No gradients. Solid Deep Ink on solid Paper Cream.</li>
+        <li>No rounded corners over 2&nbsp;px.</li>
+        <li>No icons in chrome. Fish only. Care symbols are regulatory.</li>
+        <li>No exclamation marks. No marketing words.</li>
+        <li>Terracotta used exactly once &mdash; the wax seal.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Next steps</h3>
+      <ul>
+        <li>Commission fish-only and wordmark-only SVG variants.</li>
+        <li>Brief Trishul Labels with a press proof of the neck label.</li>
+        <li>Source the brass die from Studio Penne; pair with terracotta wax.</li>
+        <li>Build email templates in Postmark from blocks 13&ndash;15.</li>
+        <li>Letterpress proof the hangtag and business card.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Tissue paper repeat — three fish at 12cm scale on a 30cm grid.
+  (function () {
+    const tissue = document.getElementById('tissue');
+    if (!tissue) return;
+    const fish = [
+      { x: 0.12, y: 0.18, rot:   8 },
+      { x: 0.58, y: 0.42, rot: -34 },
+      { x: 0.28, y: 0.72, rot:  62 },
+    ];
+    fish.forEach(({x, y, rot}) => {
+      const img = document.createElement('img');
+      img.src = 'fish.png';
+      img.alt = '';
+      img.className = 'tissue__fish';
+      img.style.left = (x * 100) + '%';
+      img.style.top  = (y * 100) + '%';
+      img.style.transform = `rotate(${rot}deg)`;
+      tissue.appendChild(img);
+    });
+  })();
+</script>
+</body>
+</html>
