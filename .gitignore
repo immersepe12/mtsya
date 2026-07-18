@@ -32,8 +32,18 @@ yarn-error.log*
 .idea
 .vscode
 
-# Streetwear design iteration renders — kept local, not versioned (110MB of drafts).
+# Streetwear design iteration renders — kept local, not versioned (drafts).
 # Every iteration stays reproducible via scripts/generate-design.mjs + its prompt.txt.
 research/streetwear-decode/iterations/**/image-*.png
 research/streetwear-decode/iterations/**/image-*.jpeg
 research/streetwear-decode/iterations/**/response-*.json
+research/streetwear-decode/iterations/**/image-*.webp
+
+# Raw on-model shoot archive — heavy (~230MB of drafts), kept local only.
+# The curated FINAL on-model shots live in research/first-drop/ (tracked).
+research/models/
+
+# Working/scratch subfolders inside first-drop (keep only the curated *-images/ finals).
+research/first-drop/reshoot-*/
+research/first-drop/pant-model-*/
+research/first-drop/_*/

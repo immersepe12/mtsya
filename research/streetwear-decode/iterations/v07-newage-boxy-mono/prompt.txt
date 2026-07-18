@@ -1,0 +1,21 @@
+Generate exactly ONE image.
+
+Create a photorealistic apparel mockup of a premium streetwear t-shirt, front view and back view laid FLAT SIDE BY SIDE — two separate garments, NOT overlapping, neither one behind the other — on a neutral concrete-grey background. Moody, editorial product-photography lighting, no models, no props. Both garments completely visible with clear margin — nothing cropped by the image border.
+
+CRITICAL — THE LOGO: the attached reference image is the brand logo and its geometry is exact and non-negotiable. It is EXACTLY FOUR fish scales in a tight diamond: ONE scale on top, TWO scales in the middle row, ONE scale at the bottom tapering to a sharp point. Do NOT add extra scales, do NOT enlarge the cluster, do NOT redesign it. Reproduce it stroke for stroke as a THIN OUTLINE ONLY, no fill, executed as embroidered stitching, kept SMALL on the chest.
+
+FIT — the point of this piece, get the silhouette exactly right: a new-age boxy streetwear cut. The shoulder line is WIDE and squared-off, extending noticeably past the natural shoulder into a broad, structured, almost horizontal shoulder — architectural and clean, NOT a soft slouchy drop. Below that wide shoulder the body is BOXY and squared: cropped slightly short, straight vertical side seams with no taper, so the garment reads as a clean rectangle hanging off a wide top. The cut through the torso is LEAN and trim — narrower than a heavyweight oversized tee — but still falls with a little ease and air around the body: relaxed and a little loose, NOT tight, NOT baggy. Short, wide, straight-cut sleeves sitting off the wide shoulder. The overall read: wide and structured up top, lean and boxy and a little loose through the body — modern, angular, new-age.
+
+FABRIC — the hero of the design: a mid-heavyweight ~240 GSM cotton jersey with visible fabric texture, structured enough to hold the wide squared shoulder crisp but with enough drape to fall lean and a little loose through the boxy body. Garment-dyed and mineral/salt-washed so the surface reads as made cloth, never printed. Show the jersey texture clearly.
+
+COLOR: the shirt is ONE color — washed deep indigo — covering roughly 90% of the garment evenly. The remaining interest comes only from subtle tonal variation within that same indigo: soft irregular patches where the wash faded the dye a shade or two lighter, gentle darker pooling in seams and folds, a slight overall mineral-wash cloudiness. The patches must be quiet, organic and slightly random — like a garment dyed once and worn through water and sun. NO ombre, NO gradient from hem to shoulder, NO second color, NO high-contrast spots — just one indigo breathing in its own shades.
+
+CONSTRUCTION — visible stitch and seam play: the wide shoulder seams finished in exposed decorative coverstitch taping in tonal indigo thread — the seam itself is a design line running the full broad shoulder. Near the front hem, two diagonal panel seams angle inward like the planking of a boat hull, stitched with the same exposed tonal coverstitch. Ribbed collar. Sleeve hems and bottom hem finished raw with a slight curl. The boxy squared body and wide shoulder must stay clean and structured.
+
+Front: the reference logo embroidered small on the left chest — tonal thread one shade LIGHTER than the indigo fabric, like a stitch bleached by water. Tone-on-tone, raised stitch texture, outline only. Quiet from a distance, revealed up close.
+
+Back: completely clean except small Devanagari text "मत्स्य" embroidered at the back nape, horizontally CENTERED directly below the collar, in the same lighter tonal thread. No wordmark, no graphics.
+
+A small woven deep-indigo fabric label stitched into the bottom side hem, reading "DELUGE 01".
+
+Style: premium Indian streetwear — mythology through process, not clip-art. No fish illustrations, no god imagery, no loud colors, no prints or graphics beyond what is specified.

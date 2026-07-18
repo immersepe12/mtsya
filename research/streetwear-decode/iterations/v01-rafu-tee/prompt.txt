@@ -1,0 +1,19 @@
+Generate exactly ONE image.
+
+Create a photorealistic apparel mockup of a premium oversized streetwear t-shirt, front view and back view laid FLAT SIDE BY SIDE — two separate garments, NOT overlapping, neither one behind the other — on a neutral concrete-grey background. Moody, editorial product-photography lighting, no models, no props. Both garments completely visible with clear margin — nothing cropped by the image border.
+
+CRITICAL — THE LOGO: the attached reference image is the brand logo and its geometry is exact and non-negotiable. It is EXACTLY FOUR fish scales in a tight diamond: ONE scale on top, TWO scales in the middle row, ONE scale at the bottom tapering to a sharp point. Do NOT add extra scales, do NOT enlarge the cluster, do NOT redesign it. Reproduce it stroke for stroke as a THIN OUTLINE ONLY, no fill, executed as embroidered stitching, kept SMALL on the left chest, placed on a calm, smooth, un-mended patch of fabric so it stays clean and legible.
+
+FABRIC & CRAFT — the hero of the design: heavyweight washed indigo cotton jersey that has been HAND-MENDED in the Indian rafu / boro tradition. The garment reads as one quiet indigo from a distance, but up close it is PIECED AND DARNED: several irregular, organic patches of the SAME indigo in slightly different wash depths — some a shade paler and sun-bleached, some deeper — are laid over the base cloth and secured with fine, dense, PARALLEL ROWS OF RUNNING-STITCH darning (rafu / sashiko) in tonal indigo thread. The stitching is delicate and hand-worked, close parallel lines that follow and reinforce each patch. The mending is ASYMMETRIC and concentrated toward the lower body and one side — as if the cloth wore thin there and was lovingly repaired — thinning out to plain calm cloth across the chest and shoulders. Nothing is printed; every mark is a real seam, patch or stitch. Show the darning texture clearly and close enough to read.
+
+COLOR: strictly tonal — ONE washed indigo breathing in its own shades across the patches and stitching. NO contrasting second color, NO bright thread, NO loud graphics, NO ombre gradient. Just indigo on indigo, quiet and organic, like cloth worn through water and mended by hand.
+
+CONSTRUCTION: oversized boxy body, dropped shoulders, ribbed collar, heavyweight cloth. Sleeve hems and bottom hem finished clean. A couple of the patch edges left with a soft raw, slightly frayed edge for honesty, secured by the darning.
+
+Front: the reference logo embroidered small on the left chest on a calm un-mended patch — tonal thread one shade lighter than the indigo, outline only, raised stitch texture. Quiet from a distance, revealed up close.
+
+Back: largely clean calm cloth with one or two small mended patches low on the body echoing the front; small Devanagari text "मत्स्य" embroidered at the back nape, horizontally CENTERED directly below the collar, in the same lighter tonal thread. No wordmark, no printed graphics.
+
+A small woven deep-indigo fabric label stitched into the bottom side hem, reading "DELUGE 01".
+
+Style: premium Indian streetwear — mythology and heritage craft through process, not clip-art. In the lane of Kapital and Story mfg but rooted in Indian rafugar hand-darning. No fish illustrations, no god imagery, no loud colors, no prints or graphics beyond what is specified.
