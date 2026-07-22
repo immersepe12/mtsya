@@ -1,0 +1,19 @@
+code,point_of_measure,how_to_measure,S_cm,M_cm,L_cm,XL_cm,tolerance_cm,grade_per_size_cm
+A,Body length from HPS,HPS at collar seam straight down to hem bottom (front),70,72,74,76,1.0,2.0
+B,Centre-back length,CB collar seam to hem bottom,68,70,72,74,1.0,2.0
+C,Half chest,2.5cm below armhole join straight across seam to seam (flat),57.5,60,62.5,65,1.0,2.5
+D,Half bottom hem sweep,Straight across hem edge seam to seam (flat),57,59.5,62,64.5,1.0,2.5
+E,Across shoulder (set-in styles),Shoulder seam end to end straight across back,55.5,57.5,59.5,61.5,0.7,2.0
+F,Shoulder slope drop from HPS,Vertical drop HPS level to shoulder seam end,4.5,4.5,4.5,4.5,0.3,0
+G,Armhole depth straight,Shoulder seam end to underarm join measured straight,26,27,28,29,0.5,1.0
+H,Half bicep,2.5cm below underarm join straight across sleeve (flat),24,25,26,27,0.5,1.0
+I,Sleeve length from shoulder seam (set-in styles),Shoulder seam end along fold to sleeve hem edge,22.5,23.5,24.5,25.5,0.5,1.0
+J,CB neck to sleeve hem (universal - controls raglan styles),CB collar seam along shoulder/sleeve to sleeve hem edge,50,52,54,56,1.0,2.0
+K,Half sleeve opening,Straight across sleeve hem edge (flat),19,19.5,20,20.5,0.5,0.5
+L,Neck width,Inside collar seam to inside collar seam straight,18.5,19,19.5,20,0.3,0.5
+M,Front neck drop,HPS line to inside front collar seam vertical,8.5,9,9.5,10,0.3,0.5
+N,Back neck drop,HPS line to inside back collar seam vertical,2.2,2.2,2.2,2.2,0.3,0
+O,Collar height finished rib,Seam to top edge of rib,2.2,2.2,2.2,2.2,0.2,0
+P,Bottom hem depth,Fold depth of finished hem (Abyss/Depth raw-cut = 0),2.5,2.5,2.5,2.5,0.2,0
+Q,Sleeve hem depth,Fold depth of finished sleeve hem (Abyss raw-cut = 0),2.5,2.5,2.5,2.5,0.2,0
+R,Side-seam length (reference),Underarm join to hem edge along side seam,40.5,41.5,42.5,43.5,1.0,1.0
