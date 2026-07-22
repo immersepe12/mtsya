@@ -1,0 +1,19 @@
+code,point_of_measure,S_in,M_in,L_in,XL_in,tolerance_in
+A,Body length from HPS,27.5,28.375,29.125,29.875,0.375
+B,Centre-back length,26.75,27.5,28.375,29.125,0.375
+C,Half chest,22.625,23.625,24.625,25.625,0.375
+D,Half bottom hem sweep,22.5,23.375,24.375,25.375,0.375
+E,Across shoulder (set-in styles),21.875,22.625,23.375,24.25,0.25
+F,Shoulder slope drop from HPS,1.75,1.75,1.75,1.75,0.125
+G,Armhole depth straight,10.25,10.625,11,11.375,0.1875
+H,Half bicep,9.5,9.875,10.25,10.625,0.1875
+I,Sleeve length from shoulder seam (set-in styles),8.875,9.25,9.625,10,0.1875
+J,CB neck to sleeve hem (universal - controls raglan styles),19.625,20.5,21.25,22,0.375
+K,Half sleeve opening,7.5,7.625,7.875,8.125,0.1875
+L,Neck width,7.25,7.5,7.625,7.875,0.125
+M,Front neck drop,3.375,3.5,3.75,3.875,0.125
+N,Back neck drop,0.875,0.875,0.875,0.875,0.125
+O,Collar height finished rib,0.875,0.875,0.875,0.875,0.0625
+P,Bottom hem depth (Abyss/Depth raw-cut = 0),1,1,1,1,0.0625
+Q,Sleeve hem depth (Abyss raw-cut = 0),1,1,1,1,0.0625
+R,Side-seam length (reference),16,16.375,16.75,17.125,0.375

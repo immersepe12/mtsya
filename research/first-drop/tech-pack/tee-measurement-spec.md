@@ -46,6 +46,37 @@ sizes (28.75 + 23.5 = 52.25 ≈ 52 ✓) — so the same J value controls the rag
 
 ---
 
+## 1b · Points of Measure — INCHES
+
+Converted from the cm master, rounded to the nearest **⅛″** (tolerances to 1/16″).
+**The cm sheet remains the master spec** — where ⅛″ rounding makes a grade step look
+uneven (e.g. K, D), follow the cm values.
+
+| # | Point of measure | S | M | L | XL | Tol ± |
+|---|---|---|---|---|---|---|
+| A | Body length from HPS | 27½ | 28⅜ | 29⅛ | 29⅞ | ⅜ |
+| B | Centre-back length | 26¾ | 27½ | 28⅜ | 29⅛ | ⅜ |
+| C | Half chest | 22⅝ | 23⅝ | 24⅝ | 25⅝ | ⅜ |
+| D | Half bottom hem (sweep) | 22½ | 23⅜ | 24⅜ | 25⅜ | ⅜ |
+| E | Across shoulder (set-in styles) | 21⅞ | 22⅝ | 23⅜ | 24¼ | ¼ |
+| F | Shoulder slope (drop from HPS) | 1¾ | 1¾ | 1¾ | 1¾ | ⅛ |
+| G | Armhole depth (straight) | 10¼ | 10⅝ | 11 | 11⅜ | 3/16 |
+| H | Half bicep | 9½ | 9⅞ | 10¼ | 10⅝ | 3/16 |
+| I | Sleeve length from shoulder seam (set-in) | 8⅞ | 9¼ | 9⅝ | 10 | 3/16 |
+| J | CB neck → sleeve hem (universal / raglan control) | 19⅝ | 20½ | 21¼ | 22 | ⅜ |
+| K | Half sleeve opening | 7½ | 7⅝ | 7⅞ | 8⅛ | 3/16 |
+| L | Neck width | 7¼ | 7½ | 7⅝ | 7⅞ | ⅛ |
+| M | Front neck drop | 3⅜ | 3½ | 3¾ | 3⅞ | ⅛ |
+| N | Back neck drop | ⅞ | ⅞ | ⅞ | ⅞ | ⅛ |
+| O | Collar height (finished rib) | ⅞ | ⅞ | ⅞ | ⅞ | 1/16 |
+| P | Bottom hem depth | 1 | 1 | 1 | 1 | 1/16 |
+| Q | Sleeve hem depth | 1 | 1 | 1 | 1 | 1/16 |
+| R | Side-seam length (reference) | 16 | 16⅜ | 16¾ | 17⅛ | ⅜ |
+
+Wearer size guide in inches: S fits 34½–37¾″ chest · M 37¾–41″ · L 41–44″ · XL 44–47¼″.
+
+---
+
 ## 2 · Two sleeve constructions, one silhouette
 
 | Styles | Construction | Controlling POMs |
